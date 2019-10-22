@@ -32,7 +32,3 @@ Future release(Ref ref) {
     ios: (pool) => PlatformFactory_iOS.release(ref),
   );
 }
-
-Future<void> performSelectorWithObject(Ref ref, String selector, Object object) {
-  return MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('Ref::performSelectorWithObject', {'refId': ref.refId, 'selector': selector, 'object': object});
-}

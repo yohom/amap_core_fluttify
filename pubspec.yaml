@@ -1,6 +1,6 @@
 name: amap_core_fluttify
-description: 
-version: 0.0.5
+description: An `Amap` core component, based on `fluttify` engine.
+version: 0.0.6
 author: yohom <382146139@qq.com>
 homepage: https://github.com/fluttify-project/amap_core_fluttify
 
@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  foundation_fluttify:
+  foundation_fluttify: ^0.0.1
 
 dev_dependencies:
   flutter_test:
