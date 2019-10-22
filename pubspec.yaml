@@ -1,8 +1,8 @@
 name: amap_core_fluttify
 description: 
-version: 0.0.1
-author:
-homepage:
+version: 0.0.5
+author: yohom <382146139@qq.com>
+homepage: https://github.com/fluttify-project/amap_core_fluttify
 
 environment:
   sdk: ">=2.2.2 <3.0.0"
