@@ -4,6 +4,7 @@ export 'ref.g.dart';
 export 'object_factory.g.dart';
 export 'AMapNaviConfig.g.dart';
 export 'AMapServices.g.dart';
+export 'functions.g.dart';
 export 'AMapPOIConfig.g.dart';
 export 'AMapRouteSearchType.g.dart';
 export 'AMapTransitStrategy.g.dart';
