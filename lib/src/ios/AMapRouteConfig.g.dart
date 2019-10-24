@@ -25,14 +25,14 @@ class AMapRouteConfig extends NSObject  {
   
   Future<CLLocationCoordinate2D> get_startCoordinate() async {
     final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapRouteConfig::get_startCoordinate", {'refId': refId});
-    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = result);
-    return CLLocationCoordinate2D()..refId = result;
+    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = result..tag = 'amap_core_fluttify');
+    return CLLocationCoordinate2D()..refId = result..tag = 'amap_core_fluttify';
   }
   
   Future<CLLocationCoordinate2D> get_destinationCoordinate() async {
     final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapRouteConfig::get_destinationCoordinate", {'refId': refId});
-    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = result);
-    return CLLocationCoordinate2D()..refId = result;
+    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = result..tag = 'amap_core_fluttify');
+    return CLLocationCoordinate2D()..refId = result..tag = 'amap_core_fluttify';
   }
   
   Future<AMapDrivingStrategy> get_drivingStrategy() async {
