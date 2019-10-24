@@ -25,8 +25,8 @@ Future<CLLocationCoordinate2D> AMapCoordinateConvert(CLLocationCoordinate2D coor
   if (result == null) {
     return null;
   } else {
-    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = result);
-    return CLLocationCoordinate2D()..refId = result;
+    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = result..tag = 'amap_core_fluttify');
+    return CLLocationCoordinate2D()..refId = result..tag = 'amap_core_fluttify';
   }
 }
 

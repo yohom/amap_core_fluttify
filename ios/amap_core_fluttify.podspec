@@ -4,13 +4,13 @@
 Pod::Spec.new do |s|
   s.name             = 'amap_core_fluttify'
   s.version          = '0.0.1'
-  s.summary          = '{{description}}'
+  s.summary          = 'An `Amap` core component, based on `fluttify` engine.'
   s.description      = <<-DESC
 A new flutter plugin project.
                        DESC
-  s.homepage         = 'http://example.com'
+  s.homepage         = 'https://github.com/fluttify-project/amap_core_fluttify'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Your Company' => 'email@example.com' }
+  s.author           = { 'yohom' => '382146139@qq.com' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'

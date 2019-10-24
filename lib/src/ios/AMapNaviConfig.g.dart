@@ -25,8 +25,8 @@ class AMapNaviConfig extends NSObject  {
   
   Future<CLLocationCoordinate2D> get_destination() async {
     final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapNaviConfig::get_destination", {'refId': refId});
-    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = result);
-    return CLLocationCoordinate2D()..refId = result;
+    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = result..tag = 'amap_core_fluttify');
+    return CLLocationCoordinate2D()..refId = result..tag = 'amap_core_fluttify';
   }
   
   Future<AMapDrivingStrategy> get_strategy() async {

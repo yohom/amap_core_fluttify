@@ -31,14 +31,14 @@ class AMapPOIConfig extends NSObject  {
   
   Future<CLLocationCoordinate2D> get_leftTopCoordinate() async {
     final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapPOIConfig::get_leftTopCoordinate", {'refId': refId});
-    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = result);
-    return CLLocationCoordinate2D()..refId = result;
+    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = result..tag = 'amap_core_fluttify');
+    return CLLocationCoordinate2D()..refId = result..tag = 'amap_core_fluttify';
   }
   
   Future<CLLocationCoordinate2D> get_rightBottomCoordinate() async {
     final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapPOIConfig::get_rightBottomCoordinate", {'refId': refId});
-    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = result);
-    return CLLocationCoordinate2D()..refId = result;
+    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = result..tag = 'amap_core_fluttify');
+    return CLLocationCoordinate2D()..refId = result..tag = 'amap_core_fluttify';
   }
   
 

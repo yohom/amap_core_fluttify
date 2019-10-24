@@ -72,8 +72,8 @@ class AMapServices extends NSObject  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(AMapServices()..refId = result);
-      return AMapServices()..refId = result;
+      kNativeObjectPool.add(AMapServices()..refId = result..tag = 'amap_core_fluttify');
+      return AMapServices()..refId = result..tag = 'amap_core_fluttify';
     }
   }
   
