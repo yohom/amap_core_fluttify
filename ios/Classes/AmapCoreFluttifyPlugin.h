@@ -3,7 +3,13 @@
 //////////////////////////////////////////////////////////
 
 #import <Flutter/Flutter.h>
+#import <AMapFoundationKit/AMapURLSearch.h>
+#import <AMapFoundationKit/AMapURLSearchType.h>
+#import <AMapFoundationKit/AMapURLSearchConfig.h>
+#import <AMapFoundationKit/AMapFoundationVersion.h>
+#import <AMapFoundationKit/AMapUtility.h>
 #import <AMapFoundationKit/AMapFoundationKit.h>
+#import <AMapFoundationKit/AMapServices.h>
 
 @interface AmapCoreFluttifyPlugin : NSObject<FlutterPlugin>
 
