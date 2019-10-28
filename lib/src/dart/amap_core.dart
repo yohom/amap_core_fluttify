@@ -1,5 +1,6 @@
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 import '../ios/ios.export.g.dart';
-import '../utils.g.dart';
 
 class AmapCore {
   static Future<void> init(String iosKey) {
