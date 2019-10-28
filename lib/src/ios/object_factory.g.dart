@@ -9,7 +9,7 @@ import 'package:flutter/services.dart';
 import 'package:amap_core_fluttify/src/ios/ios.export.g.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
-class ObjectFactory_iOS {
+class AmapCoreFluttifyFactoryIOS {
   static final _channel = MethodChannel('me.yohom/amap_core_fluttify');
 
   static Future<AMapURLSearch> createAMapURLSearch() async {
