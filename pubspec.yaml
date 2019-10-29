@@ -1,6 +1,6 @@
 name: amap_core_fluttify
 description: An `Amap` core component, based on `fluttify` engine.
-version: 0.0.7+025550b
+version: 0.0.8+025550b
 author: yohom <382146139@qq.com>
 homepage: https://github.com/fluttify-project/amap_core_fluttify
 
