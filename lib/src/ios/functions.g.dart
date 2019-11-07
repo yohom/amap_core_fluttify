@@ -12,7 +12,9 @@ import 'package:flutter/services.dart';
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 Future<CLLocationCoordinate2D> AMapCoordinateConvert(CLLocationCoordinate2D coordinate, AMapCoordinateType type) async {
   // print log
-  print('fluttify-dart: AMapCoordinateConvert::AMapCoordinateConvert([])');
+  if (!kReleaseMode) {
+    print('fluttify-dart: AMapCoordinateConvert::AMapCoordinateConvert([])');
+  }
 
   // invoke native method
   final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('AMapCoordinateConvert::AMapCoordinateConvert', {"coordinate": coordinate.refId, "type": type.index});
@@ -32,7 +34,9 @@ Future<CLLocationCoordinate2D> AMapCoordinateConvert(CLLocationCoordinate2D coor
 
 Future<bool> AMapDataAvailableForCoordinate(CLLocationCoordinate2D coordinate) async {
   // print log
-  print('fluttify-dart: AMapDataAvailableForCoordinate::AMapDataAvailableForCoordinate([])');
+  if (!kReleaseMode) {
+    print('fluttify-dart: AMapDataAvailableForCoordinate::AMapDataAvailableForCoordinate([])');
+  }
 
   // invoke native method
   final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('AMapDataAvailableForCoordinate::AMapDataAvailableForCoordinate', {"coordinate": coordinate.refId});
