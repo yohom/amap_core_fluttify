@@ -33,7 +33,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           NSLog(@"fluttify-objc: AMapURLSearch::getLatestAMapApp(暂未实现参数打印)");
       
           // invoke native method
-          [AMapURLSearch getLatestAMapApp ];
+          [AMapURLSearch getLatestAMapApp];
       
           // result
           // 无返回值
@@ -800,7 +800,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapNaviConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -811,7 +813,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapRouteConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -822,7 +826,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapPOIConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -833,7 +839,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapServices": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -844,9 +852,56 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
+      @"AMapCoordinateConvert::AMapCoordinateConvert": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          // args
+          // struct arg
+          NSValue* coordinateValue = (NSValue*) HEAP[@([args[@"coordinate"] integerValue])];
+          CLLocationCoordinate2D coordinate;
+          [coordinateValue getValue:&coordinate];
+          // enum arg
+          AMapCoordinateType type = (AMapCoordinateType) [args[@"type"] integerValue];
+      
+          // ref
+      
+      
+          // print log
+          NSLog(@"fluttify-objc: AMapCoordinateConvert::AMapCoordinateConvert(暂未实现参数打印)");
+      
+          // invoke native method
+          CLLocationCoordinate2D result = AMapCoordinateConvert(coordinate, type);
+      
+          // result
+          // 返回值: 结构体
+          NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
+          HEAP[@(resultValue.hash)] = resultValue;
+      
+          methodResult(@(resultValue.hash));
+      },
+      @"AMapDataAvailableForCoordinate::AMapDataAvailableForCoordinate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          // args
+          // struct arg
+          NSValue* coordinateValue = (NSValue*) HEAP[@([args[@"coordinate"] integerValue])];
+          CLLocationCoordinate2D coordinate;
+          [coordinateValue getValue:&coordinate];
+      
+          // ref
+      
+      
+          // print log
+          NSLog(@"fluttify-objc: AMapDataAvailableForCoordinate::AMapDataAvailableForCoordinate(暂未实现参数打印)");
+      
+          // invoke native method
+          BOOL result = AMapDataAvailableForCoordinate(coordinate);
+      
+          // result
+          // 返回值: Value
+          methodResult(@(result));
+      },
     };
   }
 
