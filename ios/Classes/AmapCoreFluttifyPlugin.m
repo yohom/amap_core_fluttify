@@ -10,6 +10,8 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
 // Dart端随机存取对象的容器
 extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
+// 日志打印开关
+extern BOOL enableLog;
 
 @implementation AmapCoreFluttifyPlugin {
   NSObject <FlutterPluginRegistrar> * _registrar;
@@ -30,7 +32,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
       
           // print log
-          NSLog(@"fluttify-objc: AMapURLSearch::getLatestAMapApp(暂未实现参数打印)");
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapURLSearch::getLatestAMapApp(暂未实现参数打印)");
+          }
       
           // invoke native method
           [AMapURLSearch getLatestAMapApp];
@@ -48,7 +52,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
       
           // print log
-          NSLog(@"fluttify-objc: AMapURLSearch::openAMapNavigation(暂未实现参数打印)");
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapURLSearch::openAMapNavigation(暂未实现参数打印)");
+          }
       
           // invoke native method
           BOOL result = [AMapURLSearch openAMapNavigation: config];
@@ -66,7 +72,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
       
           // print log
-          NSLog(@"fluttify-objc: AMapURLSearch::openAMapRouteSearch(暂未实现参数打印)");
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapURLSearch::openAMapRouteSearch(暂未实现参数打印)");
+          }
       
           // invoke native method
           BOOL result = [AMapURLSearch openAMapRouteSearch: config];
@@ -84,7 +92,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
       
           // print log
-          NSLog(@"fluttify-objc: AMapURLSearch::openAMapPOISearch(暂未实现参数打印)");
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapURLSearch::openAMapPOISearch(暂未实现参数打印)");
+          }
       
           // invoke native method
           BOOL result = [AMapURLSearch openAMapPOISearch: config];
@@ -101,7 +111,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
       
           // print log
-          NSLog(@"fluttify-objc: AMapServices::sharedServices(暂未实现参数打印)");
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapServices::sharedServices(暂未实现参数打印)");
+          }
       
           // invoke native method
           AMapServices* result = [AMapServices sharedServices];
@@ -112,7 +124,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           methodResult(@(result.hash));
       },
       @"AMapNaviConfig::get_appScheme": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapNaviConfig::get_appScheme");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapNaviConfig::get_appScheme");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -126,7 +141,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapNaviConfig::get_appName": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapNaviConfig::get_appName");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapNaviConfig::get_appName");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -140,7 +158,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapNaviConfig::get_destination": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapNaviConfig::get_destination");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapNaviConfig::get_destination");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -157,7 +178,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapNaviConfig::get_strategy": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapNaviConfig::get_strategy");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapNaviConfig::get_strategy");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -171,7 +195,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapRouteConfig::get_appScheme": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapRouteConfig::get_appScheme");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapRouteConfig::get_appScheme");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -185,7 +212,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapRouteConfig::get_appName": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapRouteConfig::get_appName");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapRouteConfig::get_appName");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -199,7 +229,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapRouteConfig::get_startCoordinate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapRouteConfig::get_startCoordinate");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapRouteConfig::get_startCoordinate");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -216,7 +249,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapRouteConfig::get_destinationCoordinate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapRouteConfig::get_destinationCoordinate");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapRouteConfig::get_destinationCoordinate");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -233,7 +269,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapRouteConfig::get_drivingStrategy": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapRouteConfig::get_drivingStrategy");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapRouteConfig::get_drivingStrategy");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -247,7 +286,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapRouteConfig::get_transitStrategy": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapRouteConfig::get_transitStrategy");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapRouteConfig::get_transitStrategy");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -261,7 +303,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapRouteConfig::get_routeType": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapRouteConfig::get_routeType");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapRouteConfig::get_routeType");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -275,7 +320,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapPOIConfig::get_appScheme": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapPOIConfig::get_appScheme");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapPOIConfig::get_appScheme");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -289,7 +337,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapPOIConfig::get_appName": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapPOIConfig::get_appName");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapPOIConfig::get_appName");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -303,7 +354,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapPOIConfig::get_keywords": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapPOIConfig::get_keywords");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapPOIConfig::get_keywords");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -317,7 +371,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapPOIConfig::get_leftTopCoordinate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapPOIConfig::get_leftTopCoordinate");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapPOIConfig::get_leftTopCoordinate");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -334,7 +391,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapPOIConfig::get_rightBottomCoordinate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapPOIConfig::get_rightBottomCoordinate");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapPOIConfig::get_rightBottomCoordinate");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -351,7 +411,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapServices::get_apiKey": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapServices::get_apiKey");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapServices::get_apiKey");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -365,7 +428,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapServices::get_enableHTTPS": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapServices::get_enableHTTPS");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapServices::get_enableHTTPS");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -379,7 +445,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapServices::get_crashReportEnabled": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapServices::get_crashReportEnabled");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapServices::get_crashReportEnabled");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -393,7 +462,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapServices::get_identifier": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapServices::get_identifier");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapServices::get_identifier");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -407,7 +479,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapNaviConfig::set_appScheme": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapNaviConfig::set_appScheme");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapNaviConfig::set_appScheme");
+          }
       
           // args
           // jsonable arg
@@ -421,7 +496,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapNaviConfig::set_appName": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapNaviConfig::set_appName");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapNaviConfig::set_appName");
+          }
       
           // args
           // jsonable arg
@@ -435,7 +513,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapNaviConfig::set_destination": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapNaviConfig::set_destination");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapNaviConfig::set_destination");
+          }
       
           // args
           // struct arg
@@ -451,7 +532,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapNaviConfig::set_strategy": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapNaviConfig::set_strategy");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapNaviConfig::set_strategy");
+          }
       
           // args
           // enum arg
@@ -465,7 +549,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapRouteConfig::set_appScheme": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapRouteConfig::set_appScheme");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapRouteConfig::set_appScheme");
+          }
       
           // args
           // jsonable arg
@@ -479,7 +566,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapRouteConfig::set_appName": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapRouteConfig::set_appName");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapRouteConfig::set_appName");
+          }
       
           // args
           // jsonable arg
@@ -493,7 +583,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapRouteConfig::set_startCoordinate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapRouteConfig::set_startCoordinate");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapRouteConfig::set_startCoordinate");
+          }
       
           // args
           // struct arg
@@ -509,7 +602,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapRouteConfig::set_destinationCoordinate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapRouteConfig::set_destinationCoordinate");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapRouteConfig::set_destinationCoordinate");
+          }
       
           // args
           // struct arg
@@ -525,7 +621,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapRouteConfig::set_drivingStrategy": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapRouteConfig::set_drivingStrategy");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapRouteConfig::set_drivingStrategy");
+          }
       
           // args
           // enum arg
@@ -539,7 +638,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapRouteConfig::set_transitStrategy": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapRouteConfig::set_transitStrategy");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapRouteConfig::set_transitStrategy");
+          }
       
           // args
           // enum arg
@@ -553,7 +655,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapRouteConfig::set_routeType": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapRouteConfig::set_routeType");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapRouteConfig::set_routeType");
+          }
       
           // args
           // enum arg
@@ -567,7 +672,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapPOIConfig::set_appScheme": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapPOIConfig::set_appScheme");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapPOIConfig::set_appScheme");
+          }
       
           // args
           // jsonable arg
@@ -581,7 +689,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapPOIConfig::set_appName": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapPOIConfig::set_appName");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapPOIConfig::set_appName");
+          }
       
           // args
           // jsonable arg
@@ -595,7 +706,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapPOIConfig::set_keywords": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapPOIConfig::set_keywords");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapPOIConfig::set_keywords");
+          }
       
           // args
           // jsonable arg
@@ -609,7 +723,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapPOIConfig::set_leftTopCoordinate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapPOIConfig::set_leftTopCoordinate");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapPOIConfig::set_leftTopCoordinate");
+          }
       
           // args
           // struct arg
@@ -625,7 +742,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapPOIConfig::set_rightBottomCoordinate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapPOIConfig::set_rightBottomCoordinate");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapPOIConfig::set_rightBottomCoordinate");
+          }
       
           // args
           // struct arg
@@ -641,7 +761,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapServices::set_apiKey": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapServices::set_apiKey");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapServices::set_apiKey");
+          }
       
           // args
           // jsonable arg
@@ -655,7 +778,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapServices::set_enableHTTPS": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapServices::set_enableHTTPS");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapServices::set_enableHTTPS");
+          }
       
           // args
           // jsonable arg
@@ -669,7 +795,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapServices::set_crashReportEnabled": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapServices::set_crashReportEnabled");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapServices::set_crashReportEnabled");
+          }
       
           // args
           // jsonable arg
@@ -793,68 +922,73 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"ObjectFactory::createAMapURLSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"ObjectFactory::createAMapURLSearch");
+          // print log
+          if (enableLog) {
+              NSLog(@"ObjectFactory::createAMapURLSearch");
+          }
       
           AMapURLSearch* ref = [[AMapURLSearch alloc] init];
           HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-      #ifdef DEBUG
-          NSLog(@"HEAP: %@", HEAP);
-      #endif
+          if (enableLog) NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapNaviConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"ObjectFactory::createAMapNaviConfig");
+          // print log
+          if (enableLog) {
+              NSLog(@"ObjectFactory::createAMapNaviConfig");
+          }
       
           AMapNaviConfig* ref = [[AMapNaviConfig alloc] init];
           HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-      #ifdef DEBUG
-          NSLog(@"HEAP: %@", HEAP);
-      #endif
+          if (enableLog) NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapRouteConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"ObjectFactory::createAMapRouteConfig");
+          // print log
+          if (enableLog) {
+              NSLog(@"ObjectFactory::createAMapRouteConfig");
+          }
       
           AMapRouteConfig* ref = [[AMapRouteConfig alloc] init];
           HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-      #ifdef DEBUG
-          NSLog(@"HEAP: %@", HEAP);
-      #endif
+          if (enableLog) NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapPOIConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"ObjectFactory::createAMapPOIConfig");
+          // print log
+          if (enableLog) {
+              NSLog(@"ObjectFactory::createAMapPOIConfig");
+          }
       
           AMapPOIConfig* ref = [[AMapPOIConfig alloc] init];
           HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-      #ifdef DEBUG
-          NSLog(@"HEAP: %@", HEAP);
-      #endif
+          if (enableLog) NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapServices": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"ObjectFactory::createAMapServices");
+          // print log
+          if (enableLog) {
+              NSLog(@"ObjectFactory::createAMapServices");
+          }
       
           AMapServices* ref = [[AMapServices alloc] init];
           HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-      #ifdef DEBUG
-          NSLog(@"HEAP: %@", HEAP);
-      #endif
+          if (enableLog) NSLog(@"HEAP: %@", HEAP);
       },
       
       @"AMapCoordinateConvert::AMapCoordinateConvert": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -870,7 +1004,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
       
           // print log
-          NSLog(@"fluttify-objc: AMapCoordinateConvert::AMapCoordinateConvert(暂未实现参数打印)");
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapCoordinateConvert::AMapCoordinateConvert(暂未实现参数打印)");
+          }
       
           // invoke native method
           CLLocationCoordinate2D result = AMapCoordinateConvert(coordinate, type);
@@ -893,7 +1029,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
       
           // print log
-          NSLog(@"fluttify-objc: AMapDataAvailableForCoordinate::AMapDataAvailableForCoordinate(暂未实现参数打印)");
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapDataAvailableForCoordinate::AMapDataAvailableForCoordinate(暂未实现参数打印)");
+          }
       
           // invoke native method
           BOOL result = AMapDataAvailableForCoordinate(coordinate);

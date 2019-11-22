@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 Future<CLLocationCoordinate2D> AMapCoordinateConvert(CLLocationCoordinate2D coordinate, AMapCoordinateType type) async {
   // print log
-  if (!kReleaseMode) {
+  if (fluttifyLogEnabled) {
     print('fluttify-dart: AMapCoordinateConvert::AMapCoordinateConvert([])');
   }
 
@@ -34,7 +34,7 @@ Future<CLLocationCoordinate2D> AMapCoordinateConvert(CLLocationCoordinate2D coor
 
 Future<bool> AMapDataAvailableForCoordinate(CLLocationCoordinate2D coordinate) async {
   // print log
-  if (!kReleaseMode) {
+  if (fluttifyLogEnabled) {
     print('fluttify-dart: AMapDataAvailableForCoordinate::AMapDataAvailableForCoordinate([])');
   }
 
