@@ -60,7 +60,7 @@ class AMapServices extends NSObject  {
   // generate methods
   static Future<AMapServices> sharedServices() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapServices::sharedServices([])');
     }
   
