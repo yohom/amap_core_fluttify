@@ -119,9 +119,9 @@ extern BOOL enableLog;
           AMapServices* result = [AMapServices sharedServices];
       
           // result
-          // 返回值: 引用
-          HEAP[@(result.hash)] = result;
-          methodResult(@(result.hash));
+          // return a ref
+          HEAP[@((result).hash)] = result;
+          methodResult(@((result).hash));
       },
       @"AMapNaviConfig::get_appScheme": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // print log
