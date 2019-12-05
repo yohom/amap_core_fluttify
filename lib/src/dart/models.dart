@@ -4,11 +4,11 @@ class LatLng {
 
   LatLng(this.latitude, this.longitude);
 
-  static LatLng fromJson(Map<String, double> json) {
-    return LatLng(json['latitude'], json['longitude']);
+  static LatLng fromJson(Map<String, dynamic> json) {
+    return LatLng(json['latitude'] as double, json['longitude'] as double);
   }
 
-  Map<String, double> toJson() {
+  Map<String, dynamic> toJson() {
     return {
       'latitude': latitude,
       'longitude': longitude,
