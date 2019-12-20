@@ -17,6 +17,6 @@ class LatLng {
 
   @override
   String toString() {
-    return 'LatLng{lat: $latitude, lng: $longitude}';
+    return 'LatLng{latitude: $latitude, longitude: $longitude}';
   }
 }
