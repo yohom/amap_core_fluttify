@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapServices extends NSObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapServices> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('ObjectFactory::createAMapServices');
+    final object = AMapServices()..refId = refId..tag = 'amap_core_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<String> get_apiKey() async {
     final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapServices::get_apiKey", {'refId': refId});
   
@@ -38,8 +51,9 @@ class AMapServices extends NSObject  {
     return result;
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_apiKey(String apiKey) async {
     await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('AMapServices::set_apiKey', {'refId': refId, "apiKey": apiKey});
   
@@ -58,8 +72,9 @@ class AMapServices extends NSObject  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   static Future<AMapServices> sharedServices() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -82,4 +97,5 @@ class AMapServices extends NSObject  {
     }
   }
   
+  //endregion
 }

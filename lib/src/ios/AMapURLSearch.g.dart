@@ -11,15 +11,30 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapURLSearch extends NSObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapURLSearch> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('ObjectFactory::createAMapURLSearch');
+    final object = AMapURLSearch()..refId = refId..tag = 'amap_core_fluttify';
   
-
-  // generate setters
+    kNativeObjectPool.add(object);
+    return object;
+  }
   
+  //endregion
 
-  // generate methods
+  //region getters
+  
+  //endregion
+
+  //region setters
+  
+  //endregion
+
+  //region methods
   static Future<void> getLatestAMapApp() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -108,4 +123,5 @@ class AMapURLSearch extends NSObject  {
     }
   }
   
+  //endregion
 }

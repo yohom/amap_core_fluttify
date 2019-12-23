@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapNaviConfig extends NSObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapNaviConfig> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('ObjectFactory::createAMapNaviConfig');
+    final object = AMapNaviConfig()..refId = refId..tag = 'amap_core_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<String> get_appScheme() async {
     final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapNaviConfig::get_appScheme", {'refId': refId});
   
@@ -38,8 +51,9 @@ class AMapNaviConfig extends NSObject  {
     return AMapDrivingStrategy.values[result];
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_appScheme(String appScheme) async {
     await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('AMapNaviConfig::set_appScheme', {'refId': refId, "appScheme": appScheme});
   
@@ -64,7 +78,9 @@ class AMapNaviConfig extends NSObject  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }
