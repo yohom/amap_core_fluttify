@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapPOIConfig extends NSObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapPOIConfig> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('ObjectFactory::createAMapPOIConfig');
+    final object = AMapPOIConfig()..refId = refId..tag = 'amap_core_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<String> get_appScheme() async {
     final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapPOIConfig::get_appScheme", {'refId': refId});
   
@@ -44,8 +57,9 @@ class AMapPOIConfig extends NSObject  {
     return CLLocationCoordinate2D()..refId = result..tag = 'amap_core_fluttify';
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_appScheme(String appScheme) async {
     await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('AMapPOIConfig::set_appScheme', {'refId': refId, "appScheme": appScheme});
   
@@ -76,7 +90,9 @@ class AMapPOIConfig extends NSObject  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

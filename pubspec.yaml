@@ -6,12 +6,13 @@ homepage: https://github.com/fluttify-project/amap_core_fluttify
 
 environment:
   sdk: ">=2.6.0 <3.0.0"
+  flutter: ">=1.12.13 <2.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  foundation_fluttify: ^0.4.0
   
+  foundation_fluttify: ^0.4.0
 
 dev_dependencies:
   flutter_test:
