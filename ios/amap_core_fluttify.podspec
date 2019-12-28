@@ -4,7 +4,7 @@
 Pod::Spec.new do |s|
   s.name             = 'amap_core_fluttify'
   s.version          = '0.0.1'
-  s.summary          = 'An `Amap` Core Component, Powered By `Fluttify` Engine.'
+  s.summary          = 'An `Amap` Core Component, Powered By `Fluttify` Engine, Which Generates Dart Interface For Native SDK.'
   s.description      = <<-DESC
 A new flutter plugin project.
                        DESC
@@ -19,7 +19,7 @@ A new flutter plugin project.
   # flutter plugin dependency
   
   # sdk dependency
-  s.dependency 'AMapFoundation', '~> 1.6'
+  s.dependency 'AMapFoundation', '1.6'
 
   s.ios.deployment_target = '8.0'
   # include project framework

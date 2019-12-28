@@ -16,7 +16,7 @@ class AMapServices extends NSObject  {
   //endregion
 
   //region creators
-  static Future<AMapServices> create() async {
+  static Future<AMapServices> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('ObjectFactory::createAMapServices');
     final object = AMapServices()..refId = refId..tag = 'amap_core_fluttify';
   

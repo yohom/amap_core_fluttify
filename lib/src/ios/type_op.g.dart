@@ -11,53 +11,56 @@ import 'package:amap_core_fluttify/src/android/android.export.g.dart';
 import 'package:amap_core_fluttify/src/ios/ios.export.g.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
-Future<bool> isKindOfAMapURLSearch(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfAMapURLSearch', {'refId': ref.refId});
-  return result;
-}
+extension TypeOpIOS on Ref {
+  Future<bool> isAMapURLSearch() async {
+    final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfAMapURLSearch', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapNaviConfig() async {
+    final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfAMapNaviConfig', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapRouteConfig() async {
+    final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfAMapRouteConfig', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapPOIConfig() async {
+    final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfAMapPOIConfig', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapServices() async {
+    final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfAMapServices', {'refId': refId});
+    return result;
+  }
+  
 
-Future<bool> isKindOfAMapNaviConfig(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfAMapNaviConfig', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapRouteConfig(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfAMapRouteConfig', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapPOIConfig(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfAMapPOIConfig', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapServices(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfAMapServices', {'refId': ref.refId});
-  return result;
-}
-
-
-Future<AMapURLSearch> asAMapURLSearch(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::asAMapURLSearch', {'refId': ref.refId});
-  return AMapURLSearch()..refId = result;
-}
-
-Future<AMapNaviConfig> asAMapNaviConfig(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::asAMapNaviConfig', {'refId': ref.refId});
-  return AMapNaviConfig()..refId = result;
-}
-
-Future<AMapRouteConfig> asAMapRouteConfig(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::asAMapRouteConfig', {'refId': ref.refId});
-  return AMapRouteConfig()..refId = result;
-}
-
-Future<AMapPOIConfig> asAMapPOIConfig(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::asAMapPOIConfig', {'refId': ref.refId});
-  return AMapPOIConfig()..refId = result;
-}
-
-Future<AMapServices> asAMapServices(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::asAMapServices', {'refId': ref.refId});
-  return AMapServices()..refId = result;
+  Future<AMapURLSearch> asAMapURLSearch() async {
+    final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::asAMapURLSearch', {'refId': refId});
+    return AMapURLSearch()..refId = result;
+  }
+  
+  Future<AMapNaviConfig> asAMapNaviConfig() async {
+    final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::asAMapNaviConfig', {'refId': refId});
+    return AMapNaviConfig()..refId = result;
+  }
+  
+  Future<AMapRouteConfig> asAMapRouteConfig() async {
+    final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::asAMapRouteConfig', {'refId': refId});
+    return AMapRouteConfig()..refId = result;
+  }
+  
+  Future<AMapPOIConfig> asAMapPOIConfig() async {
+    final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::asAMapPOIConfig', {'refId': refId});
+    return AMapPOIConfig()..refId = result;
+  }
+  
+  Future<AMapServices> asAMapServices() async {
+    final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::asAMapServices', {'refId': refId});
+    return AMapServices()..refId = result;
+  }
+  
 }

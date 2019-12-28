@@ -16,7 +16,7 @@ class AMapNaviConfig extends NSObject  {
   //endregion
 
   //region creators
-  static Future<AMapNaviConfig> create() async {
+  static Future<AMapNaviConfig> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('ObjectFactory::createAMapNaviConfig');
     final object = AMapNaviConfig()..refId = refId..tag = 'amap_core_fluttify';
   
