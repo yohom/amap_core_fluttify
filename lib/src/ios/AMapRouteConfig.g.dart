@@ -16,7 +16,7 @@ class AMapRouteConfig extends NSObject  {
   //endregion
 
   //region creators
-  static Future<AMapRouteConfig> create() async {
+  static Future<AMapRouteConfig> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('ObjectFactory::createAMapRouteConfig');
     final object = AMapRouteConfig()..refId = refId..tag = 'amap_core_fluttify';
   

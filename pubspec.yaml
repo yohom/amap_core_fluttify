@@ -1,5 +1,5 @@
 name: amap_core_fluttify
-description: An `Amap` Core Component, Powered By `Fluttify` Engine.
+description: An `Amap` Core Component, Powered By `Fluttify` Engine, Which Generates Dart Interface For Native SDK.
 version: 0.5.0+ea37ae9
 author: yohom <382146139@qq.com>
 homepage: https://github.com/fluttify-project/amap_core_fluttify
@@ -12,7 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   
-  foundation_fluttify: ^0.4.0
+  foundation_fluttify: ^0.4.1
 
 dev_dependencies:
   flutter_test:

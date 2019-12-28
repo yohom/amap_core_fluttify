@@ -16,7 +16,7 @@ class AMapPOIConfig extends NSObject  {
   //endregion
 
   //region creators
-  static Future<AMapPOIConfig> create() async {
+  static Future<AMapPOIConfig> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('ObjectFactory::createAMapPOIConfig');
     final object = AMapPOIConfig()..refId = refId..tag = 'amap_core_fluttify';
   
