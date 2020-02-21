@@ -24,6 +24,17 @@ class AMapRouteConfig extends NSObject  {
     return object;
   }
   
+  static Future<List<AMapRouteConfig>> create_batch__(int length) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('ObjectFactory::create_batchAMapRouteConfig', {'length': length});
+  
+    final List<AMapRouteConfig> typedResult = resultBatch.map((result) => AMapRouteConfig()..refId = result..tag = 'amap_core_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
+  }
+  
   //endregion
 
   //region getters
@@ -112,6 +123,64 @@ class AMapRouteConfig extends NSObject  {
     await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('AMapRouteConfig::set_routeType', {'refId': refId, "routeType": routeType.index});
   
   
+  }
+  
+  //endregion
+
+  //region methods
+  
+  //endregion
+}
+
+extension AMapRouteConfig_Batch on List<AMapRouteConfig> {
+  //region getters
+  Future<List<String>> get_appScheme_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapRouteConfig::get_appScheme_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<String>> get_appName_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapRouteConfig::get_appName_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<CLLocationCoordinate2D>> get_startCoordinate_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapRouteConfig::get_startCoordinate_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => CLLocationCoordinate2D()..refId = result..tag = 'amap_core_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
+  }
+  
+  Future<List<CLLocationCoordinate2D>> get_destinationCoordinate_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapRouteConfig::get_destinationCoordinate_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => CLLocationCoordinate2D()..refId = result..tag = 'amap_core_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
+  }
+  
+  Future<List<AMapDrivingStrategy>> get_drivingStrategy_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapRouteConfig::get_drivingStrategy_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => AMapDrivingStrategy.values[result]).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<AMapTransitStrategy>> get_transitStrategy_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapRouteConfig::get_transitStrategy_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => AMapTransitStrategy.values[result]).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<AMapRouteSearchType>> get_routeType_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapRouteConfig::get_routeType_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => AMapRouteSearchType.values[result]).toList();
+  
+    return typedResult;
   }
   
   //endregion

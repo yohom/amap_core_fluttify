@@ -24,6 +24,17 @@ class AMapNaviConfig extends NSObject  {
     return object;
   }
   
+  static Future<List<AMapNaviConfig>> create_batch__(int length) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('ObjectFactory::create_batchAMapNaviConfig', {'length': length});
+  
+    final List<AMapNaviConfig> typedResult = resultBatch.map((result) => AMapNaviConfig()..refId = result..tag = 'amap_core_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
+  }
+  
   //endregion
 
   //region getters
@@ -76,6 +87,43 @@ class AMapNaviConfig extends NSObject  {
     await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('AMapNaviConfig::set_strategy', {'refId': refId, "strategy": strategy.index});
   
   
+  }
+  
+  //endregion
+
+  //region methods
+  
+  //endregion
+}
+
+extension AMapNaviConfig_Batch on List<AMapNaviConfig> {
+  //region getters
+  Future<List<String>> get_appScheme_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapNaviConfig::get_appScheme_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<String>> get_appName_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapNaviConfig::get_appName_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<CLLocationCoordinate2D>> get_destination_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapNaviConfig::get_destination_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => CLLocationCoordinate2D()..refId = result..tag = 'amap_core_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
+  }
+  
+  Future<List<AMapDrivingStrategy>> get_strategy_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapNaviConfig::get_strategy_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => AMapDrivingStrategy.values[result]).toList();
+  
+    return typedResult;
   }
   
   //endregion

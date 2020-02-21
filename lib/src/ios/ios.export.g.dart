@@ -9,4 +9,3 @@ export 'AMapRouteSearchType.g.dart';
 export 'AMapTransitStrategy.g.dart';
 export 'AMapCoordinateType.g.dart';
 export 'AMapURLSearch.g.dart';
-export 'package:foundation_fluttify/foundation_fluttify.dart';
