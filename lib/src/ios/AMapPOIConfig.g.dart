@@ -24,6 +24,17 @@ class AMapPOIConfig extends NSObject  {
     return object;
   }
   
+  static Future<List<AMapPOIConfig>> create_batch__(int length) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('ObjectFactory::create_batchAMapPOIConfig', {'length': length});
+  
+    final List<AMapPOIConfig> typedResult = resultBatch.map((result) => AMapPOIConfig()..refId = result..tag = 'amap_core_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
+  }
+  
   //endregion
 
   //region getters
@@ -88,6 +99,50 @@ class AMapPOIConfig extends NSObject  {
     await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('AMapPOIConfig::set_rightBottomCoordinate', {'refId': refId, "rightBottomCoordinate": rightBottomCoordinate.refId});
   
   
+  }
+  
+  //endregion
+
+  //region methods
+  
+  //endregion
+}
+
+extension AMapPOIConfig_Batch on List<AMapPOIConfig> {
+  //region getters
+  Future<List<String>> get_appScheme_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapPOIConfig::get_appScheme_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<String>> get_appName_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapPOIConfig::get_appName_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<String>> get_keywords_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapPOIConfig::get_keywords_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<CLLocationCoordinate2D>> get_leftTopCoordinate_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapPOIConfig::get_leftTopCoordinate_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => CLLocationCoordinate2D()..refId = result..tag = 'amap_core_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
+  }
+  
+  Future<List<CLLocationCoordinate2D>> get_rightBottomCoordinate_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapPOIConfig::get_rightBottomCoordinate_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => CLLocationCoordinate2D()..refId = result..tag = 'amap_core_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
   }
   
   //endregion

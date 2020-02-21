@@ -24,6 +24,17 @@ class AMapServices extends NSObject  {
     return object;
   }
   
+  static Future<List<AMapServices>> create_batch__(int length) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('ObjectFactory::create_batchAMapServices', {'length': length});
+  
+    final List<AMapServices> typedResult = resultBatch.map((result) => AMapServices()..refId = result..tag = 'amap_core_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
+  }
+  
   //endregion
 
   //region getters
@@ -94,6 +105,62 @@ class AMapServices extends NSObject  {
     } else {
       kNativeObjectPool.add(AMapServices()..refId = result..tag = 'amap_core_fluttify');
       return AMapServices()..refId = result..tag = 'amap_core_fluttify';
+    }
+  }
+  
+  //endregion
+}
+
+extension AMapServices_Batch on List<AMapServices> {
+  //region getters
+  Future<List<String>> get_apiKey_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapServices::get_apiKey_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<bool>> get_enableHTTPS_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapServices::get_enableHTTPS_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<bool>> get_crashReportEnabled_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapServices::get_crashReportEnabled_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<String>> get_identifier_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapServices::get_identifier_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  //endregion
+
+  //region methods
+  Future<List<AMapServices>> sharedServices_batch() async {
+    // print log
+    // if (fluttifyLogEnabled) {
+    //   #__log__#
+    // }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('AMapServices::sharedServices_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => AMapServices()..refId = result..tag = 'amap_core_fluttify').toList();
+      kNativeObjectPool.addAll(typedResult);
+      return typedResult;
     }
   }
   
