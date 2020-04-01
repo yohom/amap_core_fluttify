@@ -1,4 +1,6 @@
 class LatLng {
+  static final zero = LatLng(0, 0);
+
   double latitude;
   double longitude;
 
@@ -14,6 +16,17 @@ class LatLng {
       'longitude': longitude,
     };
   }
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is LatLng &&
+          runtimeType == other.runtimeType &&
+          latitude == other.latitude &&
+          longitude == other.longitude;
+
+  @override
+  int get hashCode => latitude.hashCode ^ longitude.hashCode;
 
   @override
   String toString() {
