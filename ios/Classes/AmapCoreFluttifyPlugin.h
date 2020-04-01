@@ -11,8 +11,12 @@
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import <AMapFoundationKit/AMapServices.h>
 
+typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, id, FlutterResult);
+
 @interface AmapCoreFluttifyPlugin : NSObject<FlutterPlugin>
 
 - (instancetype) initWithFlutterPluginRegistrar: (NSObject <FlutterPluginRegistrar> *) registrar;
+
+@property(nonatomic) NSObject<FlutterPluginRegistrar>* registrar;
 
 @end
