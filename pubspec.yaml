@@ -12,7 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   
-  foundation_fluttify: ^0.5.0
+  foundation_fluttify: ^0.6.0
 
 dev_dependencies:
   flutter_test:
