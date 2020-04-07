@@ -119,28 +119,28 @@ extension AMapServices_Batch on List<AMapServices> {
   //region getters
   Future<List<String>> get_apiKey_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapServices::get_apiKey_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<bool>> get_enableHTTPS_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapServices::get_enableHTTPS_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<bool>> get_crashReportEnabled_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapServices::get_crashReportEnabled_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_identifier_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapServices::get_identifier_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   
     return typedResult;
   }
@@ -182,7 +182,7 @@ extension AMapServices_Batch on List<AMapServices> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => AMapServices()..refId = __result__..tag__ = 'amap_core_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => AMapServices()..refId = __result__..tag__ = 'amap_core_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }

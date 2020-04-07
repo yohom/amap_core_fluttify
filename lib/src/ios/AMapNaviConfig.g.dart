@@ -104,28 +104,28 @@ extension AMapNaviConfig_Batch on List<AMapNaviConfig> {
   //region getters
   Future<List<String>> get_appScheme_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapNaviConfig::get_appScheme_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_appName_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapNaviConfig::get_appName_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<CLLocationCoordinate2D>> get_destination_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapNaviConfig::get_destination_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => CLLocationCoordinate2D()..refId = __result__..tag__ = 'amap_core_fluttify').toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => CLLocationCoordinate2D()..refId = __result__..tag__ = 'amap_core_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
   Future<List<AMapDrivingStrategy>> get_strategy_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapNaviConfig::get_strategy_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => AMapDrivingStrategy.values[__result__]).toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => AMapDrivingStrategy.values[__result__]).toList();
   
     return typedResult;
   }
