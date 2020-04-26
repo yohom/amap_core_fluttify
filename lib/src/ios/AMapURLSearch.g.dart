@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class AMapURLSearch extends NSObject  {
   //region constants
@@ -50,6 +51,7 @@ class AMapURLSearch extends NSObject  {
   //endregion
 
   //region methods
+  
   static Future<void> getLatestAMapApp() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class AMapURLSearch extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   static Future<bool> openAMapNavigation(AMapNaviConfig config) async {
     // print log
@@ -89,10 +93,12 @@ class AMapURLSearch extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   static Future<bool> openAMapRouteSearch(AMapRouteConfig config) async {
     // print log
@@ -111,10 +117,12 @@ class AMapURLSearch extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   static Future<bool> openAMapPOISearch(AMapPOIConfig config) async {
     // print log
@@ -133,8 +141,9 @@ class AMapURLSearch extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -151,7 +160,8 @@ extension AMapURLSearch_Batch on List<AMapURLSearch> {
   //endregion
 
   //region methods
-  static Future<void> getLatestAMapApp_batch() async {
+  
+  static Future<List<void>> getLatestAMapApp_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -169,6 +179,7 @@ extension AMapURLSearch_Batch on List<AMapURLSearch> {
       return typedResult;
     }
   }
+  
   
   static Future<List<bool>> openAMapNavigation_batch(List<AMapNaviConfig> config) async {
     if (false) {
@@ -189,6 +200,7 @@ extension AMapURLSearch_Batch on List<AMapURLSearch> {
     }
   }
   
+  
   static Future<List<bool>> openAMapRouteSearch_batch(List<AMapRouteConfig> config) async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -207,6 +219,7 @@ extension AMapURLSearch_Batch on List<AMapURLSearch> {
       return typedResult;
     }
   }
+  
   
   static Future<List<bool>> openAMapPOISearch_batch(List<AMapPOIConfig> config) async {
     if (false) {
