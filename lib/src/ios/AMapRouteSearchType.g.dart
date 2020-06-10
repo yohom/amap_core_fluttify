@@ -4,7 +4,7 @@
 //////////////////////////////////////////////////////////
 
 enum AMapRouteSearchType {
-  AMapRouteSearchTypeDriving,
-  AMapRouteSearchTypeTransit,
-  AMapRouteSearchTypeWalking
+  AMapRouteSearchTypeDriving /* 0 */,
+  AMapRouteSearchTypeTransit /* 1 */,
+  AMapRouteSearchTypeWalking /* 2 */
 }

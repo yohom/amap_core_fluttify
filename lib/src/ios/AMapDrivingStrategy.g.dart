@@ -4,13 +4,13 @@
 //////////////////////////////////////////////////////////
 
 enum AMapDrivingStrategy {
-  AMapDrivingStrategyFastest,
-  AMapDrivingStrategyMinFare,
-  AMapDrivingStrategyShortest,
-  AMapDrivingStrategyNoHighways,
-  AMapDrivingStrategyAvoidCongestion,
-  AMapDrivingStrategyAvoidHighwaysAndFare,
-  AMapDrivingStrategyAvoidHighwaysAndCongestion,
-  AMapDrivingStrategyAvoidFareAndCongestion,
-  AMapDrivingStrategyAvoidHighwaysAndFareAndCongestion
+  AMapDrivingStrategyFastest /* 0 */,
+  AMapDrivingStrategyMinFare /* 1 */,
+  AMapDrivingStrategyShortest /* 2 */,
+  AMapDrivingStrategyNoHighways /* 3 */,
+  AMapDrivingStrategyAvoidCongestion /* 4 */,
+  AMapDrivingStrategyAvoidHighwaysAndFare /* 5 */,
+  AMapDrivingStrategyAvoidHighwaysAndCongestion /* 6 */,
+  AMapDrivingStrategyAvoidFareAndCongestion /* 7 */,
+  AMapDrivingStrategyAvoidHighwaysAndFareAndCongestion /* 8 */
 }

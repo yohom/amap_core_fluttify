@@ -4,10 +4,10 @@
 //////////////////////////////////////////////////////////
 
 enum AMapTransitStrategy {
-  AMapTransitStrategyFastest,
-  AMapTransitStrategyMinFare,
-  AMapTransitStrategyMinTransfer,
-  AMapTransitStrategyMinWalk,
-  AMapTransitStrategyMostComfortable,
-  AMapTransitStrategyAvoidSubway
+  AMapTransitStrategyFastest /* 0 */,
+  AMapTransitStrategyMinFare /* 1 */,
+  AMapTransitStrategyMinTransfer /* 2 */,
+  AMapTransitStrategyMinWalk /* 3 */,
+  AMapTransitStrategyMostComfortable /* 4 */,
+  AMapTransitStrategyAvoidSubway /* 5 */
 }
