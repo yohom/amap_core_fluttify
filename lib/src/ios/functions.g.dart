@@ -16,11 +16,11 @@ import 'package:core_location_fluttify/core_location_fluttify.dart';
 Future<CLLocationCoordinate2D> AMapCoordinateConvert(CLLocationCoordinate2D coordinate, AMapCoordinateType type) async {
   // print log
   if (fluttifyLogEnabled) {
-    print('fluttify-dart: AMapCoordinateConvert::AMapCoordinateConvert([])');
+    debugPrint('fluttify-dart: AMapCoordinateConvert::AMapCoordinateConvert([])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('AMapCoordinateConvert::AMapCoordinateConvert', {"coordinate": coordinate.refId, "type": type.index - 1});
+  final __result__ = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('AMapCoordinateConvert::AMapCoordinateConvert', {"coordinate": coordinate.refId, "type": type.index});
   
 
   // handle native call
@@ -38,7 +38,7 @@ Future<CLLocationCoordinate2D> AMapCoordinateConvert(CLLocationCoordinate2D coor
 Future<bool> AMapDataAvailableForCoordinate(CLLocationCoordinate2D coordinate) async {
   // print log
   if (fluttifyLogEnabled) {
-    print('fluttify-dart: AMapDataAvailableForCoordinate::AMapDataAvailableForCoordinate([])');
+    debugPrint('fluttify-dart: AMapDataAvailableForCoordinate::AMapDataAvailableForCoordinate([])');
   }
 
   // invoke native method

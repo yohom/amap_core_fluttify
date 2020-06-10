@@ -55,7 +55,7 @@ class AMapURLSearch extends NSObject  {
   static Future<void> getLatestAMapApp() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapURLSearch::getLatestAMapApp([])');
+      debugPrint('fluttify-dart: AMapURLSearch::getLatestAMapApp([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class AMapURLSearch extends NSObject  {
   static Future<bool> openAMapNavigation(AMapNaviConfig config) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapURLSearch::openAMapNavigation([])');
+      debugPrint('fluttify-dart: AMapURLSearch::openAMapNavigation([])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class AMapURLSearch extends NSObject  {
   static Future<bool> openAMapRouteSearch(AMapRouteConfig config) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapURLSearch::openAMapRouteSearch([])');
+      debugPrint('fluttify-dart: AMapURLSearch::openAMapRouteSearch([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class AMapURLSearch extends NSObject  {
   static Future<bool> openAMapPOISearch(AMapPOIConfig config) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapURLSearch::openAMapPOISearch([])');
+      debugPrint('fluttify-dart: AMapURLSearch::openAMapPOISearch([])');
     }
   
     // invoke native method

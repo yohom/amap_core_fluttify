@@ -95,7 +95,7 @@ class AMapServices extends NSObject  {
   static Future<AMapServices> sharedServices() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapServices::sharedServices([])');
+      debugPrint('fluttify-dart: AMapServices::sharedServices([])');
     }
   
     // invoke native method
