@@ -6,7 +6,6 @@
 import 'dart:typed_data';
 
 import 'package:amap_core_fluttify/src/ios/ios.export.g.dart';
-import 'package:amap_core_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
@@ -110,7 +109,7 @@ class AMapServices extends NSObject  {
       return null;
     } else {
       final __return__ = AMapServices()..refId = __result__..tag__ = 'amap_core_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }

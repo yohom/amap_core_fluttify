@@ -7,63 +7,175 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
-import 'package:amap_core_fluttify/src/android/android.export.g.dart';
 import 'package:amap_core_fluttify/src/ios/ios.export.g.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
-extension TypeOpAmapCoreFluttifyIOS on Ref {
-  Future<bool> isAMapURLSearch() async {
-    final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfAMapURLSearch', {'refId': refId});
-    return result;
+extension TypeOpAmapCoreFluttifyIOS on Object {
+  // type check
+  Future<bool> is__<T>() async {
+    final typeName = T.toString();
+    if (RegExp('(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)').hasMatch(typeName)) {
+      return this is T;
+    }
+    else if (T == AMapURLSearch) {
+      final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfAMapURLSearch', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapNaviConfig) {
+      final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfAMapNaviConfig', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapRouteConfig) {
+      final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfAMapRouteConfig', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapPOIConfig) {
+      final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfAMapPOIConfig', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapServices) {
+      final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfAMapServices', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == CLLocation) {
+      final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfCLLocation', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == CLHeading) {
+      final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfCLHeading', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == CGRect) {
+      final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfCGRect', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == CGPoint) {
+      final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfCGPoint', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == CGSize) {
+      final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfCGSize', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == UIEdgeInsets) {
+      final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfUIEdgeInsets', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == CLLocationCoordinate2D) {
+      final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfCLLocationCoordinate2D', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == CLLocationManager) {
+      final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfCLLocationManager', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == NSError) {
+      final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfNSError', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == UIView) {
+      final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfUIView', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == UIViewController) {
+      final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfUIViewController', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == UIControl) {
+      final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfUIControl', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == UIImage) {
+      final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfUIImage', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == UIColor) {
+      final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfUIColor', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == NSData) {
+      final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfNSData', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == NSOperation) {
+      final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfNSOperation', {'refId': (this as Ref).refId});
+      return result;
+    }
   }
-  
-  Future<bool> isAMapNaviConfig() async {
-    final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfAMapNaviConfig', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapRouteConfig() async {
-    final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfAMapRouteConfig', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapPOIConfig() async {
-    final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfAMapPOIConfig', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapServices() async {
-    final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::isKindOfAMapServices', {'refId': refId});
-    return result;
-  }
-  
 
-  Future<AMapURLSearch> asAMapURLSearch() async {
-    final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::asAMapURLSearch', {'refId': refId});
-    return AMapURLSearch()..refId = result;
+  // type cast
+  T as__<T>() {
+    final typeName = T.toString();
+    // jsonable 直接造型 返回
+    if (RegExp('(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)').hasMatch(typeName)) {
+      return this as T;
+    }
+    // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+    else if (T == AMapURLSearch) {
+      return (AMapURLSearch()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
+    }
+    else if (T == AMapNaviConfig) {
+      return (AMapNaviConfig()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
+    }
+    else if (T == AMapRouteConfig) {
+      return (AMapRouteConfig()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
+    }
+    else if (T == AMapPOIConfig) {
+      return (AMapPOIConfig()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
+    }
+    else if (T == AMapServices) {
+      return (AMapServices()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
+    }
+    else if (T == CLLocation) {
+      return (CLLocation()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
+    }
+    else if (T == CLHeading) {
+      return (CLHeading()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
+    }
+    else if (T == CGRect) {
+      return (CGRect()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
+    }
+    else if (T == CGPoint) {
+      return (CGPoint()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
+    }
+    else if (T == CGSize) {
+      return (CGSize()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
+    }
+    else if (T == UIEdgeInsets) {
+      return (UIEdgeInsets()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
+    }
+    else if (T == CLLocationCoordinate2D) {
+      return (CLLocationCoordinate2D()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
+    }
+    else if (T == CLLocationManager) {
+      return (CLLocationManager()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
+    }
+    else if (T == NSError) {
+      return (NSError()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
+    }
+    else if (T == UIView) {
+      return (UIView()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
+    }
+    else if (T == UIViewController) {
+      return (UIViewController()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
+    }
+    else if (T == UIControl) {
+      return (UIControl()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
+    }
+    else if (T == UIImage) {
+      return (UIImage()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
+    }
+    else if (T == UIColor) {
+      return (UIColor()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
+    }
+    else if (T == NSData) {
+      return (NSData()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
+    }
+    else if (T == NSOperation) {
+      return (NSOperation()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
+    }
   }
-  
-  Future<AMapNaviConfig> asAMapNaviConfig() async {
-    final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::asAMapNaviConfig', {'refId': refId});
-    return AMapNaviConfig()..refId = result;
-  }
-  
-  Future<AMapRouteConfig> asAMapRouteConfig() async {
-    final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::asAMapRouteConfig', {'refId': refId});
-    return AMapRouteConfig()..refId = result;
-  }
-  
-  Future<AMapPOIConfig> asAMapPOIConfig() async {
-    final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::asAMapPOIConfig', {'refId': refId});
-    return AMapPOIConfig()..refId = result;
-  }
-  
-  Future<AMapServices> asAMapServices() async {
-    final result = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('RefClass::asAMapServices', {'refId': refId});
-    return AMapServices()..refId = result;
-  }
-  
 }
