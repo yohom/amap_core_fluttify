@@ -129,104 +129,80 @@ extension TypeOpAmapCoreFluttifyAndroid on Object {
     if (RegExp('(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)').hasMatch(typeName)) {
       return this as T;
     }
+    // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
     else if (T == android_content_Context) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_content_Context()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == android_content_Intent) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_content_Intent()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == android_content_ContentProvider) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_content_ContentProvider()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == android_app_Application) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_app_Application()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == android_app_Notification) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_app_Notification()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == android_app_Activity) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_app_Activity()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == android_app_PendingIntent) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_app_PendingIntent()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == android_os_Bundle) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_os_Bundle()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == android_os_Binder) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_os_Binder()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == android_view_View) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_view_View()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == android_view_SurfaceView) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_view_SurfaceView()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == android_view_ViewGroup) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_view_ViewGroup()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == android_graphics_Point) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_graphics_Point()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == android_graphics_PointF) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_graphics_PointF()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == android_graphics_Bitmap) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_graphics_Bitmap()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == android_widget_ImageView) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_widget_ImageView()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == java_io_File) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (java_io_File()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == android_location_Location) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_location_Location()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == android_view_MotionEvent) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_view_MotionEvent()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == android_graphics_drawable_Drawable) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_graphics_drawable_Drawable()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == android_widget_FrameLayout) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_widget_FrameLayout()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == android_widget_TextView) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_widget_TextView()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == android_widget_LinearLayout) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_widget_LinearLayout()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == android_widget_RelativeLayout) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_widget_RelativeLayout()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == android_util_Pair) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_util_Pair()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
   }

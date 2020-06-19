@@ -113,88 +113,68 @@ extension TypeOpAmapCoreFluttifyIOS on Object {
     if (RegExp('(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)').hasMatch(typeName)) {
       return this as T;
     }
+    // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
     else if (T == AMapURLSearch) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (AMapURLSearch()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == AMapNaviConfig) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (AMapNaviConfig()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == AMapRouteConfig) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (AMapRouteConfig()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == AMapPOIConfig) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (AMapPOIConfig()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == AMapServices) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (AMapServices()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == CLLocation) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (CLLocation()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == CLHeading) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (CLHeading()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == CGRect) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (CGRect()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == CGPoint) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (CGPoint()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == CGSize) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (CGSize()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == UIEdgeInsets) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (UIEdgeInsets()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == CLLocationCoordinate2D) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (CLLocationCoordinate2D()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == CLLocationManager) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (CLLocationManager()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == NSError) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (NSError()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == UIView) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (UIView()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == UIViewController) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (UIViewController()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == UIControl) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (UIControl()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == UIImage) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (UIImage()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == UIColor) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (UIColor()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == NSData) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (NSData()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
     else if (T == NSOperation) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (NSOperation()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_core_fluttify') as T;
     }
   }

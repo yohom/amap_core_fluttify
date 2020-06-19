@@ -82,7 +82,7 @@ class AMapURLSearch extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('AMapURLSearch::openAMapNavigation', {"config": config.refId});
+    final __result__ = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('AMapURLSearch::openAMapNavigation', {"config": config?.refId});
   
   
     // handle native call
@@ -106,7 +106,7 @@ class AMapURLSearch extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('AMapURLSearch::openAMapRouteSearch', {"config": config.refId});
+    final __result__ = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('AMapURLSearch::openAMapRouteSearch', {"config": config?.refId});
   
   
     // handle native call
@@ -130,7 +130,7 @@ class AMapURLSearch extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('AMapURLSearch::openAMapPOISearch', {"config": config.refId});
+    final __result__ = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('AMapURLSearch::openAMapPOISearch', {"config": config?.refId});
   
   
     // handle native call

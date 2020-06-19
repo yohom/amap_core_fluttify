@@ -25,6 +25,7 @@ import io.flutter.plugin.common.PluginRegistry.Registrar;
 import io.flutter.plugin.platform.PlatformViewRegistry;
 
 import me.yohom.amap_core_fluttify.sub_handler.*;
+import me.yohom.amap_core_fluttify.sub_handler.custom.SubHandlerCustom;
 
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
@@ -48,7 +49,7 @@ public class AmapCoreFluttifyPlugin implements FlutterPlugin, MethodChannel.Meth
         plugin.platformViewRegistry = platformViewRegistry;
 
         handlerMapList = new ArrayList<>();
-        
+        handlerMapList.add(SubHandler0.getSubHandler(messenger));
         handlerMapList.add(SubHandlerCustom.getSubHandler(messenger));
 
         channel.setMethodCallHandler(plugin);
@@ -73,7 +74,7 @@ public class AmapCoreFluttifyPlugin implements FlutterPlugin, MethodChannel.Meth
         platformViewRegistry = binding.getPlatformViewRegistry();
 
         handlerMapList = new ArrayList<>();
-        
+        handlerMapList.add(SubHandler0.getSubHandler(messenger));
         handlerMapList.add(SubHandlerCustom.getSubHandler(messenger));
 
         channel.setMethodCallHandler(this);
