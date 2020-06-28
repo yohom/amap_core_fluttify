@@ -6,10 +6,35 @@
 enum AMapCoordinateType {
   AMapCoordinateTypeAMap /* -1 */,
   AMapCoordinateTypeBaidu /* 0 */,
-  AMapCoordinateTypeMapBar /* 0 */,
-  AMapCoordinateTypeMapABC /* 0 */,
-  AMapCoordinateTypeSoSoMap /* 0 */,
-  AMapCoordinateTypeAliYun /* 0 */,
-  AMapCoordinateTypeGoogle /* 0 */,
-  AMapCoordinateTypeGPS /* 0 */
+  AMapCoordinateTypeMapBar /* null */,
+  AMapCoordinateTypeMapABC /* null */,
+  AMapCoordinateTypeSoSoMap /* null */,
+  AMapCoordinateTypeAliYun /* null */,
+  AMapCoordinateTypeGoogle /* null */,
+  AMapCoordinateTypeGPS /* null */
+}
+
+extension AMapCoordinateTypeToX on AMapCoordinateType {
+  int toValue() {
+    switch (this) {
+      case AMapCoordinateType.AMapCoordinateTypeAMap: return -1;
+      case AMapCoordinateType.AMapCoordinateTypeBaidu: return 0;
+      case AMapCoordinateType.AMapCoordinateTypeMapBar: return AMapCoordinateType.AMapCoordinateTypeMapBar.index + -1;
+      case AMapCoordinateType.AMapCoordinateTypeMapABC: return AMapCoordinateType.AMapCoordinateTypeMapABC.index + -1;
+      case AMapCoordinateType.AMapCoordinateTypeSoSoMap: return AMapCoordinateType.AMapCoordinateTypeSoSoMap.index + -1;
+      case AMapCoordinateType.AMapCoordinateTypeAliYun: return AMapCoordinateType.AMapCoordinateTypeAliYun.index + -1;
+      case AMapCoordinateType.AMapCoordinateTypeGoogle: return AMapCoordinateType.AMapCoordinateTypeGoogle.index + -1;
+      case AMapCoordinateType.AMapCoordinateTypeGPS: return AMapCoordinateType.AMapCoordinateTypeGPS.index + -1;
+    }
+  }
+}
+
+extension AMapCoordinateTypeFromX on int {
+  AMapCoordinateType toAMapCoordinateType() {
+    switch (this) {
+      case -1: return AMapCoordinateType.AMapCoordinateTypeAMap;
+      case 0: return AMapCoordinateType.AMapCoordinateTypeBaidu;
+      default: return AMapCoordinateType.values[this + -1];
+    }
+  }
 }

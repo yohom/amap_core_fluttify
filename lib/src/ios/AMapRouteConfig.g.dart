@@ -69,19 +69,19 @@ class AMapRouteConfig extends NSObject  {
   Future<AMapDrivingStrategy> get_drivingStrategy() async {
     final __result__ = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapRouteConfig::get_drivingStrategy", {'refId': refId});
   
-    return AMapDrivingStrategy.values[__result__];
+    return (__result__ as int).toAMapDrivingStrategy();
   }
   
   Future<AMapTransitStrategy> get_transitStrategy() async {
     final __result__ = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapRouteConfig::get_transitStrategy", {'refId': refId});
   
-    return AMapTransitStrategy.values[__result__];
+    return (__result__ as int).toAMapTransitStrategy();
   }
   
   Future<AMapRouteSearchType> get_routeType() async {
     final __result__ = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapRouteConfig::get_routeType", {'refId': refId});
   
-    return AMapRouteSearchType.values[__result__];
+    return (__result__ as int).toAMapRouteSearchType();
   }
   
   //endregion
@@ -168,21 +168,21 @@ extension AMapRouteConfig_Batch on List<AMapRouteConfig> {
   
   Future<List<AMapDrivingStrategy>> get_drivingStrategy_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapRouteConfig::get_drivingStrategy_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => AMapDrivingStrategy.values[__result__]).toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as int).toAMapDrivingStrategy()).toList();
   
     return typedResult;
   }
   
   Future<List<AMapTransitStrategy>> get_transitStrategy_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapRouteConfig::get_transitStrategy_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => AMapTransitStrategy.values[__result__]).toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as int).toAMapTransitStrategy()).toList();
   
     return typedResult;
   }
   
   Future<List<AMapRouteSearchType>> get_routeType_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod("AMapRouteConfig::get_routeType_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => AMapRouteSearchType.values[__result__]).toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as int).toAMapRouteSearchType()).toList();
   
     return typedResult;
   }

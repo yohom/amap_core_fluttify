@@ -14,3 +14,36 @@ enum AMapDrivingStrategy {
   AMapDrivingStrategyAvoidFareAndCongestion /* 7 */,
   AMapDrivingStrategyAvoidHighwaysAndFareAndCongestion /* 8 */
 }
+
+extension AMapDrivingStrategyToX on AMapDrivingStrategy {
+  int toValue() {
+    switch (this) {
+      case AMapDrivingStrategy.AMapDrivingStrategyFastest: return 0;
+      case AMapDrivingStrategy.AMapDrivingStrategyMinFare: return 1;
+      case AMapDrivingStrategy.AMapDrivingStrategyShortest: return 2;
+      case AMapDrivingStrategy.AMapDrivingStrategyNoHighways: return 3;
+      case AMapDrivingStrategy.AMapDrivingStrategyAvoidCongestion: return 4;
+      case AMapDrivingStrategy.AMapDrivingStrategyAvoidHighwaysAndFare: return 5;
+      case AMapDrivingStrategy.AMapDrivingStrategyAvoidHighwaysAndCongestion: return 6;
+      case AMapDrivingStrategy.AMapDrivingStrategyAvoidFareAndCongestion: return 7;
+      case AMapDrivingStrategy.AMapDrivingStrategyAvoidHighwaysAndFareAndCongestion: return 8;
+    }
+  }
+}
+
+extension AMapDrivingStrategyFromX on int {
+  AMapDrivingStrategy toAMapDrivingStrategy() {
+    switch (this) {
+      case 0: return AMapDrivingStrategy.AMapDrivingStrategyFastest;
+      case 1: return AMapDrivingStrategy.AMapDrivingStrategyMinFare;
+      case 2: return AMapDrivingStrategy.AMapDrivingStrategyShortest;
+      case 3: return AMapDrivingStrategy.AMapDrivingStrategyNoHighways;
+      case 4: return AMapDrivingStrategy.AMapDrivingStrategyAvoidCongestion;
+      case 5: return AMapDrivingStrategy.AMapDrivingStrategyAvoidHighwaysAndFare;
+      case 6: return AMapDrivingStrategy.AMapDrivingStrategyAvoidHighwaysAndCongestion;
+      case 7: return AMapDrivingStrategy.AMapDrivingStrategyAvoidFareAndCongestion;
+      case 8: return AMapDrivingStrategy.AMapDrivingStrategyAvoidHighwaysAndFareAndCongestion;
+      default: return AMapDrivingStrategy.values[this + 0];
+    }
+  }
+}
