@@ -38,7 +38,7 @@ extern BOOL enableLog;
         @"AMapURLSearch::openAMapNavigation": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapNaviConfig* config = (AMapNaviConfig*) HEAP[@([args[@"config"] integerValue])];
+            AMapNaviConfig* config = (AMapNaviConfig*) HEAP[args[@"config"]];
         
             // ref
         
@@ -60,7 +60,7 @@ extern BOOL enableLog;
         @"AMapURLSearch::openAMapRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapRouteConfig* config = (AMapRouteConfig*) HEAP[@([args[@"config"] integerValue])];
+            AMapRouteConfig* config = (AMapRouteConfig*) HEAP[args[@"config"]];
         
             // ref
         
@@ -82,7 +82,7 @@ extern BOOL enableLog;
         @"AMapURLSearch::openAMapPOISearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapPOIConfig* config = (AMapPOIConfig*) HEAP[@([args[@"config"] integerValue])];
+            AMapPOIConfig* config = (AMapPOIConfig*) HEAP[args[@"config"]];
         
             // ref
         
@@ -118,8 +118,8 @@ extern BOOL enableLog;
         
             // result
             // return a ref
-            HEAP[@((result).hash)] = result;
-            NSNumber* jsonableResult = @((result).hash);
+            HEAP[[NSNumber numberWithLong: (result).hash]] = result;
+            NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
         
             methodResult(jsonableResult);
         },
@@ -155,7 +155,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapNaviConfig* config = (AMapNaviConfig*) HEAP[@([args[@"config"] integerValue])];
+                AMapNaviConfig* config = (AMapNaviConfig*) HEAP[args[@"config"]];
         
                 // ref
         
@@ -180,7 +180,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapRouteConfig* config = (AMapRouteConfig*) HEAP[@([args[@"config"] integerValue])];
+                AMapRouteConfig* config = (AMapRouteConfig*) HEAP[args[@"config"]];
         
                 // ref
         
@@ -205,7 +205,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapPOIConfig* config = (AMapPOIConfig*) HEAP[@([args[@"config"] integerValue])];
+                AMapPOIConfig* config = (AMapPOIConfig*) HEAP[args[@"config"]];
         
                 // ref
         
@@ -239,8 +239,8 @@ extern BOOL enableLog;
         
                 // result
                 // return a ref
-                HEAP[@((result).hash)] = result;
-                NSNumber* jsonableResult = @((result).hash);
+                HEAP[[NSNumber numberWithLong: (result).hash]] = result;
+                NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
         
                 [resultList addObject:jsonableResult];
             }
@@ -297,8 +297,8 @@ extern BOOL enableLog;
         
             // 返回值: 结构体
             NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
-            HEAP[@(resultValue.hash)] = resultValue;
-            NSNumber* jsonableResult = @(resultValue.hash);
+            HEAP[[NSNumber numberWithLong: resultValue.hash]] = resultValue;
+            NSNumber* jsonableResult = [NSNumber numberWithLong: resultValue.hash];
         
             methodResult(jsonableResult);
         },
@@ -371,8 +371,8 @@ extern BOOL enableLog;
         
             // 返回值: 结构体
             NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
-            HEAP[@(resultValue.hash)] = resultValue;
-            NSNumber* jsonableResult = @(resultValue.hash);
+            HEAP[[NSNumber numberWithLong: resultValue.hash]] = resultValue;
+            NSNumber* jsonableResult = [NSNumber numberWithLong: resultValue.hash];
         
             methodResult(jsonableResult);
         },
@@ -391,8 +391,8 @@ extern BOOL enableLog;
         
             // 返回值: 结构体
             NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
-            HEAP[@(resultValue.hash)] = resultValue;
-            NSNumber* jsonableResult = @(resultValue.hash);
+            HEAP[[NSNumber numberWithLong: resultValue.hash]] = resultValue;
+            NSNumber* jsonableResult = [NSNumber numberWithLong: resultValue.hash];
         
             methodResult(jsonableResult);
         },
@@ -519,8 +519,8 @@ extern BOOL enableLog;
         
             // 返回值: 结构体
             NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
-            HEAP[@(resultValue.hash)] = resultValue;
-            NSNumber* jsonableResult = @(resultValue.hash);
+            HEAP[[NSNumber numberWithLong: resultValue.hash]] = resultValue;
+            NSNumber* jsonableResult = [NSNumber numberWithLong: resultValue.hash];
         
             methodResult(jsonableResult);
         },
@@ -539,8 +539,8 @@ extern BOOL enableLog;
         
             // 返回值: 结构体
             NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
-            HEAP[@(resultValue.hash)] = resultValue;
-            NSNumber* jsonableResult = @(resultValue.hash);
+            HEAP[[NSNumber numberWithLong: resultValue.hash]] = resultValue;
+            NSNumber* jsonableResult = [NSNumber numberWithLong: resultValue.hash];
         
             methodResult(jsonableResult);
         },
@@ -670,8 +670,8 @@ extern BOOL enableLog;
         
                 // 返回值: 结构体
                 NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
-                HEAP[@(resultValue.hash)] = resultValue;
-                NSNumber* jsonableResult = @(resultValue.hash);
+                HEAP[[NSNumber numberWithLong: resultValue.hash]] = resultValue;
+                NSNumber* jsonableResult = [NSNumber numberWithLong: resultValue.hash];
         
                 [resultList addObject:jsonableResult];
             }
@@ -752,8 +752,8 @@ extern BOOL enableLog;
         
                 // 返回值: 结构体
                 NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
-                HEAP[@(resultValue.hash)] = resultValue;
-                NSNumber* jsonableResult = @(resultValue.hash);
+                HEAP[[NSNumber numberWithLong: resultValue.hash]] = resultValue;
+                NSNumber* jsonableResult = [NSNumber numberWithLong: resultValue.hash];
         
                 [resultList addObject:jsonableResult];
             }
@@ -774,8 +774,8 @@ extern BOOL enableLog;
         
                 // 返回值: 结构体
                 NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
-                HEAP[@(resultValue.hash)] = resultValue;
-                NSNumber* jsonableResult = @(resultValue.hash);
+                HEAP[[NSNumber numberWithLong: resultValue.hash]] = resultValue;
+                NSNumber* jsonableResult = [NSNumber numberWithLong: resultValue.hash];
         
                 [resultList addObject:jsonableResult];
             }
@@ -916,8 +916,8 @@ extern BOOL enableLog;
         
                 // 返回值: 结构体
                 NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
-                HEAP[@(resultValue.hash)] = resultValue;
-                NSNumber* jsonableResult = @(resultValue.hash);
+                HEAP[[NSNumber numberWithLong: resultValue.hash]] = resultValue;
+                NSNumber* jsonableResult = [NSNumber numberWithLong: resultValue.hash];
         
                 [resultList addObject:jsonableResult];
             }
@@ -938,8 +938,8 @@ extern BOOL enableLog;
         
                 // 返回值: 结构体
                 NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
-                HEAP[@(resultValue.hash)] = resultValue;
-                NSNumber* jsonableResult = @(resultValue.hash);
+                HEAP[[NSNumber numberWithLong: resultValue.hash]] = resultValue;
+                NSNumber* jsonableResult = [NSNumber numberWithLong: resultValue.hash];
         
                 [resultList addObject:jsonableResult];
             }
@@ -1069,7 +1069,7 @@ extern BOOL enableLog;
         
             // args
             // struct arg
-            NSValue* destinationValue = (NSValue*) HEAP[@([args[@"destination"] integerValue])];
+            NSValue* destinationValue = (NSValue*) HEAP[args[@"destination"]];
             CLLocationCoordinate2D destination;
             [destinationValue getValue:&destination];
         
@@ -1139,7 +1139,7 @@ extern BOOL enableLog;
         
             // args
             // struct arg
-            NSValue* startCoordinateValue = (NSValue*) HEAP[@([args[@"startCoordinate"] integerValue])];
+            NSValue* startCoordinateValue = (NSValue*) HEAP[args[@"startCoordinate"]];
             CLLocationCoordinate2D startCoordinate;
             [startCoordinateValue getValue:&startCoordinate];
         
@@ -1158,7 +1158,7 @@ extern BOOL enableLog;
         
             // args
             // struct arg
-            NSValue* destinationCoordinateValue = (NSValue*) HEAP[@([args[@"destinationCoordinate"] integerValue])];
+            NSValue* destinationCoordinateValue = (NSValue*) HEAP[args[@"destinationCoordinate"]];
             CLLocationCoordinate2D destinationCoordinate;
             [destinationCoordinateValue getValue:&destinationCoordinate];
         
@@ -1279,7 +1279,7 @@ extern BOOL enableLog;
         
             // args
             // struct arg
-            NSValue* leftTopCoordinateValue = (NSValue*) HEAP[@([args[@"leftTopCoordinate"] integerValue])];
+            NSValue* leftTopCoordinateValue = (NSValue*) HEAP[args[@"leftTopCoordinate"]];
             CLLocationCoordinate2D leftTopCoordinate;
             [leftTopCoordinateValue getValue:&leftTopCoordinate];
         
@@ -1298,7 +1298,7 @@ extern BOOL enableLog;
         
             // args
             // struct arg
-            NSValue* rightBottomCoordinateValue = (NSValue*) HEAP[@([args[@"rightBottomCoordinate"] integerValue])];
+            NSValue* rightBottomCoordinateValue = (NSValue*) HEAP[args[@"rightBottomCoordinate"]];
             CLLocationCoordinate2D rightBottomCoordinate;
             [rightBottomCoordinateValue getValue:&rightBottomCoordinate];
         
@@ -1402,7 +1402,7 @@ extern BOOL enableLog;
         
                 // args
                 // struct arg
-                NSValue* destinationValue = (NSValue*) HEAP[@([args[@"destination"] integerValue])];
+                NSValue* destinationValue = (NSValue*) HEAP[args[@"destination"]];
                 CLLocationCoordinate2D destination;
                 [destinationValue getValue:&destination];
         
@@ -1476,7 +1476,7 @@ extern BOOL enableLog;
         
                 // args
                 // struct arg
-                NSValue* startCoordinateValue = (NSValue*) HEAP[@([args[@"startCoordinate"] integerValue])];
+                NSValue* startCoordinateValue = (NSValue*) HEAP[args[@"startCoordinate"]];
                 CLLocationCoordinate2D startCoordinate;
                 [startCoordinateValue getValue:&startCoordinate];
         
@@ -1496,7 +1496,7 @@ extern BOOL enableLog;
         
                 // args
                 // struct arg
-                NSValue* destinationCoordinateValue = (NSValue*) HEAP[@([args[@"destinationCoordinate"] integerValue])];
+                NSValue* destinationCoordinateValue = (NSValue*) HEAP[args[@"destinationCoordinate"]];
                 CLLocationCoordinate2D destinationCoordinate;
                 [destinationCoordinateValue getValue:&destinationCoordinate];
         
@@ -1624,7 +1624,7 @@ extern BOOL enableLog;
         
                 // args
                 // struct arg
-                NSValue* leftTopCoordinateValue = (NSValue*) HEAP[@([args[@"leftTopCoordinate"] integerValue])];
+                NSValue* leftTopCoordinateValue = (NSValue*) HEAP[args[@"leftTopCoordinate"]];
                 CLLocationCoordinate2D leftTopCoordinate;
                 [leftTopCoordinateValue getValue:&leftTopCoordinate];
         
@@ -1644,7 +1644,7 @@ extern BOOL enableLog;
         
                 // args
                 // struct arg
-                NSValue* rightBottomCoordinateValue = (NSValue*) HEAP[@([args[@"rightBottomCoordinate"] integerValue])];
+                NSValue* rightBottomCoordinateValue = (NSValue*) HEAP[args[@"rightBottomCoordinate"]];
                 CLLocationCoordinate2D rightBottomCoordinate;
                 [rightBottomCoordinateValue getValue:&rightBottomCoordinate];
         
@@ -1757,71 +1757,6 @@ extern BOOL enableLog;
             methodResult(@(isTargetType));
         },
         
-        @"RefClass::asAMapURLSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            // 转型
-            ref = (AMapURLSearch *) ref;
-            // 放回HEAP
-            HEAP[refId] = ref;
-        
-            methodResult(refId);
-        },
-        
-        @"RefClass::asAMapNaviConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            // 转型
-            ref = (AMapNaviConfig *) ref;
-            // 放回HEAP
-            HEAP[refId] = ref;
-        
-            methodResult(refId);
-        },
-        
-        @"RefClass::asAMapRouteConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            // 转型
-            ref = (AMapRouteConfig *) ref;
-            // 放回HEAP
-            HEAP[refId] = ref;
-        
-            methodResult(refId);
-        },
-        
-        @"RefClass::asAMapPOIConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            // 转型
-            ref = (AMapPOIConfig *) ref;
-            // 放回HEAP
-            HEAP[refId] = ref;
-        
-            methodResult(refId);
-        },
-        
-        @"RefClass::asAMapServices": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            // 转型
-            ref = (AMapServices *) ref;
-            // 放回HEAP
-            HEAP[refId] = ref;
-        
-            methodResult(refId);
-        },
-        
         @"ObjectFactory::createAMapURLSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // print log
             if (enableLog) {
@@ -1829,9 +1764,9 @@ extern BOOL enableLog;
             }
         
             AMapURLSearch* ref = [[AMapURLSearch alloc] init];
-            HEAP[@(ref.hash)] = ref;
+            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult(@(ref.hash));
+            methodResult([NSNumber numberWithLong: ref.hash]);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1843,9 +1778,9 @@ extern BOOL enableLog;
             }
         
             AMapNaviConfig* ref = [[AMapNaviConfig alloc] init];
-            HEAP[@(ref.hash)] = ref;
+            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult(@(ref.hash));
+            methodResult([NSNumber numberWithLong: ref.hash]);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1857,9 +1792,9 @@ extern BOOL enableLog;
             }
         
             AMapRouteConfig* ref = [[AMapRouteConfig alloc] init];
-            HEAP[@(ref.hash)] = ref;
+            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult(@(ref.hash));
+            methodResult([NSNumber numberWithLong: ref.hash]);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1871,9 +1806,9 @@ extern BOOL enableLog;
             }
         
             AMapPOIConfig* ref = [[AMapPOIConfig alloc] init];
-            HEAP[@(ref.hash)] = ref;
+            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult(@(ref.hash));
+            methodResult([NSNumber numberWithLong: ref.hash]);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1885,9 +1820,9 @@ extern BOOL enableLog;
             }
         
             AMapServices* ref = [[AMapServices alloc] init];
-            HEAP[@(ref.hash)] = ref;
+            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult(@(ref.hash));
+            methodResult([NSNumber numberWithLong: ref.hash]);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1897,9 +1832,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapURLSearch* ref = [[AMapURLSearch alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1912,9 +1847,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapNaviConfig* ref = [[AMapNaviConfig alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1927,9 +1862,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRouteConfig* ref = [[AMapRouteConfig alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1942,9 +1877,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapPOIConfig* ref = [[AMapPOIConfig alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1957,9 +1892,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapServices* ref = [[AMapServices alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1970,7 +1905,7 @@ extern BOOL enableLog;
         @"AMapCoordinateConvert::AMapCoordinateConvert": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // struct arg
-            NSValue* coordinateValue = (NSValue*) HEAP[@([args[@"coordinate"] integerValue])];
+            NSValue* coordinateValue = (NSValue*) HEAP[args[@"coordinate"]];
             CLLocationCoordinate2D coordinate;
             [coordinateValue getValue:&coordinate];
             // enum arg
@@ -1990,15 +1925,15 @@ extern BOOL enableLog;
             // result
             // 返回值: 结构体
             NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
-            HEAP[@(resultValue.hash)] = resultValue;
-            NSNumber* jsonableResult = @(resultValue.hash);
+            HEAP[[NSNumber numberWithLong: resultValue.hash]] = resultValue;
+            NSNumber* jsonableResult = [NSNumber numberWithLong: resultValue.hash];
         
             methodResult(jsonableResult);
         },
         @"AMapDataAvailableForCoordinate::AMapDataAvailableForCoordinate": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // struct arg
-            NSValue* coordinateValue = (NSValue*) HEAP[@([args[@"coordinate"] integerValue])];
+            NSValue* coordinateValue = (NSValue*) HEAP[args[@"coordinate"]];
             CLLocationCoordinate2D coordinate;
             [coordinateValue getValue:&coordinate];
         

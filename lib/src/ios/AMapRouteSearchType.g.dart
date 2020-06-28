@@ -8,3 +8,24 @@ enum AMapRouteSearchType {
   AMapRouteSearchTypeTransit /* 1 */,
   AMapRouteSearchTypeWalking /* 2 */
 }
+
+extension AMapRouteSearchTypeToX on AMapRouteSearchType {
+  int toValue() {
+    switch (this) {
+      case AMapRouteSearchType.AMapRouteSearchTypeDriving: return 0;
+      case AMapRouteSearchType.AMapRouteSearchTypeTransit: return 1;
+      case AMapRouteSearchType.AMapRouteSearchTypeWalking: return 2;
+    }
+  }
+}
+
+extension AMapRouteSearchTypeFromX on int {
+  AMapRouteSearchType toAMapRouteSearchType() {
+    switch (this) {
+      case 0: return AMapRouteSearchType.AMapRouteSearchTypeDriving;
+      case 1: return AMapRouteSearchType.AMapRouteSearchTypeTransit;
+      case 2: return AMapRouteSearchType.AMapRouteSearchTypeWalking;
+      default: return AMapRouteSearchType.values[this + 0];
+    }
+  }
+}
