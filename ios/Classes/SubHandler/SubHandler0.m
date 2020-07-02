@@ -13,6 +13,7 @@ extern BOOL enableLog;
 
 @implementation AmapCoreFluttifyPlugin (SubHandler0)
 - (NSDictionary<NSString*, Handler>*) getSubHandler0 {
+    __weak __typeof(self)weakSelf = self;
     return @{
         @"AMapURLSearch::getLatestAMapApp": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
