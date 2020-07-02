@@ -50,7 +50,7 @@ public class AmapCoreFluttifyPlugin implements FlutterPlugin, MethodChannel.Meth
 
         handlerMapList = new ArrayList<>();
         
-        handlerMapList.add(SubHandlerCustom.getSubHandler(messenger));
+        handlerMapList.add(SubHandlerCustom.getSubHandler(messenger, registrar.activity()));
 
         channel.setMethodCallHandler(plugin);
 
@@ -75,7 +75,6 @@ public class AmapCoreFluttifyPlugin implements FlutterPlugin, MethodChannel.Meth
 
         handlerMapList = new ArrayList<>();
         
-        handlerMapList.add(SubHandlerCustom.getSubHandler(messenger));
 
         channel.setMethodCallHandler(this);
     }
@@ -93,6 +92,8 @@ public class AmapCoreFluttifyPlugin implements FlutterPlugin, MethodChannel.Meth
             Log.d("fluttify-java", "AmapCoreFluttifyPlugin::onAttachedToActivity@" + binding);
         }
         Activity activity = binding.getActivity();
+
+        handlerMapList.add(SubHandlerCustom.getSubHandler(messenger, activity));
 
         // register platform view
         
