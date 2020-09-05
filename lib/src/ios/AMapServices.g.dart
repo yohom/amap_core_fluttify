@@ -63,19 +63,19 @@ class AMapServices extends NSObject  {
 
   //region setters
   Future<void> set_apiKey(String apiKey) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapServices::set_apiKey', {'refId': refId, "apiKey": apiKey});
+    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapServices::set_apiKey', {'__this__': this, "apiKey": apiKey});
   
   
   }
   
   Future<void> set_enableHTTPS(bool enableHTTPS) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapServices::set_enableHTTPS', {'refId': refId, "enableHTTPS": enableHTTPS});
+    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapServices::set_enableHTTPS', {'__this__': this, "enableHTTPS": enableHTTPS});
   
   
   }
   
   Future<void> set_crashReportEnabled(bool crashReportEnabled) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapServices::set_crashReportEnabled', {'refId': refId, "crashReportEnabled": crashReportEnabled});
+    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapServices::set_crashReportEnabled', {'__this__': this, "crashReportEnabled": crashReportEnabled});
   
   
   }
@@ -139,19 +139,19 @@ extension AMapServices_Batch on List<AMapServices> {
 
   //region setters
   Future<void> set_apiKey_batch(List<String> apiKey) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapServices::set_apiKey_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "apiKey": apiKey[__i__]}]);
+    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapServices::set_apiKey_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "apiKey": apiKey[__i__]}]);
   
   
   }
   
   Future<void> set_enableHTTPS_batch(List<bool> enableHTTPS) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapServices::set_enableHTTPS_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "enableHTTPS": enableHTTPS[__i__]}]);
+    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapServices::set_enableHTTPS_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "enableHTTPS": enableHTTPS[__i__]}]);
   
   
   }
   
   Future<void> set_crashReportEnabled_batch(List<bool> crashReportEnabled) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapServices::set_crashReportEnabled_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "crashReportEnabled": crashReportEnabled[__i__]}]);
+    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapServices::set_crashReportEnabled_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "crashReportEnabled": crashReportEnabled[__i__]}]);
   
   
   }

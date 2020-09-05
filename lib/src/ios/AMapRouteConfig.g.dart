@@ -78,43 +78,43 @@ class AMapRouteConfig extends NSObject  {
 
   //region setters
   Future<void> set_appScheme(String appScheme) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteConfig::set_appScheme', {'refId': refId, "appScheme": appScheme});
+    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteConfig::set_appScheme', {'__this__': this, "appScheme": appScheme});
   
   
   }
   
   Future<void> set_appName(String appName) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteConfig::set_appName', {'refId': refId, "appName": appName});
+    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteConfig::set_appName', {'__this__': this, "appName": appName});
   
   
   }
   
   Future<void> set_startCoordinate(CLLocationCoordinate2D startCoordinate) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteConfig::set_startCoordinate', {'refId': refId, "startCoordinate": startCoordinate.refId});
+    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteConfig::set_startCoordinate', {'__this__': this, "startCoordinate": startCoordinate.refId});
   
   
   }
   
   Future<void> set_destinationCoordinate(CLLocationCoordinate2D destinationCoordinate) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteConfig::set_destinationCoordinate', {'refId': refId, "destinationCoordinate": destinationCoordinate.refId});
+    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteConfig::set_destinationCoordinate', {'__this__': this, "destinationCoordinate": destinationCoordinate.refId});
   
   
   }
   
   Future<void> set_drivingStrategy(AMapDrivingStrategy drivingStrategy) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteConfig::set_drivingStrategy', {'refId': refId, "drivingStrategy": drivingStrategy.toValue()});
+    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteConfig::set_drivingStrategy', {'__this__': this, "drivingStrategy": drivingStrategy.toValue()});
   
   
   }
   
   Future<void> set_transitStrategy(AMapTransitStrategy transitStrategy) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteConfig::set_transitStrategy', {'refId': refId, "transitStrategy": transitStrategy.toValue()});
+    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteConfig::set_transitStrategy', {'__this__': this, "transitStrategy": transitStrategy.toValue()});
   
   
   }
   
   Future<void> set_routeType(AMapRouteSearchType routeType) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteConfig::set_routeType', {'refId': refId, "routeType": routeType.toValue()});
+    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteConfig::set_routeType', {'__this__': this, "routeType": routeType.toValue()});
   
   
   }
@@ -174,43 +174,43 @@ extension AMapRouteConfig_Batch on List<AMapRouteConfig> {
 
   //region setters
   Future<void> set_appScheme_batch(List<String> appScheme) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteConfig::set_appScheme_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "appScheme": appScheme[__i__]}]);
+    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteConfig::set_appScheme_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "appScheme": appScheme[__i__]}]);
   
   
   }
   
   Future<void> set_appName_batch(List<String> appName) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteConfig::set_appName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "appName": appName[__i__]}]);
+    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteConfig::set_appName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "appName": appName[__i__]}]);
   
   
   }
   
   Future<void> set_startCoordinate_batch(List<CLLocationCoordinate2D> startCoordinate) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteConfig::set_startCoordinate_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "startCoordinate": startCoordinate[__i__].refId}]);
+    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteConfig::set_startCoordinate_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "startCoordinate": startCoordinate[__i__].refId}]);
   
   
   }
   
   Future<void> set_destinationCoordinate_batch(List<CLLocationCoordinate2D> destinationCoordinate) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteConfig::set_destinationCoordinate_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "destinationCoordinate": destinationCoordinate[__i__].refId}]);
+    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteConfig::set_destinationCoordinate_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "destinationCoordinate": destinationCoordinate[__i__].refId}]);
   
   
   }
   
   Future<void> set_drivingStrategy_batch(List<AMapDrivingStrategy> drivingStrategy) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteConfig::set_drivingStrategy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "drivingStrategy": drivingStrategy[__i__].toValue()}]);
+    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteConfig::set_drivingStrategy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "drivingStrategy": drivingStrategy[__i__].toValue()}]);
   
   
   }
   
   Future<void> set_transitStrategy_batch(List<AMapTransitStrategy> transitStrategy) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteConfig::set_transitStrategy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "transitStrategy": transitStrategy[__i__].toValue()}]);
+    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteConfig::set_transitStrategy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "transitStrategy": transitStrategy[__i__].toValue()}]);
   
   
   }
   
   Future<void> set_routeType_batch(List<AMapRouteSearchType> routeType) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteConfig::set_routeType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "routeType": routeType[__i__].toValue()}]);
+    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteConfig::set_routeType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "routeType": routeType[__i__].toValue()}]);
   
   
   }
