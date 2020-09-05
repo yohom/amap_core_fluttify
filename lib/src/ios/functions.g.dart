@@ -13,6 +13,28 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
+Future<String> AMapEmptyStringIfNil(String s) async {
+  // print log
+  if (fluttifyLogEnabled) {
+    debugPrint('fluttify-dart: AMapEmptyStringIfNil::AMapEmptyStringIfNil([\'s\':$s])');
+  }
+
+  // invoke native method
+  final __result__ = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapEmptyStringIfNil::AMapEmptyStringIfNil', {"s": s});
+  
+
+  // handle native call
+  
+
+  // convert native result to dart side object
+  if (__result__ == null) {
+    return null;
+  } else {
+    
+    return __result__;
+  }
+}
+
 Future<CLLocationCoordinate2D> AMapCoordinateConvert(CLLocationCoordinate2D coordinate, AMapCoordinateType type) async {
   // print log
   if (fluttifyLogEnabled) {
@@ -20,7 +42,7 @@ Future<CLLocationCoordinate2D> AMapCoordinateConvert(CLLocationCoordinate2D coor
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('AMapCoordinateConvert::AMapCoordinateConvert', {"coordinate": coordinate?.refId, "type": type.toValue()});
+  final __result__ = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCoordinateConvert::AMapCoordinateConvert', {"coordinate": coordinate, "type": type});
   
 
   // handle native call
@@ -42,7 +64,7 @@ Future<bool> AMapDataAvailableForCoordinate(CLLocationCoordinate2D coordinate) a
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_core_fluttify').invokeMethod('AMapDataAvailableForCoordinate::AMapDataAvailableForCoordinate', {"coordinate": coordinate?.refId});
+  final __result__ = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapDataAvailableForCoordinate::AMapDataAvailableForCoordinate', {"coordinate": coordinate});
   
 
   // handle native call

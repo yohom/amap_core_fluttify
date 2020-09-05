@@ -2,7 +2,6 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 import '../ios/ios.export.g.dart';
 
-// TODO 碰到ios端枚举值从-1开始的情况
 class AmapCore {
   static Future<void> init(String iosKey) {
     return platform(
