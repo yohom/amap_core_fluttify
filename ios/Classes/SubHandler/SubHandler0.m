@@ -3,6 +3,7 @@
 //////////////////////////////////////////////////////////
 
 #import "SubHandler0.h"
+#import "FluttifyMessageCodec.h"
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
@@ -54,7 +55,7 @@ extern BOOL enableLog;
         
             // result
             // 返回值: Value
-            id jsonableResult = @(result);
+            NSObject* jsonableResult = @(result);
         
             methodResult(jsonableResult);
         },
@@ -76,7 +77,7 @@ extern BOOL enableLog;
         
             // result
             // 返回值: Value
-            id jsonableResult = @(result);
+            NSObject* jsonableResult = @(result);
         
             methodResult(jsonableResult);
         },
@@ -98,7 +99,7 @@ extern BOOL enableLog;
         
             // result
             // 返回值: Value
-            id jsonableResult = @(result);
+            NSObject* jsonableResult = @(result);
         
             methodResult(jsonableResult);
         },
@@ -166,7 +167,7 @@ extern BOOL enableLog;
         
                 // result
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -191,7 +192,7 @@ extern BOOL enableLog;
         
                 // result
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -216,7 +217,7 @@ extern BOOL enableLog;
         
                 // result
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -255,7 +256,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapNaviConfig* ref = (AMapNaviConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapNaviConfig* ref = (AMapNaviConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             // invoke native method
             NSString* result = ref.appScheme;
@@ -273,7 +274,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapNaviConfig* ref = (AMapNaviConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapNaviConfig* ref = (AMapNaviConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             // invoke native method
             NSString* result = ref.appName;
@@ -291,7 +292,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapNaviConfig* ref = (AMapNaviConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapNaviConfig* ref = (AMapNaviConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             // invoke native method
             CLLocationCoordinate2D result = ref.destination;
@@ -311,13 +312,13 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapNaviConfig* ref = (AMapNaviConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapNaviConfig* ref = (AMapNaviConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             // invoke native method
             AMapDrivingStrategy result = ref.strategy;
         
             // 返回值: Value
-            id jsonableResult = @(result);
+            NSObject* jsonableResult = @(result);
         
             methodResult(jsonableResult);
         },
@@ -329,7 +330,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             // invoke native method
             NSString* result = ref.appScheme;
@@ -347,7 +348,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             // invoke native method
             NSString* result = ref.appName;
@@ -365,7 +366,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             // invoke native method
             CLLocationCoordinate2D result = ref.startCoordinate;
@@ -385,7 +386,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             // invoke native method
             CLLocationCoordinate2D result = ref.destinationCoordinate;
@@ -405,13 +406,13 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             // invoke native method
             AMapDrivingStrategy result = ref.drivingStrategy;
         
             // 返回值: Value
-            id jsonableResult = @(result);
+            NSObject* jsonableResult = @(result);
         
             methodResult(jsonableResult);
         },
@@ -423,13 +424,13 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             // invoke native method
             AMapTransitStrategy result = ref.transitStrategy;
         
             // 返回值: Value
-            id jsonableResult = @(result);
+            NSObject* jsonableResult = @(result);
         
             methodResult(jsonableResult);
         },
@@ -441,13 +442,13 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             // invoke native method
             AMapRouteSearchType result = ref.routeType;
         
             // 返回值: Value
-            id jsonableResult = @(result);
+            NSObject* jsonableResult = @(result);
         
             methodResult(jsonableResult);
         },
@@ -459,7 +460,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapPOIConfig* ref = (AMapPOIConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             // invoke native method
             NSString* result = ref.appScheme;
@@ -477,7 +478,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapPOIConfig* ref = (AMapPOIConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             // invoke native method
             NSString* result = ref.appName;
@@ -495,7 +496,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapPOIConfig* ref = (AMapPOIConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             // invoke native method
             NSString* result = ref.keywords;
@@ -513,7 +514,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapPOIConfig* ref = (AMapPOIConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             // invoke native method
             CLLocationCoordinate2D result = ref.leftTopCoordinate;
@@ -533,7 +534,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapPOIConfig* ref = (AMapPOIConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             // invoke native method
             CLLocationCoordinate2D result = ref.rightBottomCoordinate;
@@ -553,7 +554,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapServices* ref = (AMapServices*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapServices* ref = (AMapServices*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             // invoke native method
             NSString* result = ref.apiKey;
@@ -571,13 +572,13 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapServices* ref = (AMapServices*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapServices* ref = (AMapServices*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             // invoke native method
             BOOL result = ref.enableHTTPS;
         
             // 返回值: Value
-            id jsonableResult = @(result);
+            NSObject* jsonableResult = @(result);
         
             methodResult(jsonableResult);
         },
@@ -589,13 +590,13 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapServices* ref = (AMapServices*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapServices* ref = (AMapServices*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             // invoke native method
             BOOL result = ref.crashReportEnabled;
         
             // 返回值: Value
-            id jsonableResult = @(result);
+            NSObject* jsonableResult = @(result);
         
             methodResult(jsonableResult);
         },
@@ -607,7 +608,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapServices* ref = (AMapServices*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapServices* ref = (AMapServices*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             // invoke native method
             NSString* result = ref.identifier;
@@ -625,7 +626,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapNaviConfig* ref = (AMapNaviConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapNaviConfig* ref = (AMapNaviConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 NSString* result = ref.appScheme;
         
@@ -645,7 +646,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapNaviConfig* ref = (AMapNaviConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapNaviConfig* ref = (AMapNaviConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 NSString* result = ref.appName;
         
@@ -665,7 +666,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapNaviConfig* ref = (AMapNaviConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapNaviConfig* ref = (AMapNaviConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 CLLocationCoordinate2D result = ref.destination;
         
@@ -687,12 +688,12 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapNaviConfig* ref = (AMapNaviConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapNaviConfig* ref = (AMapNaviConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 AMapDrivingStrategy result = ref.strategy;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -707,7 +708,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 NSString* result = ref.appScheme;
         
@@ -727,7 +728,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 NSString* result = ref.appName;
         
@@ -747,7 +748,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 CLLocationCoordinate2D result = ref.startCoordinate;
         
@@ -769,7 +770,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 CLLocationCoordinate2D result = ref.destinationCoordinate;
         
@@ -791,12 +792,12 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 AMapDrivingStrategy result = ref.drivingStrategy;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -811,12 +812,12 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 AMapTransitStrategy result = ref.transitStrategy;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -831,12 +832,12 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 AMapRouteSearchType result = ref.routeType;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -851,7 +852,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapPOIConfig* ref = (AMapPOIConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 NSString* result = ref.appScheme;
         
@@ -871,7 +872,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapPOIConfig* ref = (AMapPOIConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 NSString* result = ref.appName;
         
@@ -891,7 +892,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapPOIConfig* ref = (AMapPOIConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 NSString* result = ref.keywords;
         
@@ -911,7 +912,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapPOIConfig* ref = (AMapPOIConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 CLLocationCoordinate2D result = ref.leftTopCoordinate;
         
@@ -933,7 +934,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapPOIConfig* ref = (AMapPOIConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 CLLocationCoordinate2D result = ref.rightBottomCoordinate;
         
@@ -955,7 +956,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapServices* ref = (AMapServices*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapServices* ref = (AMapServices*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 NSString* result = ref.apiKey;
         
@@ -975,12 +976,12 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapServices* ref = (AMapServices*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapServices* ref = (AMapServices*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 BOOL result = ref.enableHTTPS;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -995,12 +996,12 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapServices* ref = (AMapServices*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapServices* ref = (AMapServices*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 BOOL result = ref.crashReportEnabled;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -1015,7 +1016,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapServices* ref = (AMapServices*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapServices* ref = (AMapServices*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 NSString* result = ref.identifier;
         
@@ -1039,7 +1040,7 @@ extern BOOL enableLog;
             NSString* appScheme = (NSString*) args[@"appScheme"];
         
             // ref
-            AMapNaviConfig* ref = (AMapNaviConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapNaviConfig* ref = (AMapNaviConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.appScheme = appScheme;
             methodResult(@"success");
@@ -1056,7 +1057,7 @@ extern BOOL enableLog;
             NSString* appName = (NSString*) args[@"appName"];
         
             // ref
-            AMapNaviConfig* ref = (AMapNaviConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapNaviConfig* ref = (AMapNaviConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.appName = appName;
             methodResult(@"success");
@@ -1075,7 +1076,7 @@ extern BOOL enableLog;
             [destinationValue getValue:&destination];
         
             // ref
-            AMapNaviConfig* ref = (AMapNaviConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapNaviConfig* ref = (AMapNaviConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.destination = destination;
             methodResult(@"success");
@@ -1092,7 +1093,7 @@ extern BOOL enableLog;
             AMapDrivingStrategy strategy = (AMapDrivingStrategy) [args[@"strategy"] integerValue];
         
             // ref
-            AMapNaviConfig* ref = (AMapNaviConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapNaviConfig* ref = (AMapNaviConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.strategy = strategy;
             methodResult(@"success");
@@ -1109,7 +1110,7 @@ extern BOOL enableLog;
             NSString* appScheme = (NSString*) args[@"appScheme"];
         
             // ref
-            AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.appScheme = appScheme;
             methodResult(@"success");
@@ -1126,7 +1127,7 @@ extern BOOL enableLog;
             NSString* appName = (NSString*) args[@"appName"];
         
             // ref
-            AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.appName = appName;
             methodResult(@"success");
@@ -1145,7 +1146,7 @@ extern BOOL enableLog;
             [startCoordinateValue getValue:&startCoordinate];
         
             // ref
-            AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.startCoordinate = startCoordinate;
             methodResult(@"success");
@@ -1164,7 +1165,7 @@ extern BOOL enableLog;
             [destinationCoordinateValue getValue:&destinationCoordinate];
         
             // ref
-            AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.destinationCoordinate = destinationCoordinate;
             methodResult(@"success");
@@ -1181,7 +1182,7 @@ extern BOOL enableLog;
             AMapDrivingStrategy drivingStrategy = (AMapDrivingStrategy) [args[@"drivingStrategy"] integerValue];
         
             // ref
-            AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.drivingStrategy = drivingStrategy;
             methodResult(@"success");
@@ -1198,7 +1199,7 @@ extern BOOL enableLog;
             AMapTransitStrategy transitStrategy = (AMapTransitStrategy) [args[@"transitStrategy"] integerValue];
         
             // ref
-            AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.transitStrategy = transitStrategy;
             methodResult(@"success");
@@ -1215,7 +1216,7 @@ extern BOOL enableLog;
             AMapRouteSearchType routeType = (AMapRouteSearchType) [args[@"routeType"] integerValue];
         
             // ref
-            AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.routeType = routeType;
             methodResult(@"success");
@@ -1232,7 +1233,7 @@ extern BOOL enableLog;
             NSString* appScheme = (NSString*) args[@"appScheme"];
         
             // ref
-            AMapPOIConfig* ref = (AMapPOIConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.appScheme = appScheme;
             methodResult(@"success");
@@ -1249,7 +1250,7 @@ extern BOOL enableLog;
             NSString* appName = (NSString*) args[@"appName"];
         
             // ref
-            AMapPOIConfig* ref = (AMapPOIConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.appName = appName;
             methodResult(@"success");
@@ -1266,7 +1267,7 @@ extern BOOL enableLog;
             NSString* keywords = (NSString*) args[@"keywords"];
         
             // ref
-            AMapPOIConfig* ref = (AMapPOIConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.keywords = keywords;
             methodResult(@"success");
@@ -1285,7 +1286,7 @@ extern BOOL enableLog;
             [leftTopCoordinateValue getValue:&leftTopCoordinate];
         
             // ref
-            AMapPOIConfig* ref = (AMapPOIConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.leftTopCoordinate = leftTopCoordinate;
             methodResult(@"success");
@@ -1304,7 +1305,7 @@ extern BOOL enableLog;
             [rightBottomCoordinateValue getValue:&rightBottomCoordinate];
         
             // ref
-            AMapPOIConfig* ref = (AMapPOIConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.rightBottomCoordinate = rightBottomCoordinate;
             methodResult(@"success");
@@ -1321,7 +1322,7 @@ extern BOOL enableLog;
             NSString* apiKey = (NSString*) args[@"apiKey"];
         
             // ref
-            AMapServices* ref = (AMapServices*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapServices* ref = (AMapServices*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.apiKey = apiKey;
             methodResult(@"success");
@@ -1338,7 +1339,7 @@ extern BOOL enableLog;
             BOOL enableHTTPS = [args[@"enableHTTPS"] boolValue];
         
             // ref
-            AMapServices* ref = (AMapServices*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapServices* ref = (AMapServices*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.enableHTTPS = enableHTTPS;
             methodResult(@"success");
@@ -1355,7 +1356,7 @@ extern BOOL enableLog;
             BOOL crashReportEnabled = [args[@"crashReportEnabled"] boolValue];
         
             // ref
-            AMapServices* ref = (AMapServices*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapServices* ref = (AMapServices*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.crashReportEnabled = crashReportEnabled;
             methodResult(@"success");
@@ -1370,7 +1371,7 @@ extern BOOL enableLog;
                 NSString* appScheme = (NSString*) args[@"appScheme"];
         
                 // ref
-                AMapNaviConfig* ref = (AMapNaviConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapNaviConfig* ref = (AMapNaviConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.appScheme = appScheme;
                 methodResult(@"success");
@@ -1388,7 +1389,7 @@ extern BOOL enableLog;
                 NSString* appName = (NSString*) args[@"appName"];
         
                 // ref
-                AMapNaviConfig* ref = (AMapNaviConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapNaviConfig* ref = (AMapNaviConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.appName = appName;
                 methodResult(@"success");
@@ -1408,7 +1409,7 @@ extern BOOL enableLog;
                 [destinationValue getValue:&destination];
         
                 // ref
-                AMapNaviConfig* ref = (AMapNaviConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapNaviConfig* ref = (AMapNaviConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.destination = destination;
                 methodResult(@"success");
@@ -1426,7 +1427,7 @@ extern BOOL enableLog;
                 AMapDrivingStrategy strategy = (AMapDrivingStrategy) [args[@"strategy"] integerValue];
         
                 // ref
-                AMapNaviConfig* ref = (AMapNaviConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapNaviConfig* ref = (AMapNaviConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.strategy = strategy;
                 methodResult(@"success");
@@ -1444,7 +1445,7 @@ extern BOOL enableLog;
                 NSString* appScheme = (NSString*) args[@"appScheme"];
         
                 // ref
-                AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.appScheme = appScheme;
                 methodResult(@"success");
@@ -1462,7 +1463,7 @@ extern BOOL enableLog;
                 NSString* appName = (NSString*) args[@"appName"];
         
                 // ref
-                AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.appName = appName;
                 methodResult(@"success");
@@ -1482,7 +1483,7 @@ extern BOOL enableLog;
                 [startCoordinateValue getValue:&startCoordinate];
         
                 // ref
-                AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.startCoordinate = startCoordinate;
                 methodResult(@"success");
@@ -1502,7 +1503,7 @@ extern BOOL enableLog;
                 [destinationCoordinateValue getValue:&destinationCoordinate];
         
                 // ref
-                AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.destinationCoordinate = destinationCoordinate;
                 methodResult(@"success");
@@ -1520,7 +1521,7 @@ extern BOOL enableLog;
                 AMapDrivingStrategy drivingStrategy = (AMapDrivingStrategy) [args[@"drivingStrategy"] integerValue];
         
                 // ref
-                AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.drivingStrategy = drivingStrategy;
                 methodResult(@"success");
@@ -1538,7 +1539,7 @@ extern BOOL enableLog;
                 AMapTransitStrategy transitStrategy = (AMapTransitStrategy) [args[@"transitStrategy"] integerValue];
         
                 // ref
-                AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.transitStrategy = transitStrategy;
                 methodResult(@"success");
@@ -1556,7 +1557,7 @@ extern BOOL enableLog;
                 AMapRouteSearchType routeType = (AMapRouteSearchType) [args[@"routeType"] integerValue];
         
                 // ref
-                AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.routeType = routeType;
                 methodResult(@"success");
@@ -1574,7 +1575,7 @@ extern BOOL enableLog;
                 NSString* appScheme = (NSString*) args[@"appScheme"];
         
                 // ref
-                AMapPOIConfig* ref = (AMapPOIConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.appScheme = appScheme;
                 methodResult(@"success");
@@ -1592,7 +1593,7 @@ extern BOOL enableLog;
                 NSString* appName = (NSString*) args[@"appName"];
         
                 // ref
-                AMapPOIConfig* ref = (AMapPOIConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.appName = appName;
                 methodResult(@"success");
@@ -1610,7 +1611,7 @@ extern BOOL enableLog;
                 NSString* keywords = (NSString*) args[@"keywords"];
         
                 // ref
-                AMapPOIConfig* ref = (AMapPOIConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.keywords = keywords;
                 methodResult(@"success");
@@ -1630,7 +1631,7 @@ extern BOOL enableLog;
                 [leftTopCoordinateValue getValue:&leftTopCoordinate];
         
                 // ref
-                AMapPOIConfig* ref = (AMapPOIConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.leftTopCoordinate = leftTopCoordinate;
                 methodResult(@"success");
@@ -1650,7 +1651,7 @@ extern BOOL enableLog;
                 [rightBottomCoordinateValue getValue:&rightBottomCoordinate];
         
                 // ref
-                AMapPOIConfig* ref = (AMapPOIConfig*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.rightBottomCoordinate = rightBottomCoordinate;
                 methodResult(@"success");
@@ -1668,7 +1669,7 @@ extern BOOL enableLog;
                 NSString* apiKey = (NSString*) args[@"apiKey"];
         
                 // ref
-                AMapServices* ref = (AMapServices*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapServices* ref = (AMapServices*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.apiKey = apiKey;
                 methodResult(@"success");
@@ -1686,7 +1687,7 @@ extern BOOL enableLog;
                 BOOL enableHTTPS = [args[@"enableHTTPS"] boolValue];
         
                 // ref
-                AMapServices* ref = (AMapServices*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapServices* ref = (AMapServices*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.enableHTTPS = enableHTTPS;
                 methodResult(@"success");
@@ -1704,7 +1705,7 @@ extern BOOL enableLog;
                 BOOL crashReportEnabled = [args[@"crashReportEnabled"] boolValue];
         
                 // ref
-                AMapServices* ref = (AMapServices*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapServices* ref = (AMapServices*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.crashReportEnabled = crashReportEnabled;
                 methodResult(@"success");
@@ -1715,46 +1716,41 @@ extern BOOL enableLog;
         
         @"RefClass::isKindOfAMapURLSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapURLSearch class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapURLSearch class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapNaviConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapNaviConfig class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapNaviConfig class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapRouteConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapRouteConfig class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapRouteConfig class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapPOIConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapPOIConfig class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapPOIConfig class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapServices": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapServices class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapServices class]];
             methodResult(@(isTargetType));
         },
         
@@ -1765,9 +1761,8 @@ extern BOOL enableLog;
             }
         
             AMapURLSearch* ref = [[AMapURLSearch alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1779,9 +1774,8 @@ extern BOOL enableLog;
             }
         
             AMapNaviConfig* ref = [[AMapNaviConfig alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1793,9 +1787,8 @@ extern BOOL enableLog;
             }
         
             AMapRouteConfig* ref = [[AMapRouteConfig alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1807,9 +1800,8 @@ extern BOOL enableLog;
             }
         
             AMapPOIConfig* ref = [[AMapPOIConfig alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1821,21 +1813,18 @@ extern BOOL enableLog;
             }
         
             AMapServices* ref = [[AMapServices alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
         
         @"ObjectFactory::create_batchAMapURLSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapURLSearch* ref = [[AMapURLSearch alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+                [resultList addObject:ref];
             }
         
             methodResult(resultList);
@@ -1844,13 +1833,11 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchAMapNaviConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapNaviConfig* ref = [[AMapNaviConfig alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+                [resultList addObject:ref];
             }
         
             methodResult(resultList);
@@ -1859,13 +1846,11 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchAMapRouteConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRouteConfig* ref = [[AMapRouteConfig alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+                [resultList addObject:ref];
             }
         
             methodResult(resultList);
@@ -1874,13 +1859,11 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchAMapPOIConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapPOIConfig* ref = [[AMapPOIConfig alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+                [resultList addObject:ref];
             }
         
             methodResult(resultList);
@@ -1889,13 +1872,11 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchAMapServices": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapServices* ref = [[AMapServices alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+                [resultList addObject:ref];
             }
         
             methodResult(resultList);
@@ -1903,6 +1884,28 @@ extern BOOL enableLog;
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
         
+        @"AMapEmptyStringIfNil::AMapEmptyStringIfNil": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // args
+            // jsonable arg
+            NSString* s = (NSString*) args[@"s"];
+        
+            // ref
+        
+        
+            // print log
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapEmptyStringIfNil::AMapEmptyStringIfNil(%@)", args[@"s"]);
+            }
+        
+            // invoke native method
+            NSString* result = AMapEmptyStringIfNil(s);
+        
+            // result
+            // 返回值: jsonable
+            id jsonableResult = result;
+        
+            methodResult(jsonableResult);
+        },
         @"AMapCoordinateConvert::AMapCoordinateConvert": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // struct arg
@@ -1951,7 +1954,7 @@ extern BOOL enableLog;
         
             // result
             // 返回值: Value
-            id jsonableResult = @(result);
+            NSObject* jsonableResult = @(result);
         
             methodResult(jsonableResult);
         },
