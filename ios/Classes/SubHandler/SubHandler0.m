@@ -40,7 +40,7 @@ extern BOOL enableLog;
         @"AMapURLSearch::openAMapNavigation": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapNaviConfig* config = (AMapNaviConfig*) HEAP[args[@"config"]];
+            AMapNaviConfig* config = (AMapNaviConfig*) args[@"config"];
         
             // ref
         
@@ -62,7 +62,7 @@ extern BOOL enableLog;
         @"AMapURLSearch::openAMapRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapRouteConfig* config = (AMapRouteConfig*) HEAP[args[@"config"]];
+            AMapRouteConfig* config = (AMapRouteConfig*) args[@"config"];
         
             // ref
         
@@ -84,7 +84,7 @@ extern BOOL enableLog;
         @"AMapURLSearch::openAMapPOISearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapPOIConfig* config = (AMapPOIConfig*) HEAP[args[@"config"]];
+            AMapPOIConfig* config = (AMapPOIConfig*) args[@"config"];
         
             // ref
         
@@ -156,7 +156,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapNaviConfig* config = (AMapNaviConfig*) HEAP[args[@"config"]];
+                AMapNaviConfig* config = (AMapNaviConfig*) args[@"config"];
         
                 // ref
         
@@ -181,7 +181,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapRouteConfig* config = (AMapRouteConfig*) HEAP[args[@"config"]];
+                AMapRouteConfig* config = (AMapRouteConfig*) args[@"config"];
         
                 // ref
         
@@ -206,7 +206,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapPOIConfig* config = (AMapPOIConfig*) HEAP[args[@"config"]];
+                AMapPOIConfig* config = (AMapPOIConfig*) args[@"config"];
         
                 // ref
         
@@ -254,7 +254,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapNaviConfig* ref = (AMapNaviConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapNaviConfig* ref = (AMapNaviConfig*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.appScheme;
@@ -272,7 +272,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapNaviConfig* ref = (AMapNaviConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapNaviConfig* ref = (AMapNaviConfig*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.appName;
@@ -290,7 +290,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapNaviConfig* ref = (AMapNaviConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapNaviConfig* ref = (AMapNaviConfig*) args[@"__this__"];
         
             // invoke native method
             CLLocationCoordinate2D result = ref.destination;
@@ -308,7 +308,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapNaviConfig* ref = (AMapNaviConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapNaviConfig* ref = (AMapNaviConfig*) args[@"__this__"];
         
             // invoke native method
             AMapDrivingStrategy result = ref.strategy;
@@ -326,7 +326,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.appScheme;
@@ -344,7 +344,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.appName;
@@ -362,7 +362,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
         
             // invoke native method
             CLLocationCoordinate2D result = ref.startCoordinate;
@@ -380,7 +380,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
         
             // invoke native method
             CLLocationCoordinate2D result = ref.destinationCoordinate;
@@ -398,7 +398,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
         
             // invoke native method
             AMapDrivingStrategy result = ref.drivingStrategy;
@@ -416,7 +416,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
         
             // invoke native method
             AMapTransitStrategy result = ref.transitStrategy;
@@ -434,7 +434,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
         
             // invoke native method
             AMapRouteSearchType result = ref.routeType;
@@ -452,7 +452,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapPOIConfig* ref = (AMapPOIConfig*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.appScheme;
@@ -470,7 +470,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapPOIConfig* ref = (AMapPOIConfig*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.appName;
@@ -488,7 +488,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapPOIConfig* ref = (AMapPOIConfig*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.keywords;
@@ -506,7 +506,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapPOIConfig* ref = (AMapPOIConfig*) args[@"__this__"];
         
             // invoke native method
             CLLocationCoordinate2D result = ref.leftTopCoordinate;
@@ -524,7 +524,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapPOIConfig* ref = (AMapPOIConfig*) args[@"__this__"];
         
             // invoke native method
             CLLocationCoordinate2D result = ref.rightBottomCoordinate;
@@ -542,7 +542,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapServices* ref = (AMapServices*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapServices* ref = (AMapServices*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.apiKey;
@@ -560,7 +560,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapServices* ref = (AMapServices*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapServices* ref = (AMapServices*) args[@"__this__"];
         
             // invoke native method
             BOOL result = ref.enableHTTPS;
@@ -578,7 +578,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapServices* ref = (AMapServices*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapServices* ref = (AMapServices*) args[@"__this__"];
         
             // invoke native method
             BOOL result = ref.crashReportEnabled;
@@ -596,7 +596,7 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapServices* ref = (AMapServices*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapServices* ref = (AMapServices*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.identifier;
@@ -614,7 +614,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapNaviConfig* ref = (AMapNaviConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapNaviConfig* ref = (AMapNaviConfig*) args[@"__this__"];
         
                 NSString* result = ref.appScheme;
         
@@ -634,7 +634,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapNaviConfig* ref = (AMapNaviConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapNaviConfig* ref = (AMapNaviConfig*) args[@"__this__"];
         
                 NSString* result = ref.appName;
         
@@ -654,7 +654,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapNaviConfig* ref = (AMapNaviConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapNaviConfig* ref = (AMapNaviConfig*) args[@"__this__"];
         
                 CLLocationCoordinate2D result = ref.destination;
         
@@ -674,7 +674,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapNaviConfig* ref = (AMapNaviConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapNaviConfig* ref = (AMapNaviConfig*) args[@"__this__"];
         
                 AMapDrivingStrategy result = ref.strategy;
         
@@ -694,7 +694,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
         
                 NSString* result = ref.appScheme;
         
@@ -714,7 +714,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
         
                 NSString* result = ref.appName;
         
@@ -734,7 +734,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
         
                 CLLocationCoordinate2D result = ref.startCoordinate;
         
@@ -754,7 +754,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
         
                 CLLocationCoordinate2D result = ref.destinationCoordinate;
         
@@ -774,7 +774,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
         
                 AMapDrivingStrategy result = ref.drivingStrategy;
         
@@ -794,7 +794,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
         
                 AMapTransitStrategy result = ref.transitStrategy;
         
@@ -814,7 +814,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
         
                 AMapRouteSearchType result = ref.routeType;
         
@@ -834,7 +834,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapPOIConfig* ref = (AMapPOIConfig*) args[@"__this__"];
         
                 NSString* result = ref.appScheme;
         
@@ -854,7 +854,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapPOIConfig* ref = (AMapPOIConfig*) args[@"__this__"];
         
                 NSString* result = ref.appName;
         
@@ -874,7 +874,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapPOIConfig* ref = (AMapPOIConfig*) args[@"__this__"];
         
                 NSString* result = ref.keywords;
         
@@ -894,7 +894,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapPOIConfig* ref = (AMapPOIConfig*) args[@"__this__"];
         
                 CLLocationCoordinate2D result = ref.leftTopCoordinate;
         
@@ -914,7 +914,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapPOIConfig* ref = (AMapPOIConfig*) args[@"__this__"];
         
                 CLLocationCoordinate2D result = ref.rightBottomCoordinate;
         
@@ -934,7 +934,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapServices* ref = (AMapServices*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapServices* ref = (AMapServices*) args[@"__this__"];
         
                 NSString* result = ref.apiKey;
         
@@ -954,7 +954,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapServices* ref = (AMapServices*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapServices* ref = (AMapServices*) args[@"__this__"];
         
                 BOOL result = ref.enableHTTPS;
         
@@ -974,7 +974,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapServices* ref = (AMapServices*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapServices* ref = (AMapServices*) args[@"__this__"];
         
                 BOOL result = ref.crashReportEnabled;
         
@@ -994,7 +994,7 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapServices* ref = (AMapServices*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapServices* ref = (AMapServices*) args[@"__this__"];
         
                 NSString* result = ref.identifier;
         
@@ -1018,7 +1018,7 @@ extern BOOL enableLog;
             NSString* appScheme = (NSString*) args[@"appScheme"];
         
             // ref
-            AMapNaviConfig* ref = (AMapNaviConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapNaviConfig* ref = (AMapNaviConfig*) args[@"__this__"];
         
             ref.appScheme = appScheme;
             methodResult(@"success");
@@ -1035,7 +1035,7 @@ extern BOOL enableLog;
             NSString* appName = (NSString*) args[@"appName"];
         
             // ref
-            AMapNaviConfig* ref = (AMapNaviConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapNaviConfig* ref = (AMapNaviConfig*) args[@"__this__"];
         
             ref.appName = appName;
             methodResult(@"success");
@@ -1054,7 +1054,7 @@ extern BOOL enableLog;
             [destinationValue getValue:&destination];
         
             // ref
-            AMapNaviConfig* ref = (AMapNaviConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapNaviConfig* ref = (AMapNaviConfig*) args[@"__this__"];
         
             ref.destination = destination;
             methodResult(@"success");
@@ -1071,7 +1071,7 @@ extern BOOL enableLog;
             AMapDrivingStrategy strategy = (AMapDrivingStrategy) [args[@"strategy"] integerValue];
         
             // ref
-            AMapNaviConfig* ref = (AMapNaviConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapNaviConfig* ref = (AMapNaviConfig*) args[@"__this__"];
         
             ref.strategy = strategy;
             methodResult(@"success");
@@ -1088,7 +1088,7 @@ extern BOOL enableLog;
             NSString* appScheme = (NSString*) args[@"appScheme"];
         
             // ref
-            AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
         
             ref.appScheme = appScheme;
             methodResult(@"success");
@@ -1105,7 +1105,7 @@ extern BOOL enableLog;
             NSString* appName = (NSString*) args[@"appName"];
         
             // ref
-            AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
         
             ref.appName = appName;
             methodResult(@"success");
@@ -1124,7 +1124,7 @@ extern BOOL enableLog;
             [startCoordinateValue getValue:&startCoordinate];
         
             // ref
-            AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
         
             ref.startCoordinate = startCoordinate;
             methodResult(@"success");
@@ -1143,7 +1143,7 @@ extern BOOL enableLog;
             [destinationCoordinateValue getValue:&destinationCoordinate];
         
             // ref
-            AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
         
             ref.destinationCoordinate = destinationCoordinate;
             methodResult(@"success");
@@ -1160,7 +1160,7 @@ extern BOOL enableLog;
             AMapDrivingStrategy drivingStrategy = (AMapDrivingStrategy) [args[@"drivingStrategy"] integerValue];
         
             // ref
-            AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
         
             ref.drivingStrategy = drivingStrategy;
             methodResult(@"success");
@@ -1177,7 +1177,7 @@ extern BOOL enableLog;
             AMapTransitStrategy transitStrategy = (AMapTransitStrategy) [args[@"transitStrategy"] integerValue];
         
             // ref
-            AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
         
             ref.transitStrategy = transitStrategy;
             methodResult(@"success");
@@ -1194,7 +1194,7 @@ extern BOOL enableLog;
             AMapRouteSearchType routeType = (AMapRouteSearchType) [args[@"routeType"] integerValue];
         
             // ref
-            AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
         
             ref.routeType = routeType;
             methodResult(@"success");
@@ -1211,7 +1211,7 @@ extern BOOL enableLog;
             NSString* appScheme = (NSString*) args[@"appScheme"];
         
             // ref
-            AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapPOIConfig* ref = (AMapPOIConfig*) args[@"__this__"];
         
             ref.appScheme = appScheme;
             methodResult(@"success");
@@ -1228,7 +1228,7 @@ extern BOOL enableLog;
             NSString* appName = (NSString*) args[@"appName"];
         
             // ref
-            AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapPOIConfig* ref = (AMapPOIConfig*) args[@"__this__"];
         
             ref.appName = appName;
             methodResult(@"success");
@@ -1245,7 +1245,7 @@ extern BOOL enableLog;
             NSString* keywords = (NSString*) args[@"keywords"];
         
             // ref
-            AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapPOIConfig* ref = (AMapPOIConfig*) args[@"__this__"];
         
             ref.keywords = keywords;
             methodResult(@"success");
@@ -1264,7 +1264,7 @@ extern BOOL enableLog;
             [leftTopCoordinateValue getValue:&leftTopCoordinate];
         
             // ref
-            AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapPOIConfig* ref = (AMapPOIConfig*) args[@"__this__"];
         
             ref.leftTopCoordinate = leftTopCoordinate;
             methodResult(@"success");
@@ -1283,7 +1283,7 @@ extern BOOL enableLog;
             [rightBottomCoordinateValue getValue:&rightBottomCoordinate];
         
             // ref
-            AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapPOIConfig* ref = (AMapPOIConfig*) args[@"__this__"];
         
             ref.rightBottomCoordinate = rightBottomCoordinate;
             methodResult(@"success");
@@ -1300,7 +1300,7 @@ extern BOOL enableLog;
             NSString* apiKey = (NSString*) args[@"apiKey"];
         
             // ref
-            AMapServices* ref = (AMapServices*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapServices* ref = (AMapServices*) args[@"__this__"];
         
             ref.apiKey = apiKey;
             methodResult(@"success");
@@ -1317,7 +1317,7 @@ extern BOOL enableLog;
             BOOL enableHTTPS = [args[@"enableHTTPS"] boolValue];
         
             // ref
-            AMapServices* ref = (AMapServices*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapServices* ref = (AMapServices*) args[@"__this__"];
         
             ref.enableHTTPS = enableHTTPS;
             methodResult(@"success");
@@ -1334,7 +1334,7 @@ extern BOOL enableLog;
             BOOL crashReportEnabled = [args[@"crashReportEnabled"] boolValue];
         
             // ref
-            AMapServices* ref = (AMapServices*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+            AMapServices* ref = (AMapServices*) args[@"__this__"];
         
             ref.crashReportEnabled = crashReportEnabled;
             methodResult(@"success");
@@ -1349,7 +1349,7 @@ extern BOOL enableLog;
                 NSString* appScheme = (NSString*) args[@"appScheme"];
         
                 // ref
-                AMapNaviConfig* ref = (AMapNaviConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapNaviConfig* ref = (AMapNaviConfig*) args[@"__this__"];
         
                 ref.appScheme = appScheme;
                 methodResult(@"success");
@@ -1367,7 +1367,7 @@ extern BOOL enableLog;
                 NSString* appName = (NSString*) args[@"appName"];
         
                 // ref
-                AMapNaviConfig* ref = (AMapNaviConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapNaviConfig* ref = (AMapNaviConfig*) args[@"__this__"];
         
                 ref.appName = appName;
                 methodResult(@"success");
@@ -1387,7 +1387,7 @@ extern BOOL enableLog;
                 [destinationValue getValue:&destination];
         
                 // ref
-                AMapNaviConfig* ref = (AMapNaviConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapNaviConfig* ref = (AMapNaviConfig*) args[@"__this__"];
         
                 ref.destination = destination;
                 methodResult(@"success");
@@ -1405,7 +1405,7 @@ extern BOOL enableLog;
                 AMapDrivingStrategy strategy = (AMapDrivingStrategy) [args[@"strategy"] integerValue];
         
                 // ref
-                AMapNaviConfig* ref = (AMapNaviConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapNaviConfig* ref = (AMapNaviConfig*) args[@"__this__"];
         
                 ref.strategy = strategy;
                 methodResult(@"success");
@@ -1423,7 +1423,7 @@ extern BOOL enableLog;
                 NSString* appScheme = (NSString*) args[@"appScheme"];
         
                 // ref
-                AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
         
                 ref.appScheme = appScheme;
                 methodResult(@"success");
@@ -1441,7 +1441,7 @@ extern BOOL enableLog;
                 NSString* appName = (NSString*) args[@"appName"];
         
                 // ref
-                AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
         
                 ref.appName = appName;
                 methodResult(@"success");
@@ -1461,7 +1461,7 @@ extern BOOL enableLog;
                 [startCoordinateValue getValue:&startCoordinate];
         
                 // ref
-                AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
         
                 ref.startCoordinate = startCoordinate;
                 methodResult(@"success");
@@ -1481,7 +1481,7 @@ extern BOOL enableLog;
                 [destinationCoordinateValue getValue:&destinationCoordinate];
         
                 // ref
-                AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
         
                 ref.destinationCoordinate = destinationCoordinate;
                 methodResult(@"success");
@@ -1499,7 +1499,7 @@ extern BOOL enableLog;
                 AMapDrivingStrategy drivingStrategy = (AMapDrivingStrategy) [args[@"drivingStrategy"] integerValue];
         
                 // ref
-                AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
         
                 ref.drivingStrategy = drivingStrategy;
                 methodResult(@"success");
@@ -1517,7 +1517,7 @@ extern BOOL enableLog;
                 AMapTransitStrategy transitStrategy = (AMapTransitStrategy) [args[@"transitStrategy"] integerValue];
         
                 // ref
-                AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
         
                 ref.transitStrategy = transitStrategy;
                 methodResult(@"success");
@@ -1535,7 +1535,7 @@ extern BOOL enableLog;
                 AMapRouteSearchType routeType = (AMapRouteSearchType) [args[@"routeType"] integerValue];
         
                 // ref
-                AMapRouteConfig* ref = (AMapRouteConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
         
                 ref.routeType = routeType;
                 methodResult(@"success");
@@ -1553,7 +1553,7 @@ extern BOOL enableLog;
                 NSString* appScheme = (NSString*) args[@"appScheme"];
         
                 // ref
-                AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapPOIConfig* ref = (AMapPOIConfig*) args[@"__this__"];
         
                 ref.appScheme = appScheme;
                 methodResult(@"success");
@@ -1571,7 +1571,7 @@ extern BOOL enableLog;
                 NSString* appName = (NSString*) args[@"appName"];
         
                 // ref
-                AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapPOIConfig* ref = (AMapPOIConfig*) args[@"__this__"];
         
                 ref.appName = appName;
                 methodResult(@"success");
@@ -1589,7 +1589,7 @@ extern BOOL enableLog;
                 NSString* keywords = (NSString*) args[@"keywords"];
         
                 // ref
-                AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapPOIConfig* ref = (AMapPOIConfig*) args[@"__this__"];
         
                 ref.keywords = keywords;
                 methodResult(@"success");
@@ -1609,7 +1609,7 @@ extern BOOL enableLog;
                 [leftTopCoordinateValue getValue:&leftTopCoordinate];
         
                 // ref
-                AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapPOIConfig* ref = (AMapPOIConfig*) args[@"__this__"];
         
                 ref.leftTopCoordinate = leftTopCoordinate;
                 methodResult(@"success");
@@ -1629,7 +1629,7 @@ extern BOOL enableLog;
                 [rightBottomCoordinateValue getValue:&rightBottomCoordinate];
         
                 // ref
-                AMapPOIConfig* ref = (AMapPOIConfig*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapPOIConfig* ref = (AMapPOIConfig*) args[@"__this__"];
         
                 ref.rightBottomCoordinate = rightBottomCoordinate;
                 methodResult(@"success");
@@ -1647,7 +1647,7 @@ extern BOOL enableLog;
                 NSString* apiKey = (NSString*) args[@"apiKey"];
         
                 // ref
-                AMapServices* ref = (AMapServices*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapServices* ref = (AMapServices*) args[@"__this__"];
         
                 ref.apiKey = apiKey;
                 methodResult(@"success");
@@ -1665,7 +1665,7 @@ extern BOOL enableLog;
                 BOOL enableHTTPS = [args[@"enableHTTPS"] boolValue];
         
                 // ref
-                AMapServices* ref = (AMapServices*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapServices* ref = (AMapServices*) args[@"__this__"];
         
                 ref.enableHTTPS = enableHTTPS;
                 methodResult(@"success");
@@ -1683,7 +1683,7 @@ extern BOOL enableLog;
                 BOOL crashReportEnabled = [args[@"crashReportEnabled"] boolValue];
         
                 // ref
-                AMapServices* ref = (AMapServices*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+                AMapServices* ref = (AMapServices*) args[@"__this__"];
         
                 ref.crashReportEnabled = crashReportEnabled;
                 methodResult(@"success");

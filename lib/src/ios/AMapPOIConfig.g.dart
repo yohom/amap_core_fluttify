@@ -22,7 +22,7 @@ class AMapPOIConfig extends NSObject  {
   //region creators
   static Future<AMapPOIConfig> create__() async {
     final refId = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapPOIConfig');
-    final object = AMapPOIConfig()..refId = refId..tag__ = 'amap_core_fluttify';
+    final object = AMapPOIConfig()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapPOIConfig extends NSObject  {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapPOIConfig', {'length': length});
   
-    final List<AMapPOIConfig> typedResult = resultBatch.map((result) => AMapPOIConfig()..refId = result..tag__ = 'amap_core_fluttify').toList();
+    final List<AMapPOIConfig> typedResult = resultBatch.map((result) => AMapPOIConfig()..refId = result).toList();
     return typedResult;
   }
   
@@ -41,58 +41,58 @@ class AMapPOIConfig extends NSObject  {
   //region getters
   Future<String> get_appScheme() async {
     final __result__ = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapPOIConfig::get_appScheme", {'__this__': this});
-    return __result__;
+    return __result__ == null ? null : (__result__);
   }
   
   Future<String> get_appName() async {
     final __result__ = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapPOIConfig::get_appName", {'__this__': this});
-    return __result__;
+    return __result__ == null ? null : (__result__);
   }
   
   Future<String> get_keywords() async {
     final __result__ = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapPOIConfig::get_keywords", {'__this__': this});
-    return __result__;
+    return __result__ == null ? null : (__result__);
   }
   
   Future<CLLocationCoordinate2D> get_leftTopCoordinate() async {
     final __result__ = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapPOIConfig::get_leftTopCoordinate", {'__this__': this});
-    return CLLocationCoordinate2D()..refId = __result__..tag__ = 'amap_core_fluttify';
+    return __result__ == null ? null : (CLLocationCoordinate2D()..refId = __result__);
   }
   
   Future<CLLocationCoordinate2D> get_rightBottomCoordinate() async {
     final __result__ = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapPOIConfig::get_rightBottomCoordinate", {'__this__': this});
-    return CLLocationCoordinate2D()..refId = __result__..tag__ = 'amap_core_fluttify';
+    return __result__ == null ? null : (CLLocationCoordinate2D()..refId = __result__);
   }
   
   //endregion
 
   //region setters
   Future<void> set_appScheme(String appScheme) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapPOIConfig::set_appScheme', {'__this__': this, "appScheme": appScheme});
+    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapPOIConfig::set_appScheme', <String, dynamic>{'__this__': this, "appScheme": appScheme});
   
   
   }
   
   Future<void> set_appName(String appName) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapPOIConfig::set_appName', {'__this__': this, "appName": appName});
+    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapPOIConfig::set_appName', <String, dynamic>{'__this__': this, "appName": appName});
   
   
   }
   
   Future<void> set_keywords(String keywords) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapPOIConfig::set_keywords', {'__this__': this, "keywords": keywords});
+    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapPOIConfig::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
   
   
   }
   
   Future<void> set_leftTopCoordinate(CLLocationCoordinate2D leftTopCoordinate) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapPOIConfig::set_leftTopCoordinate', {'__this__': this, "leftTopCoordinate": leftTopCoordinate.refId});
+    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapPOIConfig::set_leftTopCoordinate', <String, dynamic>{'__this__': this, "leftTopCoordinate": leftTopCoordinate});
   
   
   }
   
   Future<void> set_rightBottomCoordinate(CLLocationCoordinate2D rightBottomCoordinate) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapPOIConfig::set_rightBottomCoordinate', {'__this__': this, "rightBottomCoordinate": rightBottomCoordinate.refId});
+    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapPOIConfig::set_rightBottomCoordinate', <String, dynamic>{'__this__': this, "rightBottomCoordinate": rightBottomCoordinate});
   
   
   }
@@ -107,32 +107,37 @@ class AMapPOIConfig extends NSObject  {
 extension AMapPOIConfig_Batch on List<AMapPOIConfig> {
   //region getters
   Future<List<String>> get_appScheme_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapPOIConfig::get_appScheme_batch", this);
+    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapPOIConfig::get_appScheme_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<String>> get_appName_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapPOIConfig::get_appName_batch", this);
+    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapPOIConfig::get_appName_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<String>> get_keywords_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapPOIConfig::get_keywords_batch", this);
+    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapPOIConfig::get_keywords_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<CLLocationCoordinate2D>> get_leftTopCoordinate_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapPOIConfig::get_leftTopCoordinate_batch", this);
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => CLLocationCoordinate2D()..refId = __result__..tag__ = 'amap_core_fluttify').toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapPOIConfig::get_leftTopCoordinate_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => CLLocationCoordinate2D()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<CLLocationCoordinate2D>> get_rightBottomCoordinate_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapPOIConfig::get_rightBottomCoordinate_batch", this);
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => CLLocationCoordinate2D()..refId = __result__..tag__ = 'amap_core_fluttify').toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapPOIConfig::get_rightBottomCoordinate_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => CLLocationCoordinate2D()..refId = __result__).toList();
     return typedResult;
   }
   

@@ -115,67 +115,67 @@ extension TypeOpAmapCoreFluttifyIOS on Object {
     }
     // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
     else if (T == AMapURLSearch) {
-      return (AMapURLSearch()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (AMapURLSearch()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapNaviConfig) {
-      return (AMapNaviConfig()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (AMapNaviConfig()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapRouteConfig) {
-      return (AMapRouteConfig()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (AMapRouteConfig()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapPOIConfig) {
-      return (AMapPOIConfig()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (AMapPOIConfig()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapServices) {
-      return (AMapServices()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (AMapServices()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == CLLocation) {
-      return (CLLocation()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (CLLocation()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == CLHeading) {
-      return (CLHeading()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (CLHeading()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == CGRect) {
-      return (CGRect()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (CGRect()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == CGPoint) {
-      return (CGPoint()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (CGPoint()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == CGSize) {
-      return (CGSize()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (CGSize()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == UIEdgeInsets) {
-      return (UIEdgeInsets()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (UIEdgeInsets()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == CLLocationCoordinate2D) {
-      return (CLLocationCoordinate2D()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (CLLocationCoordinate2D()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == CLLocationManager) {
-      return (CLLocationManager()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (CLLocationManager()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == NSError) {
-      return (NSError()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (NSError()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == UIView) {
-      return (UIView()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (UIView()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == UIViewController) {
-      return (UIViewController()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (UIViewController()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == UIControl) {
-      return (UIControl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (UIControl()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == UIImage) {
-      return (UIImage()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (UIImage()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == UIColor) {
-      return (UIColor()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (UIColor()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == NSData) {
-      return (NSData()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (NSData()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == NSOperation) {
-      return (NSOperation()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (NSOperation()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
   }
 }
