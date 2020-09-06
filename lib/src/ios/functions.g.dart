@@ -30,7 +30,6 @@ Future<String> AMapEmptyStringIfNil(String s) async {
   if (__result__ == null) {
     return null;
   } else {
-    
     return __result__;
   }
 }
@@ -42,7 +41,7 @@ Future<CLLocationCoordinate2D> AMapCoordinateConvert(CLLocationCoordinate2D coor
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCoordinateConvert::AMapCoordinateConvert', {"coordinate": coordinate, "type": type});
+  final __result__ = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCoordinateConvert::AMapCoordinateConvert', {"coordinate": coordinate, "type": type.toValue()});
   
 
   // handle native call
@@ -52,8 +51,7 @@ Future<CLLocationCoordinate2D> AMapCoordinateConvert(CLLocationCoordinate2D coor
   if (__result__ == null) {
     return null;
   } else {
-    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = __result__..tag__ = 'amap_core_fluttify');
-    return CLLocationCoordinate2D()..refId = __result__..tag__ = 'amap_core_fluttify';
+    return CLLocationCoordinate2D()..refId = __result__;
   }
 }
 
@@ -74,7 +72,6 @@ Future<bool> AMapDataAvailableForCoordinate(CLLocationCoordinate2D coordinate) a
   if (__result__ == null) {
     return null;
   } else {
-    
     return __result__;
   }
 }

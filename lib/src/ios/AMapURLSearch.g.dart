@@ -22,7 +22,7 @@ class AMapURLSearch extends NSObject  {
   //region creators
   static Future<AMapURLSearch> create__() async {
     final refId = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapURLSearch');
-    final object = AMapURLSearch()..refId = refId..tag__ = 'amap_core_fluttify';
+    final object = AMapURLSearch()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapURLSearch extends NSObject  {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapURLSearch', {'length': length});
   
-    final List<AMapURLSearch> typedResult = resultBatch.map((result) => AMapURLSearch()..refId = result..tag__ = 'amap_core_fluttify').toList();
+    final List<AMapURLSearch> typedResult = resultBatch.map((result) => AMapURLSearch()..refId = result).toList();
     return typedResult;
   }
   
