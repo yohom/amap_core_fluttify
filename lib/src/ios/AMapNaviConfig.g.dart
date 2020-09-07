@@ -21,8 +21,8 @@ class AMapNaviConfig extends NSObject  {
 
   //region creators
   static Future<AMapNaviConfig> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapNaviConfig');
-    final object = AMapNaviConfig()..refId = refId;
+    final refId = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod('ObjectFactory::createAMapNaviConfig');
+    final object = AMapNaviConfig()..refId = refId..tag__ = 'amap_core_fluttify';
     return object;
   }
   
@@ -30,9 +30,9 @@ class AMapNaviConfig extends NSObject  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapNaviConfig', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapNaviConfig', {'length': length});
   
-    final List<AMapNaviConfig> typedResult = resultBatch.map((result) => AMapNaviConfig()..refId = result).toList();
+    final List<AMapNaviConfig> typedResult = resultBatch.map((result) => AMapNaviConfig()..refId = result..tag__ = 'amap_core_fluttify').toList();
     return typedResult;
   }
   
@@ -40,22 +40,22 @@ class AMapNaviConfig extends NSObject  {
 
   //region getters
   Future<String> get_appScheme() async {
-    final __result__ = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapNaviConfig::get_appScheme", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod("AMapNaviConfig::get_appScheme", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<String> get_appName() async {
-    final __result__ = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapNaviConfig::get_appName", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod("AMapNaviConfig::get_appName", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<CLLocationCoordinate2D> get_destination() async {
-    final __result__ = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapNaviConfig::get_destination", {'__this__': this});
-    return __result__ == null ? null : (CLLocationCoordinate2D()..refId = __result__);
+    final __result__ = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod("AMapNaviConfig::get_destination", {'__this__': this});
+    return __result__ == null ? null : (CLLocationCoordinate2D()..refId = __result__..tag__ = 'amap_core_fluttify');
   }
   
   Future<AMapDrivingStrategy> get_strategy() async {
-    final __result__ = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapNaviConfig::get_strategy", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod("AMapNaviConfig::get_strategy", {'__this__': this});
     return __result__ == null ? null : ((__result__ as int).toAMapDrivingStrategy());
   }
   
@@ -63,25 +63,25 @@ class AMapNaviConfig extends NSObject  {
 
   //region setters
   Future<void> set_appScheme(String appScheme) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapNaviConfig::set_appScheme', <String, dynamic>{'__this__': this, "appScheme": appScheme});
+    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod('AMapNaviConfig::set_appScheme', <String, dynamic>{'__this__': this, "appScheme": appScheme});
   
   
   }
   
   Future<void> set_appName(String appName) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapNaviConfig::set_appName', <String, dynamic>{'__this__': this, "appName": appName});
+    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod('AMapNaviConfig::set_appName', <String, dynamic>{'__this__': this, "appName": appName});
   
   
   }
   
   Future<void> set_destination(CLLocationCoordinate2D destination) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapNaviConfig::set_destination', <String, dynamic>{'__this__': this, "destination": destination});
+    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod('AMapNaviConfig::set_destination', <String, dynamic>{'__this__': this, "destination": destination});
   
   
   }
   
   Future<void> set_strategy(AMapDrivingStrategy strategy) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapNaviConfig::set_strategy', <String, dynamic>{'__this__': this, "strategy": strategy.toValue()});
+    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod('AMapNaviConfig::set_strategy', <String, dynamic>{'__this__': this, "strategy": strategy.toValue()});
   
   
   }
@@ -96,28 +96,28 @@ class AMapNaviConfig extends NSObject  {
 extension AMapNaviConfig_Batch on List<AMapNaviConfig> {
   //region getters
   Future<List<String>> get_appScheme_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapNaviConfig::get_appScheme_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod("AMapNaviConfig::get_appScheme_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<String>> get_appName_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapNaviConfig::get_appName_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod("AMapNaviConfig::get_appName_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<CLLocationCoordinate2D>> get_destination_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapNaviConfig::get_destination_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod("AMapNaviConfig::get_destination_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => CLLocationCoordinate2D()..refId = __result__).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => CLLocationCoordinate2D()..refId = __result__..tag__ = 'amap_core_fluttify').toList();
     return typedResult;
   }
   
   Future<List<AMapDrivingStrategy>> get_strategy_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapNaviConfig::get_strategy_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod("AMapNaviConfig::get_strategy_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as int).toAMapDrivingStrategy()).toList();
     return typedResult;
@@ -139,7 +139,7 @@ extension AMapNaviConfig_Batch on List<AMapNaviConfig> {
   }
   
   Future<void> set_destination_batch(List<CLLocationCoordinate2D> destination) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapNaviConfig::set_destination_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "destination": destination[__i__].refId}]);
+    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapNaviConfig::set_destination_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "destination": destination[__i__]}]);
   
   
   }
