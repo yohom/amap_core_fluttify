@@ -1049,7 +1049,7 @@ extern BOOL enableLog;
         
             // args
             // struct arg
-            NSValue* destinationValue = (NSValue*) HEAP[args[@"destination"]];
+            NSValue* destinationValue = (NSValue*) args[@"destination"];
             CLLocationCoordinate2D destination;
             [destinationValue getValue:&destination];
         
@@ -1119,7 +1119,7 @@ extern BOOL enableLog;
         
             // args
             // struct arg
-            NSValue* startCoordinateValue = (NSValue*) HEAP[args[@"startCoordinate"]];
+            NSValue* startCoordinateValue = (NSValue*) args[@"startCoordinate"];
             CLLocationCoordinate2D startCoordinate;
             [startCoordinateValue getValue:&startCoordinate];
         
@@ -1138,7 +1138,7 @@ extern BOOL enableLog;
         
             // args
             // struct arg
-            NSValue* destinationCoordinateValue = (NSValue*) HEAP[args[@"destinationCoordinate"]];
+            NSValue* destinationCoordinateValue = (NSValue*) args[@"destinationCoordinate"];
             CLLocationCoordinate2D destinationCoordinate;
             [destinationCoordinateValue getValue:&destinationCoordinate];
         
@@ -1259,7 +1259,7 @@ extern BOOL enableLog;
         
             // args
             // struct arg
-            NSValue* leftTopCoordinateValue = (NSValue*) HEAP[args[@"leftTopCoordinate"]];
+            NSValue* leftTopCoordinateValue = (NSValue*) args[@"leftTopCoordinate"];
             CLLocationCoordinate2D leftTopCoordinate;
             [leftTopCoordinateValue getValue:&leftTopCoordinate];
         
@@ -1278,7 +1278,7 @@ extern BOOL enableLog;
         
             // args
             // struct arg
-            NSValue* rightBottomCoordinateValue = (NSValue*) HEAP[args[@"rightBottomCoordinate"]];
+            NSValue* rightBottomCoordinateValue = (NSValue*) args[@"rightBottomCoordinate"];
             CLLocationCoordinate2D rightBottomCoordinate;
             [rightBottomCoordinateValue getValue:&rightBottomCoordinate];
         
@@ -1382,7 +1382,7 @@ extern BOOL enableLog;
         
                 // args
                 // struct arg
-                NSValue* destinationValue = (NSValue*) HEAP[args[@"destination"]];
+                NSValue* destinationValue = (NSValue*) args[@"destination"];
                 CLLocationCoordinate2D destination;
                 [destinationValue getValue:&destination];
         
@@ -1456,7 +1456,7 @@ extern BOOL enableLog;
         
                 // args
                 // struct arg
-                NSValue* startCoordinateValue = (NSValue*) HEAP[args[@"startCoordinate"]];
+                NSValue* startCoordinateValue = (NSValue*) args[@"startCoordinate"];
                 CLLocationCoordinate2D startCoordinate;
                 [startCoordinateValue getValue:&startCoordinate];
         
@@ -1476,7 +1476,7 @@ extern BOOL enableLog;
         
                 // args
                 // struct arg
-                NSValue* destinationCoordinateValue = (NSValue*) HEAP[args[@"destinationCoordinate"]];
+                NSValue* destinationCoordinateValue = (NSValue*) args[@"destinationCoordinate"];
                 CLLocationCoordinate2D destinationCoordinate;
                 [destinationCoordinateValue getValue:&destinationCoordinate];
         
@@ -1604,7 +1604,7 @@ extern BOOL enableLog;
         
                 // args
                 // struct arg
-                NSValue* leftTopCoordinateValue = (NSValue*) HEAP[args[@"leftTopCoordinate"]];
+                NSValue* leftTopCoordinateValue = (NSValue*) args[@"leftTopCoordinate"];
                 CLLocationCoordinate2D leftTopCoordinate;
                 [leftTopCoordinateValue getValue:&leftTopCoordinate];
         
@@ -1624,7 +1624,7 @@ extern BOOL enableLog;
         
                 // args
                 // struct arg
-                NSValue* rightBottomCoordinateValue = (NSValue*) HEAP[args[@"rightBottomCoordinate"]];
+                NSValue* rightBottomCoordinateValue = (NSValue*) args[@"rightBottomCoordinate"];
                 CLLocationCoordinate2D rightBottomCoordinate;
                 [rightBottomCoordinateValue getValue:&rightBottomCoordinate];
         
@@ -1887,7 +1887,7 @@ extern BOOL enableLog;
         @"AMapCoordinateConvert::AMapCoordinateConvert": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // struct arg
-            NSValue* coordinateValue = (NSValue*) HEAP[args[@"coordinate"]];
+            NSValue* coordinateValue = (NSValue*) args[@"coordinate"];
             CLLocationCoordinate2D coordinate;
             [coordinateValue getValue:&coordinate];
             // enum arg
@@ -1913,7 +1913,7 @@ extern BOOL enableLog;
         @"AMapDataAvailableForCoordinate::AMapDataAvailableForCoordinate": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // struct arg
-            NSValue* coordinateValue = (NSValue*) HEAP[args[@"coordinate"]];
+            NSValue* coordinateValue = (NSValue*) args[@"coordinate"];
             CLLocationCoordinate2D coordinate;
             [coordinateValue getValue:&coordinate];
         
