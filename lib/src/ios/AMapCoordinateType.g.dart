@@ -25,6 +25,7 @@ extension AMapCoordinateTypeToX on AMapCoordinateType {
       case AMapCoordinateType.AMapCoordinateTypeAliYun: return AMapCoordinateType.AMapCoordinateTypeAliYun.index + -1;
       case AMapCoordinateType.AMapCoordinateTypeGoogle: return AMapCoordinateType.AMapCoordinateTypeGoogle.index + -1;
       case AMapCoordinateType.AMapCoordinateTypeGPS: return AMapCoordinateType.AMapCoordinateTypeGPS.index + -1;
+      default: return 0;
     }
   }
 }

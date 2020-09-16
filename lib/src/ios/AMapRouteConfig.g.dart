@@ -20,17 +20,17 @@ class AMapRouteConfig extends NSObject  {
   //endregion
 
   //region creators
-  static Future<AMapRouteConfig> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod('ObjectFactory::createAMapRouteConfig');
+  static Future<AMapRouteConfig> create__({ bool init = true /* ios only */ }) async {
+    final refId = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod('ObjectFactory::createAMapRouteConfig', {'init': init});
     final object = AMapRouteConfig()..refId = refId..tag__ = 'amap_core_fluttify';
     return object;
   }
   
-  static Future<List<AMapRouteConfig>> create_batch__(int length) async {
+  static Future<List<AMapRouteConfig>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapRouteConfig', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapRouteConfig', {'length': length, 'init': init});
   
     final List<AMapRouteConfig> typedResult = resultBatch.map((result) => AMapRouteConfig()..refId = result..tag__ = 'amap_core_fluttify').toList();
     return typedResult;

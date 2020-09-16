@@ -15,6 +15,7 @@ extension AMapRouteSearchTypeToX on AMapRouteSearchType {
       case AMapRouteSearchType.AMapRouteSearchTypeDriving: return 0;
       case AMapRouteSearchType.AMapRouteSearchTypeTransit: return 1;
       case AMapRouteSearchType.AMapRouteSearchTypeWalking: return 2;
+      default: return 0;
     }
   }
 }
