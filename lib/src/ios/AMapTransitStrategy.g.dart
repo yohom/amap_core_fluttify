@@ -21,6 +21,7 @@ extension AMapTransitStrategyToX on AMapTransitStrategy {
       case AMapTransitStrategy.AMapTransitStrategyMinWalk: return 3;
       case AMapTransitStrategy.AMapTransitStrategyMostComfortable: return 4;
       case AMapTransitStrategy.AMapTransitStrategyAvoidSubway: return 5;
+      default: return 0;
     }
   }
 }

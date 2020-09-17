@@ -1738,9 +1738,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapURLSearch");
             }
         
-            AMapURLSearch* ref = [[AMapURLSearch alloc] init];
+            AMapURLSearch* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapURLSearch alloc] init];
+            } else {
+                __this__ = [AMapURLSearch alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1751,9 +1756,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapNaviConfig");
             }
         
-            AMapNaviConfig* ref = [[AMapNaviConfig alloc] init];
+            AMapNaviConfig* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapNaviConfig alloc] init];
+            } else {
+                __this__ = [AMapNaviConfig alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1764,9 +1774,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapRouteConfig");
             }
         
-            AMapRouteConfig* ref = [[AMapRouteConfig alloc] init];
+            AMapRouteConfig* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRouteConfig alloc] init];
+            } else {
+                __this__ = [AMapRouteConfig alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1777,9 +1792,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapPOIConfig");
             }
         
-            AMapPOIConfig* ref = [[AMapPOIConfig alloc] init];
+            AMapPOIConfig* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapPOIConfig alloc] init];
+            } else {
+                __this__ = [AMapPOIConfig alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1790,9 +1810,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapServices");
             }
         
-            AMapServices* ref = [[AMapServices alloc] init];
+            AMapServices* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapServices alloc] init];
+            } else {
+                __this__ = [AMapServices alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1800,9 +1825,16 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapURLSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapURLSearch* ref = [[AMapURLSearch alloc] init];
-                [resultList addObject:ref];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapURLSearch* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapURLSearch alloc] init];
+                } else {
+                    __this__ = [AMapURLSearch alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -1813,9 +1845,16 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapNaviConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapNaviConfig* ref = [[AMapNaviConfig alloc] init];
-                [resultList addObject:ref];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapNaviConfig* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapNaviConfig alloc] init];
+                } else {
+                    __this__ = [AMapNaviConfig alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -1826,9 +1865,16 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapRouteConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapRouteConfig* ref = [[AMapRouteConfig alloc] init];
-                [resultList addObject:ref];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapRouteConfig* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapRouteConfig alloc] init];
+                } else {
+                    __this__ = [AMapRouteConfig alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -1839,9 +1885,16 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapPOIConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapPOIConfig* ref = [[AMapPOIConfig alloc] init];
-                [resultList addObject:ref];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapPOIConfig* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapPOIConfig alloc] init];
+                } else {
+                    __this__ = [AMapPOIConfig alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -1852,9 +1905,16 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapServices": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapServices* ref = [[AMapServices alloc] init];
-                [resultList addObject:ref];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapServices* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapServices alloc] init];
+                } else {
+                    __this__ = [AMapServices alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);

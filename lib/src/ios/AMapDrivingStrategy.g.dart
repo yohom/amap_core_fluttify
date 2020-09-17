@@ -27,6 +27,7 @@ extension AMapDrivingStrategyToX on AMapDrivingStrategy {
       case AMapDrivingStrategy.AMapDrivingStrategyAvoidHighwaysAndCongestion: return 6;
       case AMapDrivingStrategy.AMapDrivingStrategyAvoidFareAndCongestion: return 7;
       case AMapDrivingStrategy.AMapDrivingStrategyAvoidHighwaysAndFareAndCongestion: return 8;
+      default: return 0;
     }
   }
 }
