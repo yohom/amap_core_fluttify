@@ -6,4 +6,4 @@ const kAmapCoreFluttifyChannel = MethodChannel(
   StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify')),
 );
 
-const kProjectName = 'amap_core_fluttify';
+const kAmapCoreFluttifyProjectName = 'amap_core_fluttify';
