@@ -40,7 +40,7 @@ extern BOOL enableLog;
         @"AMapURLSearch::openAMapNavigation": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapNaviConfig* config = (AMapNaviConfig*) args[@"config"];
+            AMapNaviConfig* config = (AMapNaviConfig*) (args[@"config"] == [NSNull null] ? nil : args[@"config"]);
         
             // ref
         
@@ -62,7 +62,7 @@ extern BOOL enableLog;
         @"AMapURLSearch::openAMapRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapRouteConfig* config = (AMapRouteConfig*) args[@"config"];
+            AMapRouteConfig* config = (AMapRouteConfig*) (args[@"config"] == [NSNull null] ? nil : args[@"config"]);
         
             // ref
         
@@ -84,7 +84,7 @@ extern BOOL enableLog;
         @"AMapURLSearch::openAMapPOISearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapPOIConfig* config = (AMapPOIConfig*) args[@"config"];
+            AMapPOIConfig* config = (AMapPOIConfig*) (args[@"config"] == [NSNull null] ? nil : args[@"config"]);
         
             // ref
         
@@ -120,7 +120,7 @@ extern BOOL enableLog;
         
             // result
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -156,7 +156,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapNaviConfig* config = (AMapNaviConfig*) args[@"config"];
+                AMapNaviConfig* config = (AMapNaviConfig*) (args[@"config"] == [NSNull null] ? nil : args[@"config"]);
         
                 // ref
         
@@ -181,7 +181,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapRouteConfig* config = (AMapRouteConfig*) args[@"config"];
+                AMapRouteConfig* config = (AMapRouteConfig*) (args[@"config"] == [NSNull null] ? nil : args[@"config"]);
         
                 // ref
         
@@ -206,7 +206,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapPOIConfig* config = (AMapPOIConfig*) args[@"config"];
+                AMapPOIConfig* config = (AMapPOIConfig*) (args[@"config"] == [NSNull null] ? nil : args[@"config"]);
         
                 // ref
         
@@ -240,7 +240,7 @@ extern BOOL enableLog;
         
                 // result
                 // return a ref
-                id __result__ = result;
+                NSObject* __result__ = result;
         
                 [resultList addObject:__result__];
             }

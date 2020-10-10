@@ -21,87 +21,87 @@ extension TypeOpAmapCoreFluttifyIOS on Object {
       return this is T;
     }
     else if (T == AMapURLSearch) {
-      final result = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapURLSearch', {'__this__': this});
+      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfAMapURLSearch', {'__this__': this});
       return result;
     }
     else if (T == AMapNaviConfig) {
-      final result = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapNaviConfig', {'__this__': this});
+      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfAMapNaviConfig', {'__this__': this});
       return result;
     }
     else if (T == AMapRouteConfig) {
-      final result = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapRouteConfig', {'__this__': this});
+      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfAMapRouteConfig', {'__this__': this});
       return result;
     }
     else if (T == AMapPOIConfig) {
-      final result = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapPOIConfig', {'__this__': this});
+      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfAMapPOIConfig', {'__this__': this});
       return result;
     }
     else if (T == AMapServices) {
-      final result = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapServices', {'__this__': this});
+      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfAMapServices', {'__this__': this});
       return result;
     }
     else if (T == CLLocation) {
-      final result = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfCLLocation', {'__this__': this});
+      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfCLLocation', {'__this__': this});
       return result;
     }
     else if (T == CLHeading) {
-      final result = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfCLHeading', {'__this__': this});
+      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfCLHeading', {'__this__': this});
       return result;
     }
     else if (T == CGRect) {
-      final result = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfCGRect', {'__this__': this});
+      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfCGRect', {'__this__': this});
       return result;
     }
     else if (T == CGPoint) {
-      final result = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfCGPoint', {'__this__': this});
+      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfCGPoint', {'__this__': this});
       return result;
     }
     else if (T == CGSize) {
-      final result = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfCGSize', {'__this__': this});
+      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfCGSize', {'__this__': this});
       return result;
     }
     else if (T == UIEdgeInsets) {
-      final result = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfUIEdgeInsets', {'__this__': this});
+      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfUIEdgeInsets', {'__this__': this});
       return result;
     }
     else if (T == CLLocationCoordinate2D) {
-      final result = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfCLLocationCoordinate2D', {'__this__': this});
+      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfCLLocationCoordinate2D', {'__this__': this});
       return result;
     }
     else if (T == CLLocationManager) {
-      final result = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfCLLocationManager', {'__this__': this});
+      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfCLLocationManager', {'__this__': this});
       return result;
     }
     else if (T == NSError) {
-      final result = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfNSError', {'__this__': this});
+      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfNSError', {'__this__': this});
       return result;
     }
     else if (T == UIView) {
-      final result = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfUIView', {'__this__': this});
+      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfUIView', {'__this__': this});
       return result;
     }
     else if (T == UIViewController) {
-      final result = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfUIViewController', {'__this__': this});
+      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfUIViewController', {'__this__': this});
       return result;
     }
     else if (T == UIControl) {
-      final result = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfUIControl', {'__this__': this});
+      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfUIControl', {'__this__': this});
       return result;
     }
     else if (T == UIImage) {
-      final result = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfUIImage', {'__this__': this});
+      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfUIImage', {'__this__': this});
       return result;
     }
     else if (T == UIColor) {
-      final result = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfUIColor', {'__this__': this});
+      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfUIColor', {'__this__': this});
       return result;
     }
     else if (T == NSData) {
-      final result = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfNSData', {'__this__': this});
+      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfNSData', {'__this__': this});
       return result;
     }
     else if (T == NSOperation) {
-      final result = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfNSOperation', {'__this__': this});
+      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfNSOperation', {'__this__': this});
       return result;
     }
   }
@@ -115,67 +115,67 @@ extension TypeOpAmapCoreFluttifyIOS on Object {
     }
     // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
     else if (T == AMapURLSearch) {
-      return (AMapURLSearch()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (AMapURLSearch()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapNaviConfig) {
-      return (AMapNaviConfig()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (AMapNaviConfig()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapRouteConfig) {
-      return (AMapRouteConfig()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (AMapRouteConfig()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapPOIConfig) {
-      return (AMapPOIConfig()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (AMapPOIConfig()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapServices) {
-      return (AMapServices()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (AMapServices()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == CLLocation) {
-      return (CLLocation()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (CLLocation()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == CLHeading) {
-      return (CLHeading()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (CLHeading()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == CGRect) {
-      return (CGRect()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (CGRect()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == CGPoint) {
-      return (CGPoint()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (CGPoint()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == CGSize) {
-      return (CGSize()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (CGSize()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == UIEdgeInsets) {
-      return (UIEdgeInsets()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (UIEdgeInsets()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == CLLocationCoordinate2D) {
-      return (CLLocationCoordinate2D()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (CLLocationCoordinate2D()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == CLLocationManager) {
-      return (CLLocationManager()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (CLLocationManager()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == NSError) {
-      return (NSError()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (NSError()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == UIView) {
-      return (UIView()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (UIView()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == UIViewController) {
-      return (UIViewController()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (UIViewController()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == UIControl) {
-      return (UIControl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (UIControl()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == UIImage) {
-      return (UIImage()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (UIImage()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == UIColor) {
-      return (UIColor()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (UIColor()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == NSData) {
-      return (NSData()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (NSData()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == NSOperation) {
-      return (NSOperation()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_core_fluttify') as T;
+      return (NSOperation()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
   }
 }

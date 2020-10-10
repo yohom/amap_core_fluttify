@@ -16,13 +16,16 @@ class AMapURLSearch extends NSObject  {
   //region constants
   static const String name__ = 'AMapURLSearch';
 
+  @override
+  final String tag__ = 'amap_core_fluttify';
+
   
   //endregion
 
   //region creators
   static Future<AMapURLSearch> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod('ObjectFactory::createAMapURLSearch', {'init': init});
-    final object = AMapURLSearch()..refId = refId..tag__ = 'amap_core_fluttify';
+    final refId = await kAmapCoreFluttifyChannel.invokeMethod('ObjectFactory::createAMapURLSearch', {'init': init});
+    final object = AMapURLSearch()..refId = refId;
     return object;
   }
   
@@ -30,9 +33,9 @@ class AMapURLSearch extends NSObject  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapURLSearch', {'length': length, 'init': init});
+    final List resultBatch = await kAmapCoreFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapURLSearch', {'length': length, 'init': init});
   
-    final List<AMapURLSearch> typedResult = resultBatch.map((result) => AMapURLSearch()..refId = result..tag__ = 'amap_core_fluttify').toList();
+    final List<AMapURLSearch> typedResult = resultBatch.map((result) => AMapURLSearch()..refId = result).toList();
     return typedResult;
   }
   
@@ -55,7 +58,7 @@ class AMapURLSearch extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod('AMapURLSearch::getLatestAMapApp', );
+    final __result__ = await kAmapCoreFluttifyChannel.invokeMethod('AMapURLSearch::getLatestAMapApp', );
   
   
     // handle native call
@@ -78,7 +81,7 @@ class AMapURLSearch extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod('AMapURLSearch::openAMapNavigation', {"config": config});
+    final __result__ = await kAmapCoreFluttifyChannel.invokeMethod('AMapURLSearch::openAMapNavigation', {"config": config});
   
   
     // handle native call
@@ -101,7 +104,7 @@ class AMapURLSearch extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod('AMapURLSearch::openAMapRouteSearch', {"config": config});
+    final __result__ = await kAmapCoreFluttifyChannel.invokeMethod('AMapURLSearch::openAMapRouteSearch', {"config": config});
   
   
     // handle native call
@@ -124,7 +127,7 @@ class AMapURLSearch extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod('AMapURLSearch::openAMapPOISearch', {"config": config});
+    final __result__ = await kAmapCoreFluttifyChannel.invokeMethod('AMapURLSearch::openAMapPOISearch', {"config": config});
   
   
     // handle native call
@@ -140,6 +143,11 @@ class AMapURLSearch extends NSObject  {
   }
   
   //endregion
+
+  @override
+  String toString() {
+    return 'AMapURLSearch{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension AMapURLSearch_Batch on List<AMapURLSearch> {
@@ -159,7 +167,7 @@ extension AMapURLSearch_Batch on List<AMapURLSearch> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod('AMapURLSearch::getLatestAMapApp_batch', );
+    final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod('AMapURLSearch::getLatestAMapApp_batch', );
   
   
     // convert native result to dart side object
@@ -178,7 +186,7 @@ extension AMapURLSearch_Batch on List<AMapURLSearch> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod('AMapURLSearch::openAMapNavigation_batch', [for (int __i__ = 0; __i__ < config.length; __i__++) {"config": config[__i__]}]);
+    final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod('AMapURLSearch::openAMapNavigation_batch', [for (int __i__ = 0; __i__ < config.length; __i__++) {"config": config[__i__]}]);
   
   
     // convert native result to dart side object
@@ -197,7 +205,7 @@ extension AMapURLSearch_Batch on List<AMapURLSearch> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod('AMapURLSearch::openAMapRouteSearch_batch', [for (int __i__ = 0; __i__ < config.length; __i__++) {"config": config[__i__]}]);
+    final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod('AMapURLSearch::openAMapRouteSearch_batch', [for (int __i__ = 0; __i__ < config.length; __i__++) {"config": config[__i__]}]);
   
   
     // convert native result to dart side object
@@ -216,7 +224,7 @@ extension AMapURLSearch_Batch on List<AMapURLSearch> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod('AMapURLSearch::openAMapPOISearch_batch', [for (int __i__ = 0; __i__ < config.length; __i__++) {"config": config[__i__]}]);
+    final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod('AMapURLSearch::openAMapPOISearch_batch', [for (int __i__ = 0; __i__ < config.length; __i__++) {"config": config[__i__]}]);
   
   
     // convert native result to dart side object

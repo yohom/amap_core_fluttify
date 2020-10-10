@@ -20,7 +20,7 @@ Future<String> AMapEmptyStringIfNil(String s) async {
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod('AMapEmptyStringIfNil::AMapEmptyStringIfNil', {"s": s});
+  final __result__ = await kAmapCoreFluttifyChannel.invokeMethod('AMapEmptyStringIfNil::AMapEmptyStringIfNil', {"s": s});
   
 
   // handle native call
@@ -41,7 +41,7 @@ Future<CLLocationCoordinate2D> AMapCoordinateConvert(CLLocationCoordinate2D coor
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod('AMapCoordinateConvert::AMapCoordinateConvert', {"coordinate": coordinate, "type": type.toValue()});
+  final __result__ = await kAmapCoreFluttifyChannel.invokeMethod('AMapCoordinateConvert::AMapCoordinateConvert', {"coordinate": coordinate, "type": type.toValue()});
   
 
   // handle native call
@@ -51,7 +51,7 @@ Future<CLLocationCoordinate2D> AMapCoordinateConvert(CLLocationCoordinate2D coor
   if (__result__ == null) {
     return null;
   } else {
-    return CLLocationCoordinate2D()..refId = __result__..tag__ = 'amap_core_fluttify';
+    return CLLocationCoordinate2D()..refId = __result__;
   }
 }
 
@@ -62,7 +62,7 @@ Future<bool> AMapDataAvailableForCoordinate(CLLocationCoordinate2D coordinate) a
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod('AMapDataAvailableForCoordinate::AMapDataAvailableForCoordinate', {"coordinate": coordinate});
+  final __result__ = await kAmapCoreFluttifyChannel.invokeMethod('AMapDataAvailableForCoordinate::AMapDataAvailableForCoordinate', {"coordinate": coordinate});
   
 
   // handle native call

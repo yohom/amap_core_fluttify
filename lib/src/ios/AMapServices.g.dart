@@ -16,13 +16,16 @@ class AMapServices extends NSObject  {
   //region constants
   static const String name__ = 'AMapServices';
 
+  @override
+  final String tag__ = 'amap_core_fluttify';
+
   
   //endregion
 
   //region creators
   static Future<AMapServices> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod('ObjectFactory::createAMapServices', {'init': init});
-    final object = AMapServices()..refId = refId..tag__ = 'amap_core_fluttify';
+    final refId = await kAmapCoreFluttifyChannel.invokeMethod('ObjectFactory::createAMapServices', {'init': init});
+    final object = AMapServices()..refId = refId;
     return object;
   }
   
@@ -30,9 +33,9 @@ class AMapServices extends NSObject  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapServices', {'length': length, 'init': init});
+    final List resultBatch = await kAmapCoreFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapServices', {'length': length, 'init': init});
   
-    final List<AMapServices> typedResult = resultBatch.map((result) => AMapServices()..refId = result..tag__ = 'amap_core_fluttify').toList();
+    final List<AMapServices> typedResult = resultBatch.map((result) => AMapServices()..refId = result).toList();
     return typedResult;
   }
   
@@ -40,22 +43,22 @@ class AMapServices extends NSObject  {
 
   //region getters
   Future<String> get_apiKey() async {
-    final __result__ = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod("AMapServices::get_apiKey", {'__this__': this});
+    final __result__ = await kAmapCoreFluttifyChannel.invokeMethod("AMapServices::get_apiKey", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_enableHTTPS() async {
-    final __result__ = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod("AMapServices::get_enableHTTPS", {'__this__': this});
+    final __result__ = await kAmapCoreFluttifyChannel.invokeMethod("AMapServices::get_enableHTTPS", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_crashReportEnabled() async {
-    final __result__ = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod("AMapServices::get_crashReportEnabled", {'__this__': this});
+    final __result__ = await kAmapCoreFluttifyChannel.invokeMethod("AMapServices::get_crashReportEnabled", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<String> get_identifier() async {
-    final __result__ = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod("AMapServices::get_identifier", {'__this__': this});
+    final __result__ = await kAmapCoreFluttifyChannel.invokeMethod("AMapServices::get_identifier", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
@@ -63,19 +66,19 @@ class AMapServices extends NSObject  {
 
   //region setters
   Future<void> set_apiKey(String apiKey) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod('AMapServices::set_apiKey', <String, dynamic>{'__this__': this, "apiKey": apiKey});
+    await kAmapCoreFluttifyChannel.invokeMethod('AMapServices::set_apiKey', <String, dynamic>{'__this__': this, "apiKey": apiKey});
   
   
   }
   
   Future<void> set_enableHTTPS(bool enableHTTPS) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod('AMapServices::set_enableHTTPS', <String, dynamic>{'__this__': this, "enableHTTPS": enableHTTPS});
+    await kAmapCoreFluttifyChannel.invokeMethod('AMapServices::set_enableHTTPS', <String, dynamic>{'__this__': this, "enableHTTPS": enableHTTPS});
   
   
   }
   
   Future<void> set_crashReportEnabled(bool crashReportEnabled) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod('AMapServices::set_crashReportEnabled', <String, dynamic>{'__this__': this, "crashReportEnabled": crashReportEnabled});
+    await kAmapCoreFluttifyChannel.invokeMethod('AMapServices::set_crashReportEnabled', <String, dynamic>{'__this__': this, "crashReportEnabled": crashReportEnabled});
   
   
   }
@@ -91,7 +94,7 @@ class AMapServices extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod('AMapServices::sharedServices', );
+    final __result__ = await kAmapCoreFluttifyChannel.invokeMethod('AMapServices::sharedServices', );
   
   
     // handle native call
@@ -101,39 +104,44 @@ class AMapServices extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = AMapServices()..refId = __result__..tag__ = 'amap_core_fluttify';
+      final __return__ = AMapServices()..refId = __result__;
       return __return__;
     }
   }
   
   //endregion
+
+  @override
+  String toString() {
+    return 'AMapServices{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension AMapServices_Batch on List<AMapServices> {
   //region getters
   Future<List<String>> get_apiKey_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod("AMapServices::get_apiKey_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod("AMapServices::get_apiKey_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_enableHTTPS_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod("AMapServices::get_enableHTTPS_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod("AMapServices::get_enableHTTPS_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_crashReportEnabled_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod("AMapServices::get_crashReportEnabled_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod("AMapServices::get_crashReportEnabled_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<String>> get_identifier_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod("AMapServices::get_identifier_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod("AMapServices::get_identifier_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
@@ -143,19 +151,19 @@ extension AMapServices_Batch on List<AMapServices> {
 
   //region setters
   Future<void> set_apiKey_batch(List<String> apiKey) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapServices::set_apiKey_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "apiKey": apiKey[__i__]}]);
+    await kAmapCoreFluttifyChannel.invokeMethod('AMapServices::set_apiKey_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "apiKey": apiKey[__i__]}]);
   
   
   }
   
   Future<void> set_enableHTTPS_batch(List<bool> enableHTTPS) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapServices::set_enableHTTPS_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "enableHTTPS": enableHTTPS[__i__]}]);
+    await kAmapCoreFluttifyChannel.invokeMethod('AMapServices::set_enableHTTPS_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "enableHTTPS": enableHTTPS[__i__]}]);
   
   
   }
   
   Future<void> set_crashReportEnabled_batch(List<bool> crashReportEnabled) async {
-    await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapServices::set_crashReportEnabled_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "crashReportEnabled": crashReportEnabled[__i__]}]);
+    await kAmapCoreFluttifyChannel.invokeMethod('AMapServices::set_crashReportEnabled_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "crashReportEnabled": crashReportEnabled[__i__]}]);
   
   
   }
@@ -170,14 +178,14 @@ extension AMapServices_Batch on List<AMapServices> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_core_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_core_fluttify'))).invokeMethod('AMapServices::sharedServices_batch', );
+    final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod('AMapServices::sharedServices_batch', );
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapServices()..refId = __result__..tag__ = 'amap_core_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapServices()..refId = __result__).toList();
       return typedResult;
     }
   }
