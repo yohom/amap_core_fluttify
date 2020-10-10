@@ -10,3 +10,4 @@ export 'AMapRouteSearchType.g.dart';
 export 'AMapTransitStrategy.g.dart';
 export 'AMapCoordinateType.g.dart';
 export 'AMapURLSearch.g.dart';
+export '../facade/objects.g.dart';
