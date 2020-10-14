@@ -24,8 +24,8 @@ class AMapServices extends NSObject  {
 
   //region creators
   static Future<AMapServices> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapCoreFluttifyChannel.invokeMethod('ObjectFactory::createAMapServices', {'init': init});
-    final object = AMapServices()..refId = refId;
+    final __result__ = await kAmapCoreFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapServices', {'init': init});
+    final object = AMapServices()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapServices extends NSObject  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapCoreFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapServices', {'length': length, 'init': init});
-  
-    final List<AMapServices> typedResult = resultBatch.map((result) => AMapServices()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapCoreFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapServices', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapServices()..refId = it.refId).toList();
   }
   
   //endregion
@@ -44,22 +42,22 @@ class AMapServices extends NSObject  {
   //region getters
   Future<String> get_apiKey() async {
     final __result__ = await kAmapCoreFluttifyChannel.invokeMethod("AMapServices::get_apiKey", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<bool> get_enableHTTPS() async {
     final __result__ = await kAmapCoreFluttifyChannel.invokeMethod("AMapServices::get_enableHTTPS", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<bool> get_crashReportEnabled() async {
     final __result__ = await kAmapCoreFluttifyChannel.invokeMethod("AMapServices::get_crashReportEnabled", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_identifier() async {
     final __result__ = await kAmapCoreFluttifyChannel.invokeMethod("AMapServices::get_identifier", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   //endregion
@@ -100,13 +98,7 @@ class AMapServices extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = AMapServices()..refId = __result__;
-      return __return__;
-    }
+    return __result__ == null ? null : (AMapServices()..refId = __result__.refId);
   }
   
   //endregion
@@ -181,13 +173,7 @@ extension AMapServices_Batch on List<AMapServices> {
     final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod('AMapServices::sharedServices_batch', );
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapServices()..refId = __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (AMapServices()..refId = __result__.refId)).toList();
   }
   
   //endregion
