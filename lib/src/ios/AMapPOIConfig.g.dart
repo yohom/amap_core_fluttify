@@ -24,8 +24,8 @@ class AMapPOIConfig extends NSObject  {
 
   //region creators
   static Future<AMapPOIConfig> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapCoreFluttifyChannel.invokeMethod('ObjectFactory::createAMapPOIConfig', {'init': init});
-    final object = AMapPOIConfig()..refId = refId;
+    final __result__ = await kAmapCoreFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapPOIConfig', {'init': init});
+    final object = AMapPOIConfig()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapPOIConfig extends NSObject  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapCoreFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapPOIConfig', {'length': length, 'init': init});
-  
-    final List<AMapPOIConfig> typedResult = resultBatch.map((result) => AMapPOIConfig()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapCoreFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapPOIConfig', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapPOIConfig()..refId = it.refId).toList();
   }
   
   //endregion
@@ -44,27 +42,27 @@ class AMapPOIConfig extends NSObject  {
   //region getters
   Future<String> get_appScheme() async {
     final __result__ = await kAmapCoreFluttifyChannel.invokeMethod("AMapPOIConfig::get_appScheme", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_appName() async {
     final __result__ = await kAmapCoreFluttifyChannel.invokeMethod("AMapPOIConfig::get_appName", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_keywords() async {
     final __result__ = await kAmapCoreFluttifyChannel.invokeMethod("AMapPOIConfig::get_keywords", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<CLLocationCoordinate2D> get_leftTopCoordinate() async {
     final __result__ = await kAmapCoreFluttifyChannel.invokeMethod("AMapPOIConfig::get_leftTopCoordinate", {'__this__': this});
-    return __result__ == null ? null : (CLLocationCoordinate2D()..refId = __result__);
+    return __result__ == null ? null : (CLLocationCoordinate2D()..refId = __result__.refId);
   }
   
   Future<CLLocationCoordinate2D> get_rightBottomCoordinate() async {
     final __result__ = await kAmapCoreFluttifyChannel.invokeMethod("AMapPOIConfig::get_rightBottomCoordinate", {'__this__': this});
-    return __result__ == null ? null : (CLLocationCoordinate2D()..refId = __result__);
+    return __result__ == null ? null : (CLLocationCoordinate2D()..refId = __result__.refId);
   }
   
   //endregion
@@ -138,14 +136,14 @@ extension AMapPOIConfig_Batch on List<AMapPOIConfig> {
   Future<List<CLLocationCoordinate2D>> get_leftTopCoordinate_batch() async {
     final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod("AMapPOIConfig::get_leftTopCoordinate_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => CLLocationCoordinate2D()..refId = __result__).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (CLLocationCoordinate2D()..refId = __result__.refId)).toList();
     return typedResult;
   }
   
   Future<List<CLLocationCoordinate2D>> get_rightBottomCoordinate_batch() async {
     final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod("AMapPOIConfig::get_rightBottomCoordinate_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => CLLocationCoordinate2D()..refId = __result__).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (CLLocationCoordinate2D()..refId = __result__.refId)).toList();
     return typedResult;
   }
   
