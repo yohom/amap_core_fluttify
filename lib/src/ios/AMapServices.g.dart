@@ -31,7 +31,7 @@ class AMapServices extends NSObject  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapCoreFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapServices', {'length': length, 'init': init});
+    return kAmapCoreFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapServices', {'length': length, 'init': init});
   }
   
   //endregion

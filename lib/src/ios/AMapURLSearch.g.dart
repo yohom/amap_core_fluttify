@@ -31,7 +31,7 @@ class AMapURLSearch extends NSObject  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapCoreFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapURLSearch', {'length': length, 'init': init});
+    return kAmapCoreFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapURLSearch', {'length': length, 'init': init});
   }
   
   //endregion
