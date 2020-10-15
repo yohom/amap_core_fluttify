@@ -103,6 +103,9 @@ Future<bool> AmapCoreFluttifyIOSIs<T>(dynamic __this__) async {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfNSOperation', {'__this__': __this__});
     return result;
   }
+  else {
+    return false;
+  }
 }
 
 // type cast
@@ -110,66 +113,69 @@ dynamic AmapCoreFluttifyIOSAs(dynamic __this__, String typeName) {
   // 占位用
   if (false) { }
   else if (typeName == 'AMapURLSearch') {
-    return AMapURLSearch()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+    return AMapURLSearch()..refId = (__this__ as Ref).refId;
   }
   else if (typeName == 'AMapNaviConfig') {
-    return AMapNaviConfig()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+    return AMapNaviConfig()..refId = (__this__ as Ref).refId;
   }
   else if (typeName == 'AMapRouteConfig') {
-    return AMapRouteConfig()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+    return AMapRouteConfig()..refId = (__this__ as Ref).refId;
   }
   else if (typeName == 'AMapPOIConfig') {
-    return AMapPOIConfig()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+    return AMapPOIConfig()..refId = (__this__ as Ref).refId;
   }
   else if (typeName == 'AMapServices') {
-    return AMapServices()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+    return AMapServices()..refId = (__this__ as Ref).refId;
   }
   else if (typeName == 'CLLocation') {
-    return CLLocation()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+    return CLLocation()..refId = (__this__ as Ref).refId;
   }
   else if (typeName == 'CLHeading') {
-    return CLHeading()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+    return CLHeading()..refId = (__this__ as Ref).refId;
   }
   else if (typeName == 'CGRect') {
-    return CGRect()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+    return CGRect()..refId = (__this__ as Ref).refId;
   }
   else if (typeName == 'CGPoint') {
-    return CGPoint()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+    return CGPoint()..refId = (__this__ as Ref).refId;
   }
   else if (typeName == 'CGSize') {
-    return CGSize()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+    return CGSize()..refId = (__this__ as Ref).refId;
   }
   else if (typeName == 'UIEdgeInsets') {
-    return UIEdgeInsets()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+    return UIEdgeInsets()..refId = (__this__ as Ref).refId;
   }
   else if (typeName == 'CLLocationCoordinate2D') {
-    return CLLocationCoordinate2D()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+    return CLLocationCoordinate2D()..refId = (__this__ as Ref).refId;
   }
   else if (typeName == 'CLLocationManager') {
-    return CLLocationManager()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+    return CLLocationManager()..refId = (__this__ as Ref).refId;
   }
   else if (typeName == 'NSError') {
-    return NSError()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+    return NSError()..refId = (__this__ as Ref).refId;
   }
   else if (typeName == 'UIView') {
-    return UIView()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+    return UIView()..refId = (__this__ as Ref).refId;
   }
   else if (typeName == 'UIViewController') {
-    return UIViewController()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+    return UIViewController()..refId = (__this__ as Ref).refId;
   }
   else if (typeName == 'UIControl') {
-    return UIControl()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+    return UIControl()..refId = (__this__ as Ref).refId;
   }
   else if (typeName == 'UIImage') {
-    return UIImage()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+    return UIImage()..refId = (__this__ as Ref).refId;
   }
   else if (typeName == 'UIColor') {
-    return UIColor()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+    return UIColor()..refId = (__this__ as Ref).refId;
   }
   else if (typeName == 'NSData') {
-    return NSData()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+    return NSData()..refId = (__this__ as Ref).refId;
   }
   else if (typeName == 'NSOperation') {
-    return NSOperation()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+    return NSOperation()..refId = (__this__ as Ref).refId;
+  }
+  else {
+    return null;
   }
 }

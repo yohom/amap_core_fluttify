@@ -42,7 +42,7 @@ Future<CLLocationCoordinate2D> AMapCoordinateConvert(CLLocationCoordinate2D coor
   // handle native call
   
 
-  return __result__ == null ? null : (CLLocationCoordinate2D()..refId = (__result__ as Ref).refId);
+  return __result__;
 }
 
 Future<bool> AMapDataAvailableForCoordinate(CLLocationCoordinate2D coordinate) async {

@@ -31,38 +31,45 @@ class AMapRouteConfig extends NSObject  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapCoreFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapRouteConfig', {'length': length, 'init': init});
+    return kAmapCoreFluttifyChannel.invokeListMethod<AMapRouteConfig>('ObjectFactory::create_batchAMapRouteConfig', {'length': length, 'init': init});
   }
   
   //endregion
 
   //region getters
   Future<String> get_appScheme() async {
-    return kAmapCoreFluttifyChannel.invokeMethod("AMapRouteConfig::get_appScheme", {'__this__': this});
+    final __result__ = await kAmapCoreFluttifyChannel.invokeMethod("AMapRouteConfig::get_appScheme", {'__this__': this});
+    return __result__;
   }
   
   Future<String> get_appName() async {
-    return kAmapCoreFluttifyChannel.invokeMethod("AMapRouteConfig::get_appName", {'__this__': this});
+    final __result__ = await kAmapCoreFluttifyChannel.invokeMethod("AMapRouteConfig::get_appName", {'__this__': this});
+    return __result__;
   }
   
   Future<CLLocationCoordinate2D> get_startCoordinate() async {
-    return kAmapCoreFluttifyChannel.invokeMethod("AMapRouteConfig::get_startCoordinate", {'__this__': this});
+    final __result__ = await kAmapCoreFluttifyChannel.invokeMethod("AMapRouteConfig::get_startCoordinate", {'__this__': this});
+    return __result__;
   }
   
   Future<CLLocationCoordinate2D> get_destinationCoordinate() async {
-    return kAmapCoreFluttifyChannel.invokeMethod("AMapRouteConfig::get_destinationCoordinate", {'__this__': this});
+    final __result__ = await kAmapCoreFluttifyChannel.invokeMethod("AMapRouteConfig::get_destinationCoordinate", {'__this__': this});
+    return __result__;
   }
   
   Future<AMapDrivingStrategy> get_drivingStrategy() async {
-    return kAmapCoreFluttifyChannel.invokeMethod("AMapRouteConfig::get_drivingStrategy", {'__this__': this});
+    final __result__ = await kAmapCoreFluttifyChannel.invokeMethod("AMapRouteConfig::get_drivingStrategy", {'__this__': this});
+    return (__result__ as int).toAMapDrivingStrategy();
   }
   
   Future<AMapTransitStrategy> get_transitStrategy() async {
-    return kAmapCoreFluttifyChannel.invokeMethod("AMapRouteConfig::get_transitStrategy", {'__this__': this});
+    final __result__ = await kAmapCoreFluttifyChannel.invokeMethod("AMapRouteConfig::get_transitStrategy", {'__this__': this});
+    return (__result__ as int).toAMapTransitStrategy();
   }
   
   Future<AMapRouteSearchType> get_routeType() async {
-    return kAmapCoreFluttifyChannel.invokeMethod("AMapRouteConfig::get_routeType", {'__this__': this});
+    final __result__ = await kAmapCoreFluttifyChannel.invokeMethod("AMapRouteConfig::get_routeType", {'__this__': this});
+    return (__result__ as int).toAMapRouteSearchType();
   }
   
   //endregion
@@ -125,31 +132,38 @@ class AMapRouteConfig extends NSObject  {
 extension AMapRouteConfig_Batch on List<AMapRouteConfig> {
   //region getters
   Future<List<String>> get_appScheme_batch() async {
-    return kAmapCoreFluttifyChannel.invokeMethod("AMapRouteConfig::get_appScheme_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod("AMapRouteConfig::get_appScheme_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   Future<List<String>> get_appName_batch() async {
-    return kAmapCoreFluttifyChannel.invokeMethod("AMapRouteConfig::get_appName_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod("AMapRouteConfig::get_appName_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   Future<List<CLLocationCoordinate2D>> get_startCoordinate_batch() async {
-    return kAmapCoreFluttifyChannel.invokeMethod("AMapRouteConfig::get_startCoordinate_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod("AMapRouteConfig::get_startCoordinate_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List).cast<CLLocationCoordinate2D>().map((__result__) => __result__).toList();
   }
   
   Future<List<CLLocationCoordinate2D>> get_destinationCoordinate_batch() async {
-    return kAmapCoreFluttifyChannel.invokeMethod("AMapRouteConfig::get_destinationCoordinate_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod("AMapRouteConfig::get_destinationCoordinate_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List).cast<CLLocationCoordinate2D>().map((__result__) => __result__).toList();
   }
   
   Future<List<AMapDrivingStrategy>> get_drivingStrategy_batch() async {
-    return kAmapCoreFluttifyChannel.invokeMethod("AMapRouteConfig::get_drivingStrategy_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod("AMapRouteConfig::get_drivingStrategy_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List).cast<AMapDrivingStrategy>().map((__result__) => (__result__ as int).toAMapDrivingStrategy()).toList();
   }
   
   Future<List<AMapTransitStrategy>> get_transitStrategy_batch() async {
-    return kAmapCoreFluttifyChannel.invokeMethod("AMapRouteConfig::get_transitStrategy_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod("AMapRouteConfig::get_transitStrategy_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List).cast<AMapTransitStrategy>().map((__result__) => (__result__ as int).toAMapTransitStrategy()).toList();
   }
   
   Future<List<AMapRouteSearchType>> get_routeType_batch() async {
-    return kAmapCoreFluttifyChannel.invokeMethod("AMapRouteConfig::get_routeType_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod("AMapRouteConfig::get_routeType_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List).cast<AMapRouteSearchType>().map((__result__) => (__result__ as int).toAMapRouteSearchType()).toList();
   }
   
   //endregion
