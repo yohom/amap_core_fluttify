@@ -31,7 +31,7 @@ class AMapURLSearch extends NSObject  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapCoreFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapURLSearch', {'length': length, 'init': init});
+    return kAmapCoreFluttifyChannel.invokeListMethod<AMapURLSearch>('ObjectFactory::create_batchAMapURLSearch', {'length': length, 'init': init});
   }
   
   //endregion
@@ -141,7 +141,7 @@ extension AMapURLSearch_Batch on List<AMapURLSearch> {
     final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod('AMapURLSearch::getLatestAMapApp_batch', );
   
   
-    return resultBatch;
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -154,7 +154,7 @@ extension AMapURLSearch_Batch on List<AMapURLSearch> {
     final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod('AMapURLSearch::openAMapNavigation_batch', [for (int __i__ = 0; __i__ < config.length; __i__++) {"config": config[__i__]}]);
   
   
-    return resultBatch;
+    return (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
   }
   
   
@@ -167,7 +167,7 @@ extension AMapURLSearch_Batch on List<AMapURLSearch> {
     final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod('AMapURLSearch::openAMapRouteSearch_batch', [for (int __i__ = 0; __i__ < config.length; __i__++) {"config": config[__i__]}]);
   
   
-    return resultBatch;
+    return (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
   }
   
   
@@ -180,7 +180,7 @@ extension AMapURLSearch_Batch on List<AMapURLSearch> {
     final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod('AMapURLSearch::openAMapPOISearch_batch', [for (int __i__ = 0; __i__ < config.length; __i__++) {"config": config[__i__]}]);
   
   
-    return resultBatch;
+    return (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
   }
   
   //endregion

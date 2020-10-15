@@ -31,30 +31,35 @@ class AMapPOIConfig extends NSObject  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapCoreFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapPOIConfig', {'length': length, 'init': init});
+    return kAmapCoreFluttifyChannel.invokeListMethod<AMapPOIConfig>('ObjectFactory::create_batchAMapPOIConfig', {'length': length, 'init': init});
   }
   
   //endregion
 
   //region getters
   Future<String> get_appScheme() async {
-    return kAmapCoreFluttifyChannel.invokeMethod("AMapPOIConfig::get_appScheme", {'__this__': this});
+    final __result__ = await kAmapCoreFluttifyChannel.invokeMethod("AMapPOIConfig::get_appScheme", {'__this__': this});
+    return __result__;
   }
   
   Future<String> get_appName() async {
-    return kAmapCoreFluttifyChannel.invokeMethod("AMapPOIConfig::get_appName", {'__this__': this});
+    final __result__ = await kAmapCoreFluttifyChannel.invokeMethod("AMapPOIConfig::get_appName", {'__this__': this});
+    return __result__;
   }
   
   Future<String> get_keywords() async {
-    return kAmapCoreFluttifyChannel.invokeMethod("AMapPOIConfig::get_keywords", {'__this__': this});
+    final __result__ = await kAmapCoreFluttifyChannel.invokeMethod("AMapPOIConfig::get_keywords", {'__this__': this});
+    return __result__;
   }
   
   Future<CLLocationCoordinate2D> get_leftTopCoordinate() async {
-    return kAmapCoreFluttifyChannel.invokeMethod("AMapPOIConfig::get_leftTopCoordinate", {'__this__': this});
+    final __result__ = await kAmapCoreFluttifyChannel.invokeMethod("AMapPOIConfig::get_leftTopCoordinate", {'__this__': this});
+    return __result__;
   }
   
   Future<CLLocationCoordinate2D> get_rightBottomCoordinate() async {
-    return kAmapCoreFluttifyChannel.invokeMethod("AMapPOIConfig::get_rightBottomCoordinate", {'__this__': this});
+    final __result__ = await kAmapCoreFluttifyChannel.invokeMethod("AMapPOIConfig::get_rightBottomCoordinate", {'__this__': this});
+    return __result__;
   }
   
   //endregion
@@ -105,23 +110,28 @@ class AMapPOIConfig extends NSObject  {
 extension AMapPOIConfig_Batch on List<AMapPOIConfig> {
   //region getters
   Future<List<String>> get_appScheme_batch() async {
-    return kAmapCoreFluttifyChannel.invokeMethod("AMapPOIConfig::get_appScheme_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod("AMapPOIConfig::get_appScheme_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   Future<List<String>> get_appName_batch() async {
-    return kAmapCoreFluttifyChannel.invokeMethod("AMapPOIConfig::get_appName_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod("AMapPOIConfig::get_appName_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   Future<List<String>> get_keywords_batch() async {
-    return kAmapCoreFluttifyChannel.invokeMethod("AMapPOIConfig::get_keywords_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod("AMapPOIConfig::get_keywords_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   Future<List<CLLocationCoordinate2D>> get_leftTopCoordinate_batch() async {
-    return kAmapCoreFluttifyChannel.invokeMethod("AMapPOIConfig::get_leftTopCoordinate_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod("AMapPOIConfig::get_leftTopCoordinate_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List).cast<CLLocationCoordinate2D>().map((__result__) => __result__).toList();
   }
   
   Future<List<CLLocationCoordinate2D>> get_rightBottomCoordinate_batch() async {
-    return kAmapCoreFluttifyChannel.invokeMethod("AMapPOIConfig::get_rightBottomCoordinate_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod("AMapPOIConfig::get_rightBottomCoordinate_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List).cast<CLLocationCoordinate2D>().map((__result__) => __result__).toList();
   }
   
   //endregion
