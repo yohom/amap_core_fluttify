@@ -13,169 +13,163 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
-extension TypeOpAmapCoreFluttifyIOS on Object {
-  // type check
-  Future<bool> is__<T>() async {
-    final typeName = T.toString();
-    if (RegExp(r'^(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)$').hasMatch(typeName)) {
-      return this is T;
-    }
-    else if (T == AMapURLSearch) {
-      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfAMapURLSearch', {'__this__': this});
-      return result;
-    }
-    else if (T == AMapNaviConfig) {
-      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfAMapNaviConfig', {'__this__': this});
-      return result;
-    }
-    else if (T == AMapRouteConfig) {
-      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfAMapRouteConfig', {'__this__': this});
-      return result;
-    }
-    else if (T == AMapPOIConfig) {
-      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfAMapPOIConfig', {'__this__': this});
-      return result;
-    }
-    else if (T == AMapServices) {
-      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfAMapServices', {'__this__': this});
-      return result;
-    }
-    else if (T == CLLocation) {
-      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfCLLocation', {'__this__': this});
-      return result;
-    }
-    else if (T == CLHeading) {
-      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfCLHeading', {'__this__': this});
-      return result;
-    }
-    else if (T == CGRect) {
-      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfCGRect', {'__this__': this});
-      return result;
-    }
-    else if (T == CGPoint) {
-      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfCGPoint', {'__this__': this});
-      return result;
-    }
-    else if (T == CGSize) {
-      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfCGSize', {'__this__': this});
-      return result;
-    }
-    else if (T == UIEdgeInsets) {
-      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfUIEdgeInsets', {'__this__': this});
-      return result;
-    }
-    else if (T == CLLocationCoordinate2D) {
-      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfCLLocationCoordinate2D', {'__this__': this});
-      return result;
-    }
-    else if (T == CLLocationManager) {
-      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfCLLocationManager', {'__this__': this});
-      return result;
-    }
-    else if (T == NSError) {
-      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfNSError', {'__this__': this});
-      return result;
-    }
-    else if (T == UIView) {
-      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfUIView', {'__this__': this});
-      return result;
-    }
-    else if (T == UIViewController) {
-      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfUIViewController', {'__this__': this});
-      return result;
-    }
-    else if (T == UIControl) {
-      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfUIControl', {'__this__': this});
-      return result;
-    }
-    else if (T == UIImage) {
-      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfUIImage', {'__this__': this});
-      return result;
-    }
-    else if (T == UIColor) {
-      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfUIColor', {'__this__': this});
-      return result;
-    }
-    else if (T == NSData) {
-      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfNSData', {'__this__': this});
-      return result;
-    }
-    else if (T == NSOperation) {
-      final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfNSOperation', {'__this__': this});
-      return result;
-    }
+// type check
+Future<bool> AmapCoreFluttifyIOSIs<T>(dynamic __this__) async {
+  final typeName = T.toString();
+  if (RegExp(r'^(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)$').hasMatch(typeName)) {
+    return __this__ is T;
   }
+  else if (T == AMapURLSearch) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfAMapURLSearch', {'__this__': __this__});
+    return result;
+  }
+  else if (T == AMapNaviConfig) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfAMapNaviConfig', {'__this__': __this__});
+    return result;
+  }
+  else if (T == AMapRouteConfig) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfAMapRouteConfig', {'__this__': __this__});
+    return result;
+  }
+  else if (T == AMapPOIConfig) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfAMapPOIConfig', {'__this__': __this__});
+    return result;
+  }
+  else if (T == AMapServices) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfAMapServices', {'__this__': __this__});
+    return result;
+  }
+  else if (T == CLLocation) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfCLLocation', {'__this__': __this__});
+    return result;
+  }
+  else if (T == CLHeading) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfCLHeading', {'__this__': __this__});
+    return result;
+  }
+  else if (T == CGRect) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfCGRect', {'__this__': __this__});
+    return result;
+  }
+  else if (T == CGPoint) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfCGPoint', {'__this__': __this__});
+    return result;
+  }
+  else if (T == CGSize) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfCGSize', {'__this__': __this__});
+    return result;
+  }
+  else if (T == UIEdgeInsets) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfUIEdgeInsets', {'__this__': __this__});
+    return result;
+  }
+  else if (T == CLLocationCoordinate2D) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfCLLocationCoordinate2D', {'__this__': __this__});
+    return result;
+  }
+  else if (T == CLLocationManager) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfCLLocationManager', {'__this__': __this__});
+    return result;
+  }
+  else if (T == NSError) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfNSError', {'__this__': __this__});
+    return result;
+  }
+  else if (T == UIView) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfUIView', {'__this__': __this__});
+    return result;
+  }
+  else if (T == UIViewController) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfUIViewController', {'__this__': __this__});
+    return result;
+  }
+  else if (T == UIControl) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfUIControl', {'__this__': __this__});
+    return result;
+  }
+  else if (T == UIImage) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfUIImage', {'__this__': __this__});
+    return result;
+  }
+  else if (T == UIColor) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfUIColor', {'__this__': __this__});
+    return result;
+  }
+  else if (T == NSData) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfNSData', {'__this__': __this__});
+    return result;
+  }
+  else if (T == NSOperation) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfNSOperation', {'__this__': __this__});
+    return result;
+  }
+}
 
-  // type cast
-  T as__<T>() {
-    final typeName = T.toString();
-    // jsonable 直接造型 返回
-    if (RegExp(r'^(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)$').hasMatch(typeName)) {
-      return this as T;
-    }
-    // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
-    else if (T == AMapURLSearch) {
-      return (AMapURLSearch()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
-    }
-    else if (T == AMapNaviConfig) {
-      return (AMapNaviConfig()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
-    }
-    else if (T == AMapRouteConfig) {
-      return (AMapRouteConfig()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
-    }
-    else if (T == AMapPOIConfig) {
-      return (AMapPOIConfig()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
-    }
-    else if (T == AMapServices) {
-      return (AMapServices()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
-    }
-    else if (T == CLLocation) {
-      return (CLLocation()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
-    }
-    else if (T == CLHeading) {
-      return (CLHeading()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
-    }
-    else if (T == CGRect) {
-      return (CGRect()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
-    }
-    else if (T == CGPoint) {
-      return (CGPoint()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
-    }
-    else if (T == CGSize) {
-      return (CGSize()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
-    }
-    else if (T == UIEdgeInsets) {
-      return (UIEdgeInsets()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
-    }
-    else if (T == CLLocationCoordinate2D) {
-      return (CLLocationCoordinate2D()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
-    }
-    else if (T == CLLocationManager) {
-      return (CLLocationManager()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
-    }
-    else if (T == NSError) {
-      return (NSError()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
-    }
-    else if (T == UIView) {
-      return (UIView()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
-    }
-    else if (T == UIViewController) {
-      return (UIViewController()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
-    }
-    else if (T == UIControl) {
-      return (UIControl()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
-    }
-    else if (T == UIImage) {
-      return (UIImage()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
-    }
-    else if (T == UIColor) {
-      return (UIColor()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
-    }
-    else if (T == NSData) {
-      return (NSData()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
-    }
-    else if (T == NSOperation) {
-      return (NSOperation()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
-    }
+// type cast
+dynamic AmapCoreFluttifyIOSAs(dynamic __this__, String typeName) {
+  // 占位用
+  if (false) { }
+  else if (typeName == 'AMapURLSearch') {
+    return AMapURLSearch()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  }
+  else if (typeName == 'AMapNaviConfig') {
+    return AMapNaviConfig()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  }
+  else if (typeName == 'AMapRouteConfig') {
+    return AMapRouteConfig()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  }
+  else if (typeName == 'AMapPOIConfig') {
+    return AMapPOIConfig()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  }
+  else if (typeName == 'AMapServices') {
+    return AMapServices()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  }
+  else if (typeName == 'CLLocation') {
+    return CLLocation()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  }
+  else if (typeName == 'CLHeading') {
+    return CLHeading()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  }
+  else if (typeName == 'CGRect') {
+    return CGRect()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  }
+  else if (typeName == 'CGPoint') {
+    return CGPoint()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  }
+  else if (typeName == 'CGSize') {
+    return CGSize()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  }
+  else if (typeName == 'UIEdgeInsets') {
+    return UIEdgeInsets()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  }
+  else if (typeName == 'CLLocationCoordinate2D') {
+    return CLLocationCoordinate2D()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  }
+  else if (typeName == 'CLLocationManager') {
+    return CLLocationManager()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  }
+  else if (typeName == 'NSError') {
+    return NSError()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  }
+  else if (typeName == 'UIView') {
+    return UIView()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  }
+  else if (typeName == 'UIViewController') {
+    return UIViewController()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  }
+  else if (typeName == 'UIControl') {
+    return UIControl()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  }
+  else if (typeName == 'UIImage') {
+    return UIImage()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  }
+  else if (typeName == 'UIColor') {
+    return UIColor()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  }
+  else if (typeName == 'NSData') {
+    return NSData()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  }
+  else if (typeName == 'NSOperation') {
+    return NSOperation()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
   }
 }
