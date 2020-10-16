@@ -12,6 +12,7 @@ import 'package:amap_core_fluttify/src/android/android.export.g.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
+
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 // type check
 @optionalTypeArgs
@@ -106,7 +107,10 @@ Future<bool> AmapCoreFluttifyAndroidIs<T>(dynamic __this__) async {
 @optionalTypeArgs
 T AmapCoreFluttifyAndroidAs<T>(dynamic __this__) {
   final typeName = T.toString();
-  if (RegExp(r'^(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)$').hasMatch(typeName)) {
+
+  if (__this__ == null) {
+    return null;
+  } else if (RegExp(r'^(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)$').hasMatch(typeName)) {
     return __this__ as T;
   }
   else if (T == android_content_Context) {
@@ -160,6 +164,7 @@ T AmapCoreFluttifyAndroidAs<T>(dynamic __this__) {
   } else if (T == android_util_Pair) {
     return (android_util_Pair()..refId = (__this__ as Ref).refId) as T;
   }
+  
   else {
     return null;
   }

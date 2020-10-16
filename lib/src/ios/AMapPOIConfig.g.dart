@@ -119,27 +119,27 @@ extension AMapPOIConfig_Batch on List<AMapPOIConfig> {
   //region getters
   Future<List<String>> get_appScheme_batch() async {
     final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod("AMapPOIConfig::get_appScheme_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
   Future<List<String>> get_appName_batch() async {
     final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod("AMapPOIConfig::get_appName_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
   Future<List<String>> get_keywords_batch() async {
     final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod("AMapPOIConfig::get_keywords_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
   Future<List<CLLocationCoordinate2D>> get_leftTopCoordinate_batch() async {
     final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod("AMapPOIConfig::get_leftTopCoordinate_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => AmapCoreFluttifyIOSAs<CLLocationCoordinate2D>(__result__)).cast<CLLocationCoordinate2D>().toList();
+    return (resultBatch as List)?.map((__result__) => AmapCoreFluttifyIOSAs<CLLocationCoordinate2D>(__result__))?.cast<CLLocationCoordinate2D>()?.toList();
   }
   
   Future<List<CLLocationCoordinate2D>> get_rightBottomCoordinate_batch() async {
     final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod("AMapPOIConfig::get_rightBottomCoordinate_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => AmapCoreFluttifyIOSAs<CLLocationCoordinate2D>(__result__)).cast<CLLocationCoordinate2D>().toList();
+    return (resultBatch as List)?.map((__result__) => AmapCoreFluttifyIOSAs<CLLocationCoordinate2D>(__result__))?.cast<CLLocationCoordinate2D>()?.toList();
   }
   
   //endregion
