@@ -12,8 +12,10 @@ import 'package:amap_core_fluttify/src/android/android.export.g.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
+
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 // type check
+@optionalTypeArgs
 Future<bool> AmapCoreFluttifyAndroidIs<T>(dynamic __this__) async {
   final typeName = T.toString();
   if (RegExp(r'^(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)$').hasMatch(typeName)) {
@@ -22,100 +24,76 @@ Future<bool> AmapCoreFluttifyAndroidIs<T>(dynamic __this__) async {
   else if (T == android_content_Context) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_content_Context', {'__this__': __this__});
     return result;
-  }
-  else if (T == android_content_Intent) {
+  } else if (T == android_content_Intent) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_content_Intent', {'__this__': __this__});
     return result;
-  }
-  else if (T == android_content_ContentProvider) {
+  } else if (T == android_content_ContentProvider) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_content_ContentProvider', {'__this__': __this__});
     return result;
-  }
-  else if (T == android_app_Application) {
+  } else if (T == android_app_Application) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_app_Application', {'__this__': __this__});
     return result;
-  }
-  else if (T == android_app_Notification) {
+  } else if (T == android_app_Notification) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_app_Notification', {'__this__': __this__});
     return result;
-  }
-  else if (T == android_app_Activity) {
+  } else if (T == android_app_Activity) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_app_Activity', {'__this__': __this__});
     return result;
-  }
-  else if (T == android_app_PendingIntent) {
+  } else if (T == android_app_PendingIntent) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_app_PendingIntent', {'__this__': __this__});
     return result;
-  }
-  else if (T == android_os_Bundle) {
+  } else if (T == android_os_Bundle) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_os_Bundle', {'__this__': __this__});
     return result;
-  }
-  else if (T == android_os_Binder) {
+  } else if (T == android_os_Binder) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_os_Binder', {'__this__': __this__});
     return result;
-  }
-  else if (T == android_view_View) {
+  } else if (T == android_view_View) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_view_View', {'__this__': __this__});
     return result;
-  }
-  else if (T == android_view_SurfaceView) {
+  } else if (T == android_view_SurfaceView) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_view_SurfaceView', {'__this__': __this__});
     return result;
-  }
-  else if (T == android_view_ViewGroup) {
+  } else if (T == android_view_ViewGroup) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_view_ViewGroup', {'__this__': __this__});
     return result;
-  }
-  else if (T == android_graphics_Point) {
+  } else if (T == android_graphics_Point) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_graphics_Point', {'__this__': __this__});
     return result;
-  }
-  else if (T == android_graphics_PointF) {
+  } else if (T == android_graphics_PointF) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_graphics_PointF', {'__this__': __this__});
     return result;
-  }
-  else if (T == android_graphics_Bitmap) {
+  } else if (T == android_graphics_Bitmap) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_graphics_Bitmap', {'__this__': __this__});
     return result;
-  }
-  else if (T == android_widget_ImageView) {
+  } else if (T == android_widget_ImageView) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_widget_ImageView', {'__this__': __this__});
     return result;
-  }
-  else if (T == java_io_File) {
+  } else if (T == java_io_File) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfjava_io_File', {'__this__': __this__});
     return result;
-  }
-  else if (T == android_location_Location) {
+  } else if (T == android_location_Location) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_location_Location', {'__this__': __this__});
     return result;
-  }
-  else if (T == android_view_MotionEvent) {
+  } else if (T == android_view_MotionEvent) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_view_MotionEvent', {'__this__': __this__});
     return result;
-  }
-  else if (T == android_graphics_drawable_Drawable) {
+  } else if (T == android_graphics_drawable_Drawable) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_graphics_drawable_Drawable', {'__this__': __this__});
     return result;
-  }
-  else if (T == android_widget_FrameLayout) {
+  } else if (T == android_widget_FrameLayout) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_widget_FrameLayout', {'__this__': __this__});
     return result;
-  }
-  else if (T == android_widget_TextView) {
+  } else if (T == android_widget_TextView) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_widget_TextView', {'__this__': __this__});
     return result;
-  }
-  else if (T == android_widget_LinearLayout) {
+  } else if (T == android_widget_LinearLayout) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_widget_LinearLayout', {'__this__': __this__});
     return result;
-  }
-  else if (T == android_widget_RelativeLayout) {
+  } else if (T == android_widget_RelativeLayout) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_widget_RelativeLayout', {'__this__': __this__});
     return result;
-  }
-  else if (T == android_util_Pair) {
+  } else if (T == android_util_Pair) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_util_Pair', {'__this__': __this__});
     return result;
   }
@@ -125,84 +103,68 @@ Future<bool> AmapCoreFluttifyAndroidIs<T>(dynamic __this__) async {
 }
 
 // type cast
-dynamic AmapCoreFluttifyAndroidAs(dynamic __this__, String typeName) {
-  // 占位用
-  if (false) { }
-  else if (typeName == 'android.content.Context') {
-    return android_content_Context()..refId = (__this__ as Ref).refId;
+// 给一个可选的泛型, 如果没有指定泛型就返回dynamic
+@optionalTypeArgs
+T AmapCoreFluttifyAndroidAs<T>(dynamic __this__) {
+  final typeName = T.toString();
+
+  if (__this__ == null) {
+    return null;
+  } else if (RegExp(r'^(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)$').hasMatch(typeName)) {
+    return __this__ as T;
   }
-  else if (typeName == 'android.content.Intent') {
-    return android_content_Intent()..refId = (__this__ as Ref).refId;
+  else if (T == android_content_Context) {
+    return (android_content_Context()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_content_Intent) {
+    return (android_content_Intent()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_content_ContentProvider) {
+    return (android_content_ContentProvider()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_app_Application) {
+    return (android_app_Application()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_app_Notification) {
+    return (android_app_Notification()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_app_Activity) {
+    return (android_app_Activity()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_app_PendingIntent) {
+    return (android_app_PendingIntent()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_os_Bundle) {
+    return (android_os_Bundle()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_os_Binder) {
+    return (android_os_Binder()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_view_View) {
+    return (android_view_View()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_view_SurfaceView) {
+    return (android_view_SurfaceView()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_view_ViewGroup) {
+    return (android_view_ViewGroup()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_graphics_Point) {
+    return (android_graphics_Point()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_graphics_PointF) {
+    return (android_graphics_PointF()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_graphics_Bitmap) {
+    return (android_graphics_Bitmap()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_widget_ImageView) {
+    return (android_widget_ImageView()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == java_io_File) {
+    return (java_io_File()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_location_Location) {
+    return (android_location_Location()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_view_MotionEvent) {
+    return (android_view_MotionEvent()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_graphics_drawable_Drawable) {
+    return (android_graphics_drawable_Drawable()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_widget_FrameLayout) {
+    return (android_widget_FrameLayout()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_widget_TextView) {
+    return (android_widget_TextView()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_widget_LinearLayout) {
+    return (android_widget_LinearLayout()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_widget_RelativeLayout) {
+    return (android_widget_RelativeLayout()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_util_Pair) {
+    return (android_util_Pair()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'android.content.ContentProvider') {
-    return android_content_ContentProvider()..refId = (__this__ as Ref).refId;
-  }
-  else if (typeName == 'android.app.Application') {
-    return android_app_Application()..refId = (__this__ as Ref).refId;
-  }
-  else if (typeName == 'android.app.Notification') {
-    return android_app_Notification()..refId = (__this__ as Ref).refId;
-  }
-  else if (typeName == 'android.app.Activity') {
-    return android_app_Activity()..refId = (__this__ as Ref).refId;
-  }
-  else if (typeName == 'android.app.PendingIntent') {
-    return android_app_PendingIntent()..refId = (__this__ as Ref).refId;
-  }
-  else if (typeName == 'android.os.Bundle') {
-    return android_os_Bundle()..refId = (__this__ as Ref).refId;
-  }
-  else if (typeName == 'android.os.Binder') {
-    return android_os_Binder()..refId = (__this__ as Ref).refId;
-  }
-  else if (typeName == 'android.view.View') {
-    return android_view_View()..refId = (__this__ as Ref).refId;
-  }
-  else if (typeName == 'android.view.SurfaceView') {
-    return android_view_SurfaceView()..refId = (__this__ as Ref).refId;
-  }
-  else if (typeName == 'android.view.ViewGroup') {
-    return android_view_ViewGroup()..refId = (__this__ as Ref).refId;
-  }
-  else if (typeName == 'android.graphics.Point') {
-    return android_graphics_Point()..refId = (__this__ as Ref).refId;
-  }
-  else if (typeName == 'android.graphics.PointF') {
-    return android_graphics_PointF()..refId = (__this__ as Ref).refId;
-  }
-  else if (typeName == 'android.graphics.Bitmap') {
-    return android_graphics_Bitmap()..refId = (__this__ as Ref).refId;
-  }
-  else if (typeName == 'android.widget.ImageView') {
-    return android_widget_ImageView()..refId = (__this__ as Ref).refId;
-  }
-  else if (typeName == 'java.io.File') {
-    return java_io_File()..refId = (__this__ as Ref).refId;
-  }
-  else if (typeName == 'android.location.Location') {
-    return android_location_Location()..refId = (__this__ as Ref).refId;
-  }
-  else if (typeName == 'android.view.MotionEvent') {
-    return android_view_MotionEvent()..refId = (__this__ as Ref).refId;
-  }
-  else if (typeName == 'android.graphics.drawable.Drawable') {
-    return android_graphics_drawable_Drawable()..refId = (__this__ as Ref).refId;
-  }
-  else if (typeName == 'android.widget.FrameLayout') {
-    return android_widget_FrameLayout()..refId = (__this__ as Ref).refId;
-  }
-  else if (typeName == 'android.widget.TextView') {
-    return android_widget_TextView()..refId = (__this__ as Ref).refId;
-  }
-  else if (typeName == 'android.widget.LinearLayout') {
-    return android_widget_LinearLayout()..refId = (__this__ as Ref).refId;
-  }
-  else if (typeName == 'android.widget.RelativeLayout') {
-    return android_widget_RelativeLayout()..refId = (__this__ as Ref).refId;
-  }
-  else if (typeName == 'android.util.Pair') {
-    return android_util_Pair()..refId = (__this__ as Ref).refId;
-  }
+  
   else {
     return null;
   }

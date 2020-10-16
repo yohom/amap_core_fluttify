@@ -42,7 +42,7 @@ Future<CLLocationCoordinate2D> AMapCoordinateConvert(CLLocationCoordinate2D coor
   // handle native call
   
 
-  return __result__;
+  return AmapCoreFluttifyIOSAs<CLLocationCoordinate2D>(__result__);
 }
 
 Future<bool> AMapDataAvailableForCoordinate(CLLocationCoordinate2D coordinate) async {
