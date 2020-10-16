@@ -24,14 +24,22 @@ class AMapURLSearch extends NSObject  {
 
   //region creators
   static Future<AMapURLSearch> create__({ bool init = true /* ios only */ }) async {
-    return kAmapCoreFluttifyChannel.invokeMethod('ObjectFactory::createAMapURLSearch', {'init': init});
+    final __result__ = await kAmapCoreFluttifyChannel.invokeMethod(
+      'ObjectFactory::createAMapURLSearch',
+      {'init': init}
+    );
+    return AmapCoreFluttifyIOSAs<AMapURLSearch>(__result__);
   }
   
   static Future<List<AMapURLSearch>> create_batch__(int length, { bool init = true /* ios only */ }) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    return kAmapCoreFluttifyChannel.invokeListMethod<AMapURLSearch>('ObjectFactory::create_batchAMapURLSearch', {'length': length, 'init': init});
+    assert(true);
+    final __result_batch__ = await  kAmapCoreFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchAMapURLSearch',
+      {'length': length, 'init': init}
+    );
+    return __result_batch__
+        .map((it) => AmapCoreFluttifyIOSAs<AMapURLSearch>(it))
+        .toList();
   }
   
   //endregion
@@ -133,54 +141,46 @@ extension AMapURLSearch_Batch on List<AMapURLSearch> {
   //region methods
   
   static Future<List<void>> getLatestAMapApp_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod('AMapURLSearch::getLatestAMapApp_batch', );
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   static Future<List<bool>> openAMapNavigation_batch(List<AMapNaviConfig> config) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod('AMapURLSearch::openAMapNavigation_batch', [for (int __i__ = 0; __i__ < config.length; __i__++) {"config": config[__i__]}]);
   
   
-    return (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<bool>().toList();
   }
   
   
   static Future<List<bool>> openAMapRouteSearch_batch(List<AMapRouteConfig> config) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod('AMapURLSearch::openAMapRouteSearch_batch', [for (int __i__ = 0; __i__ < config.length; __i__++) {"config": config[__i__]}]);
   
   
-    return (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<bool>().toList();
   }
   
   
   static Future<List<bool>> openAMapPOISearch_batch(List<AMapPOIConfig> config) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod('AMapURLSearch::openAMapPOISearch_batch', [for (int __i__ = 0; __i__ < config.length; __i__++) {"config": config[__i__]}]);
   
   
-    return (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<bool>().toList();
   }
   
   //endregion

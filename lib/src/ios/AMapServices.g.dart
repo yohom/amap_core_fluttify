@@ -24,14 +24,22 @@ class AMapServices extends NSObject  {
 
   //region creators
   static Future<AMapServices> create__({ bool init = true /* ios only */ }) async {
-    return kAmapCoreFluttifyChannel.invokeMethod('ObjectFactory::createAMapServices', {'init': init});
+    final __result__ = await kAmapCoreFluttifyChannel.invokeMethod(
+      'ObjectFactory::createAMapServices',
+      {'init': init}
+    );
+    return AmapCoreFluttifyIOSAs<AMapServices>(__result__);
   }
   
   static Future<List<AMapServices>> create_batch__(int length, { bool init = true /* ios only */ }) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    return kAmapCoreFluttifyChannel.invokeListMethod<AMapServices>('ObjectFactory::create_batchAMapServices', {'length': length, 'init': init});
+    assert(true);
+    final __result_batch__ = await  kAmapCoreFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchAMapServices',
+      {'length': length, 'init': init}
+    );
+    return __result_batch__
+        .map((it) => AmapCoreFluttifyIOSAs<AMapServices>(it))
+        .toList();
   }
   
   //endregion
@@ -95,7 +103,7 @@ class AMapServices extends NSObject  {
     // handle native call
   
   
-    return __result__;
+    return AmapCoreFluttifyIOSAs<AMapServices>(__result__);
   }
   
   //endregion
@@ -110,22 +118,22 @@ extension AMapServices_Batch on List<AMapServices> {
   //region getters
   Future<List<String>> get_apiKey_batch() async {
     final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod("AMapServices::get_apiKey_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
   }
   
   Future<List<bool>> get_enableHTTPS_batch() async {
     final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod("AMapServices::get_enableHTTPS_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<bool>().toList();
   }
   
   Future<List<bool>> get_crashReportEnabled_batch() async {
     final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod("AMapServices::get_crashReportEnabled_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<bool>().toList();
   }
   
   Future<List<String>> get_identifier_batch() async {
     final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod("AMapServices::get_identifier_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
   }
   
   //endregion
@@ -154,15 +162,13 @@ extension AMapServices_Batch on List<AMapServices> {
   //region methods
   
   static Future<List<AMapServices>> sharedServices_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod('AMapServices::sharedServices_batch', );
   
   
-    return (resultBatch as List).cast<AMapServices>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => AmapCoreFluttifyIOSAs<AMapServices>(__result__)).cast<AMapServices>().toList();
   }
   
   //endregion

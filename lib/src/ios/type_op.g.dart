@@ -14,6 +14,7 @@ import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 // type check
+@optionalTypeArgs
 Future<bool> AmapCoreFluttifyIOSIs<T>(dynamic __this__) async {
   final typeName = T.toString();
   if (RegExp(r'^(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)$').hasMatch(typeName)) {
@@ -109,71 +110,75 @@ Future<bool> AmapCoreFluttifyIOSIs<T>(dynamic __this__) async {
 }
 
 // type cast
-dynamic AmapCoreFluttifyIOSAs(dynamic __this__, String typeName) {
-  // 占位用
-  if (false) { }
-  else if (typeName == 'AMapURLSearch') {
-    return AMapURLSearch()..refId = (__this__ as Ref).refId;
+// 给一个可选的泛型, 如果没有指定泛型就返回dynamic
+@optionalTypeArgs
+T AmapCoreFluttifyIOSAs<T>(dynamic __this__) {
+  final typeName = T.toString();
+  if (RegExp(r'^(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)$').hasMatch(typeName)) {
+    return __this__ as T;
   }
-  else if (typeName == 'AMapNaviConfig') {
-    return AMapNaviConfig()..refId = (__this__ as Ref).refId;
+  else if (T == AMapURLSearch) {
+    return (AMapURLSearch()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapRouteConfig') {
-    return AMapRouteConfig()..refId = (__this__ as Ref).refId;
+  else if (T == AMapNaviConfig) {
+    return (AMapNaviConfig()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapPOIConfig') {
-    return AMapPOIConfig()..refId = (__this__ as Ref).refId;
+  else if (T == AMapRouteConfig) {
+    return (AMapRouteConfig()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapServices') {
-    return AMapServices()..refId = (__this__ as Ref).refId;
+  else if (T == AMapPOIConfig) {
+    return (AMapPOIConfig()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'CLLocation') {
-    return CLLocation()..refId = (__this__ as Ref).refId;
+  else if (T == AMapServices) {
+    return (AMapServices()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'CLHeading') {
-    return CLHeading()..refId = (__this__ as Ref).refId;
+  else if (T == CLLocation) {
+    return (CLLocation()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'CGRect') {
-    return CGRect()..refId = (__this__ as Ref).refId;
+  else if (T == CLHeading) {
+    return (CLHeading()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'CGPoint') {
-    return CGPoint()..refId = (__this__ as Ref).refId;
+  else if (T == CGRect) {
+    return (CGRect()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'CGSize') {
-    return CGSize()..refId = (__this__ as Ref).refId;
+  else if (T == CGPoint) {
+    return (CGPoint()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'UIEdgeInsets') {
-    return UIEdgeInsets()..refId = (__this__ as Ref).refId;
+  else if (T == CGSize) {
+    return (CGSize()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'CLLocationCoordinate2D') {
-    return CLLocationCoordinate2D()..refId = (__this__ as Ref).refId;
+  else if (T == UIEdgeInsets) {
+    return (UIEdgeInsets()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'CLLocationManager') {
-    return CLLocationManager()..refId = (__this__ as Ref).refId;
+  else if (T == CLLocationCoordinate2D) {
+    return (CLLocationCoordinate2D()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'NSError') {
-    return NSError()..refId = (__this__ as Ref).refId;
+  else if (T == CLLocationManager) {
+    return (CLLocationManager()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'UIView') {
-    return UIView()..refId = (__this__ as Ref).refId;
+  else if (T == NSError) {
+    return (NSError()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'UIViewController') {
-    return UIViewController()..refId = (__this__ as Ref).refId;
+  else if (T == UIView) {
+    return (UIView()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'UIControl') {
-    return UIControl()..refId = (__this__ as Ref).refId;
+  else if (T == UIViewController) {
+    return (UIViewController()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'UIImage') {
-    return UIImage()..refId = (__this__ as Ref).refId;
+  else if (T == UIControl) {
+    return (UIControl()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'UIColor') {
-    return UIColor()..refId = (__this__ as Ref).refId;
+  else if (T == UIImage) {
+    return (UIImage()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'NSData') {
-    return NSData()..refId = (__this__ as Ref).refId;
+  else if (T == UIColor) {
+    return (UIColor()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'NSOperation') {
-    return NSOperation()..refId = (__this__ as Ref).refId;
+  else if (T == NSData) {
+    return (NSData()..refId = (__this__ as Ref).refId) as T;
+  }
+  else if (T == NSOperation) {
+    return (NSOperation()..refId = (__this__ as Ref).refId) as T;
   }
   else {
     return null;
