@@ -13,8 +13,8 @@ dependencies:
     sdk: flutter
   
   
-  foundation_fluttify: ^0.11.0-dev.8
-  core_location_fluttify: ^0.6.0-dev.1
+  foundation_fluttify: ^0.11.0
+  core_location_fluttify: ^0.6.0
 
 dev_dependencies:
   flutter_test:
