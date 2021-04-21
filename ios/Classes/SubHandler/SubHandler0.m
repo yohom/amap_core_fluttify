@@ -4,11 +4,12 @@
 
 #import "SubHandler0.h"
 #import "FluttifyMessageCodec.h"
+#import <AMapFoundationKit/AMapFoundationKit.h>
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
 // Dart端随机存取对象的容器
-extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
+extern NSMutableDictionary<NSString*, NSObject*>* HEAP;
 // 日志打印开关
 extern BOOL enableLog;
 
@@ -1666,7 +1667,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.appScheme = appScheme;
+                ref.appScheme = appScheme;;
                 methodResult(@"success");
             }
         
@@ -1688,7 +1689,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.appName = appName;
+                ref.appName = appName;;
                 methodResult(@"success");
             }
         
@@ -1720,7 +1721,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.destination = destination;
+                ref.destination = destination;;
                 methodResult(@"success");
             }
         
@@ -1742,7 +1743,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.strategy = strategy;
+                ref.strategy = strategy;;
                 methodResult(@"success");
             }
         
@@ -1764,7 +1765,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.appScheme = appScheme;
+                ref.appScheme = appScheme;;
                 methodResult(@"success");
             }
         
@@ -1786,7 +1787,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.appName = appName;
+                ref.appName = appName;;
                 methodResult(@"success");
             }
         
@@ -1818,7 +1819,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.startCoordinate = startCoordinate;
+                ref.startCoordinate = startCoordinate;;
                 methodResult(@"success");
             }
         
@@ -1850,7 +1851,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.destinationCoordinate = destinationCoordinate;
+                ref.destinationCoordinate = destinationCoordinate;;
                 methodResult(@"success");
             }
         
@@ -1872,7 +1873,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.drivingStrategy = drivingStrategy;
+                ref.drivingStrategy = drivingStrategy;;
                 methodResult(@"success");
             }
         
@@ -1894,7 +1895,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.transitStrategy = transitStrategy;
+                ref.transitStrategy = transitStrategy;;
                 methodResult(@"success");
             }
         
@@ -1916,7 +1917,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.routeType = routeType;
+                ref.routeType = routeType;;
                 methodResult(@"success");
             }
         
@@ -1938,7 +1939,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.appScheme = appScheme;
+                ref.appScheme = appScheme;;
                 methodResult(@"success");
             }
         
@@ -1960,7 +1961,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.appName = appName;
+                ref.appName = appName;;
                 methodResult(@"success");
             }
         
@@ -1982,7 +1983,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.keywords = keywords;
+                ref.keywords = keywords;;
                 methodResult(@"success");
             }
         
@@ -2014,7 +2015,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.leftTopCoordinate = leftTopCoordinate;
+                ref.leftTopCoordinate = leftTopCoordinate;;
                 methodResult(@"success");
             }
         
@@ -2046,7 +2047,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.rightBottomCoordinate = rightBottomCoordinate;
+                ref.rightBottomCoordinate = rightBottomCoordinate;;
                 methodResult(@"success");
             }
         
@@ -2068,7 +2069,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.apiKey = apiKey;
+                ref.apiKey = apiKey;;
                 methodResult(@"success");
             }
         
@@ -2090,7 +2091,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.enableHTTPS = enableHTTPS;
+                ref.enableHTTPS = enableHTTPS;;
                 methodResult(@"success");
             }
         
@@ -2112,7 +2113,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.crashReportEnabled = crashReportEnabled;
+                ref.crashReportEnabled = crashReportEnabled;;
                 methodResult(@"success");
             }
         

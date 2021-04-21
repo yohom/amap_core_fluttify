@@ -3,7 +3,6 @@
 //////////////////////////////////////////////////////////
 
 #import <Flutter/Flutter.h>
-#import <AMapFoundationKit/AMapFoundationKit.h>
 
 typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, id, FlutterResult);
 
