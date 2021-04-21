@@ -19,7 +19,7 @@ A new flutter plugin project.
   # flutter plugin dependency
   
   # sdk dependency
-  s.dependency AMapFoundation-NO-IDFA
+  s.dependency 'AMapFoundation-NO-IDFA'
 
   s.static_framework = true
   s.ios.deployment_target = '8.0'
