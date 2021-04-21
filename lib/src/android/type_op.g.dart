@@ -13,7 +13,6 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 
-// ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 // type check
 @optionalTypeArgs
 Future<bool> AmapCoreFluttifyAndroidIs<T>(dynamic __this__) async {
@@ -53,6 +52,12 @@ Future<bool> AmapCoreFluttifyAndroidIs<T>(dynamic __this__) async {
     return result;
   } else if (T == android_view_SurfaceView) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_view_SurfaceView', {'__this__': __this__});
+    return result;
+  } else if (T == android_view_SurfaceHolder) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_view_SurfaceHolder', {'__this__': __this__});
+    return result;
+  } else if (T == android_opengl_GLSurfaceView) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_opengl_GLSurfaceView', {'__this__': __this__});
     return result;
   } else if (T == android_view_ViewGroup) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_view_ViewGroup', {'__this__': __this__});
@@ -105,7 +110,7 @@ Future<bool> AmapCoreFluttifyAndroidIs<T>(dynamic __this__) async {
 // type cast
 // 给一个可选的泛型, 如果没有指定泛型就返回dynamic
 @optionalTypeArgs
-T AmapCoreFluttifyAndroidAs<T>(dynamic __this__) {
+T? AmapCoreFluttifyAndroidAs<T>(dynamic __this__) {
   final typeName = T.toString();
 
   if (__this__ == null) {
@@ -135,6 +140,10 @@ T AmapCoreFluttifyAndroidAs<T>(dynamic __this__) {
     return (android_view_View()..refId = (__this__ as Ref).refId) as T;
   } else if (T == android_view_SurfaceView) {
     return (android_view_SurfaceView()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_view_SurfaceHolder) {
+    return (android_view_SurfaceHolder.subInstance()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_opengl_GLSurfaceView) {
+    return (android_opengl_GLSurfaceView()..refId = (__this__ as Ref).refId) as T;
   } else if (T == android_view_ViewGroup) {
     return (android_view_ViewGroup()..refId = (__this__ as Ref).refId) as T;
   } else if (T == android_graphics_Point) {
@@ -166,6 +175,6 @@ T AmapCoreFluttifyAndroidAs<T>(dynamic __this__) {
   }
   
   else {
-    return null;
+    return __this__;
   }
 }

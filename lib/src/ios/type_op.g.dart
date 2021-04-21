@@ -13,7 +13,6 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 
-// ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 // type check
 @optionalTypeArgs
 Future<bool> AmapCoreFluttifyIOSIs<T>(dynamic __this__) async {
@@ -75,11 +74,17 @@ Future<bool> AmapCoreFluttifyIOSIs<T>(dynamic __this__) async {
   } else if (T == UIImage) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfUIImage', {'__this__': __this__});
     return result;
+  } else if (T == UIImageView) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfUIImageView', {'__this__': __this__});
+    return result;
   } else if (T == UIColor) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfUIColor', {'__this__': __this__});
     return result;
   } else if (T == NSData) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfNSData', {'__this__': __this__});
+    return result;
+  } else if (T == NSDate) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfNSDate', {'__this__': __this__});
     return result;
   } else if (T == NSOperation) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfNSOperation', {'__this__': __this__});
@@ -93,7 +98,7 @@ Future<bool> AmapCoreFluttifyIOSIs<T>(dynamic __this__) async {
 // type cast
 // 给一个可选的泛型, 如果没有指定泛型就返回dynamic
 @optionalTypeArgs
-T AmapCoreFluttifyIOSAs<T>(dynamic __this__) {
+T? AmapCoreFluttifyIOSAs<T>(dynamic __this__) {
   final typeName = T.toString();
 
   if (__this__ == null) {
@@ -137,15 +142,19 @@ T AmapCoreFluttifyIOSAs<T>(dynamic __this__) {
     return (UIControl()..refId = (__this__ as Ref).refId) as T;
   } else if (T == UIImage) {
     return (UIImage()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == UIImageView) {
+    return (UIImageView()..refId = (__this__ as Ref).refId) as T;
   } else if (T == UIColor) {
     return (UIColor()..refId = (__this__ as Ref).refId) as T;
   } else if (T == NSData) {
     return (NSData()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == NSDate) {
+    return (NSDate()..refId = (__this__ as Ref).refId) as T;
   } else if (T == NSOperation) {
     return (NSOperation()..refId = (__this__ as Ref).refId) as T;
   }
   
   else {
-    return null;
+    return __this__;
   }
 }

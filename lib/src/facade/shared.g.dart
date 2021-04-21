@@ -7,3 +7,9 @@ const kAmapCoreFluttifyMessageCodec = FluttifyMessageCodec(tag: 'amap_core_flutt
 const kAmapCoreFluttifyMethodCodec = StandardMethodCodec(kAmapCoreFluttifyMessageCodec);
 const kAmapCoreFluttifyChannel = MethodChannel('me.yohom/amap_core_fluttify', kAmapCoreFluttifyMethodCodec);
 const kAmapCoreFluttifyProjectName = 'amap_core_fluttify';
+
+Future<void> releaseAmapCoreFluttifyPool() async {
+  final isCurrentPlugin = (Ref it) => it.tag__ == kAmapCoreFluttifyProjectName;
+  await gGlobalReleasePool.where(isCurrentPlugin).release_batch();
+  gGlobalReleasePool.removeWhere(isCurrentPlugin);
+}

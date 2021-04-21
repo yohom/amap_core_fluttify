@@ -28,7 +28,7 @@ class AMapURLSearch extends NSObject  {
       'ObjectFactory::createAMapURLSearch',
       {'init': init}
     );
-    return AmapCoreFluttifyIOSAs<AMapURLSearch>(__result__);
+    return AmapCoreFluttifyIOSAs<AMapURLSearch>(__result__)!;
   }
   
   static Future<List<AMapURLSearch>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -37,8 +37,8 @@ class AMapURLSearch extends NSObject  {
       'ObjectFactory::create_batchAMapURLSearch',
       {'length': length, 'init': init}
     );
-    return __result_batch__
-        .map((it) => AmapCoreFluttifyIOSAs<AMapURLSearch>(it))
+    return __result_batch__!
+        .map((it) => AmapCoreFluttifyIOSAs<AMapURLSearch>(it)!)
         .toList();
   }
   
@@ -71,7 +71,7 @@ class AMapURLSearch extends NSObject  {
   }
   
   
-  static Future<bool> openAMapNavigation(AMapNaviConfig config) async {
+  static Future<bool?> openAMapNavigation(AMapNaviConfig config) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapURLSearch::openAMapNavigation([])');
@@ -88,7 +88,7 @@ class AMapURLSearch extends NSObject  {
   }
   
   
-  static Future<bool> openAMapRouteSearch(AMapRouteConfig config) async {
+  static Future<bool?> openAMapRouteSearch(AMapRouteConfig config) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapURLSearch::openAMapRouteSearch([])');
@@ -105,7 +105,7 @@ class AMapURLSearch extends NSObject  {
   }
   
   
-  static Future<bool> openAMapPOISearch(AMapPOIConfig config) async {
+  static Future<bool?> openAMapPOISearch(AMapPOIConfig config) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapURLSearch::openAMapPOISearch([])');
@@ -140,7 +140,7 @@ extension AMapURLSearch_Batch on List<AMapURLSearch> {
 
   //region methods
   
-  static Future<List<void>> getLatestAMapApp_batch() async {
+  static Future<List<void>?> getLatestAMapApp_batch() async {
     assert(true);
   
     // invoke native method
@@ -151,7 +151,7 @@ extension AMapURLSearch_Batch on List<AMapURLSearch> {
   }
   
   
-  static Future<List<bool>> openAMapNavigation_batch(List<AMapNaviConfig> config) async {
+  static Future<List<bool?>?> openAMapNavigation_batch(List<AMapNaviConfig> config) async {
     assert(true);
   
     // invoke native method
@@ -162,7 +162,7 @@ extension AMapURLSearch_Batch on List<AMapURLSearch> {
   }
   
   
-  static Future<List<bool>> openAMapRouteSearch_batch(List<AMapRouteConfig> config) async {
+  static Future<List<bool?>?> openAMapRouteSearch_batch(List<AMapRouteConfig> config) async {
     assert(true);
   
     // invoke native method
@@ -173,7 +173,7 @@ extension AMapURLSearch_Batch on List<AMapURLSearch> {
   }
   
   
-  static Future<List<bool>> openAMapPOISearch_batch(List<AMapPOIConfig> config) async {
+  static Future<List<bool?>?> openAMapPOISearch_batch(List<AMapPOIConfig> config) async {
     assert(true);
   
     // invoke native method
