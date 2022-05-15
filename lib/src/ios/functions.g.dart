@@ -13,7 +13,7 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
-Future<String> AMapEmptyStringIfNil(String s) async {
+Future<String?> AMapEmptyStringIfNil(String s) async {
   // print log
   if (fluttifyLogEnabled) {
     debugPrint('fluttify-dart: AMapEmptyStringIfNil::AMapEmptyStringIfNil([\'s\':$s])');
@@ -29,7 +29,7 @@ Future<String> AMapEmptyStringIfNil(String s) async {
   return __result__;
 }
 
-Future<CLLocationCoordinate2D> AMapCoordinateConvert(CLLocationCoordinate2D coordinate, AMapCoordinateType type) async {
+Future<CLLocationCoordinate2D?> AMapCoordinateConvert(CLLocationCoordinate2D coordinate, AMapCoordinateType type) async {
   // print log
   if (fluttifyLogEnabled) {
     debugPrint('fluttify-dart: AMapCoordinateConvert::AMapCoordinateConvert([])');
@@ -45,7 +45,7 @@ Future<CLLocationCoordinate2D> AMapCoordinateConvert(CLLocationCoordinate2D coor
   return AmapCoreFluttifyIOSAs<CLLocationCoordinate2D>(__result__);
 }
 
-Future<bool> AMapDataAvailableForCoordinate(CLLocationCoordinate2D coordinate) async {
+Future<bool?> AMapDataAvailableForCoordinate(CLLocationCoordinate2D coordinate) async {
   // print log
   if (fluttifyLogEnabled) {
     debugPrint('fluttify-dart: AMapDataAvailableForCoordinate::AMapDataAvailableForCoordinate([])');
