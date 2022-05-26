@@ -4,11 +4,11 @@
 Pod::Spec.new do |s|
   s.name             = 'amap_core_fluttify'
   s.version          = '0.0.1'
-  s.summary          = 'An `Amap` Core Component, Powered By `Fluttify` Engine, A Dart Bindings Generator For Native SDK.'
+  s.summary          = 'An `Amap Core` Map Component, Powered By `Fluttify`, A Compiler Generating Dart Bindings For Native SDK.'
   s.description      = <<-DESC
 A new flutter plugin project.
                        DESC
-  s.homepage         = 'https://github.com/fluttify-project/amap_core_fluttify'
+  s.homepage         = 'https://github.com/fluttify-project'
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'yohom' => 'yohombao@qq.com' }
   s.source           = { :path => '.' }
@@ -19,7 +19,7 @@ A new flutter plugin project.
   # flutter plugin dependency
   
   # sdk dependency
-  s.dependency 'AMapFoundation-NO-IDFA'
+  s.dependency 'AMapFoundation-NO-IDFA', '1.7.0'
 
   s.static_framework = true
   s.ios.deployment_target = '8.0'

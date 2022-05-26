@@ -31,7 +31,7 @@ public class SubHandlerCustom {
 
     public static final SubHandlerCustom instance = new SubHandlerCustom();
 
-    private SubHandlerCustom() {}
+    private SubHandlerCustom() { }
 
     public Map<String, Handler> getSubHandler(BinaryMessenger messenger, android.app.Activity activity) {
         return new HashMap<String, Handler>() {{

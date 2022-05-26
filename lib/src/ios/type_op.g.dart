@@ -13,6 +13,7 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 
+// ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 // type check
 @optionalTypeArgs
 Future<bool> AmapCoreFluttifyIOSIs<T>(dynamic __this__) async {
