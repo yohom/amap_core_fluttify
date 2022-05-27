@@ -23,12 +23,12 @@ class AMapServices extends NSObject  {
   //endregion
 
   //region creators
-  static Future<AMapServices?> create__({ bool init = true /* ios only */ }) async {
+  static Future<AMapServices> create__({ bool init = true /* ios only */ }) async {
     final __result__ = await kAmapCoreFluttifyChannel.invokeMethod(
       'ObjectFactory::createAMapServices',
       {'init': init}
     );
-    return AmapCoreFluttifyIOSAs<AMapServices?>(__result__)!;
+    return AmapCoreFluttifyIOSAs<AMapServices>(__result__)!;
   }
   
   static Future<List<AMapServices>> create_batch__(int length, { bool init = true /* ios only */ }) async {
