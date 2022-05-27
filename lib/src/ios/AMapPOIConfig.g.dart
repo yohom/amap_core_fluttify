@@ -23,12 +23,12 @@ class AMapPOIConfig extends NSObject  {
   //endregion
 
   //region creators
-  static Future<AMapPOIConfig?> create__({ bool init = true /* ios only */ }) async {
+  static Future<AMapPOIConfig> create__({ bool init = true /* ios only */ }) async {
     final __result__ = await kAmapCoreFluttifyChannel.invokeMethod(
       'ObjectFactory::createAMapPOIConfig',
       {'init': init}
     );
-    return AmapCoreFluttifyIOSAs<AMapPOIConfig?>(__result__)!;
+    return AmapCoreFluttifyIOSAs<AMapPOIConfig>(__result__)!;
   }
   
   static Future<List<AMapPOIConfig>> create_batch__(int length, { bool init = true /* ios only */ }) async {

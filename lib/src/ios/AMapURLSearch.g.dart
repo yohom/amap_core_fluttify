@@ -23,12 +23,12 @@ class AMapURLSearch extends NSObject  {
   //endregion
 
   //region creators
-  static Future<AMapURLSearch?> create__({ bool init = true /* ios only */ }) async {
+  static Future<AMapURLSearch> create__({ bool init = true /* ios only */ }) async {
     final __result__ = await kAmapCoreFluttifyChannel.invokeMethod(
       'ObjectFactory::createAMapURLSearch',
       {'init': init}
     );
-    return AmapCoreFluttifyIOSAs<AMapURLSearch?>(__result__)!;
+    return AmapCoreFluttifyIOSAs<AMapURLSearch>(__result__)!;
   }
   
   static Future<List<AMapURLSearch>> create_batch__(int length, { bool init = true /* ios only */ }) async {

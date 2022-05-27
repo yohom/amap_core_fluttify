@@ -23,12 +23,12 @@ class AMapNaviConfig extends NSObject  {
   //endregion
 
   //region creators
-  static Future<AMapNaviConfig?> create__({ bool init = true /* ios only */ }) async {
+  static Future<AMapNaviConfig> create__({ bool init = true /* ios only */ }) async {
     final __result__ = await kAmapCoreFluttifyChannel.invokeMethod(
       'ObjectFactory::createAMapNaviConfig',
       {'init': init}
     );
-    return AmapCoreFluttifyIOSAs<AMapNaviConfig?>(__result__)!;
+    return AmapCoreFluttifyIOSAs<AMapNaviConfig>(__result__)!;
   }
   
   static Future<List<AMapNaviConfig>> create_batch__(int length, { bool init = true /* ios only */ }) async {
