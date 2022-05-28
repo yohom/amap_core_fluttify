@@ -7,7 +7,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "0.17.0-dev.1"
+    version: "0.17.0-dev.2"
   async:
     dependency: transitive
     description:
@@ -94,7 +94,7 @@ packages:
       name: foundation_fluttify
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.13.0-dev.5"
+    version: "0.13.0-dev.6"
   lints:
     dependency: transitive
     description:
