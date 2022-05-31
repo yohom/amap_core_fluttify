@@ -77,32 +77,22 @@ class AMapPOIConfig extends NSObject  {
   //region setters
   Future<void> set_appScheme(String appScheme) async {
     await kAmapCoreFluttifyChannel.invokeMethod('AMapPOIConfig::set_appScheme', <String, dynamic>{'__this__': this, "appScheme": appScheme});
-  
-  
   }
   
   Future<void> set_appName(String appName) async {
     await kAmapCoreFluttifyChannel.invokeMethod('AMapPOIConfig::set_appName', <String, dynamic>{'__this__': this, "appName": appName});
-  
-  
   }
   
   Future<void> set_keywords(String keywords) async {
     await kAmapCoreFluttifyChannel.invokeMethod('AMapPOIConfig::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
-  
-  
   }
   
   Future<void> set_leftTopCoordinate(CLLocationCoordinate2D leftTopCoordinate) async {
     await kAmapCoreFluttifyChannel.invokeMethod('AMapPOIConfig::set_leftTopCoordinate', <String, dynamic>{'__this__': this, "leftTopCoordinate": leftTopCoordinate});
-  
-  
   }
   
   Future<void> set_rightBottomCoordinate(CLLocationCoordinate2D rightBottomCoordinate) async {
     await kAmapCoreFluttifyChannel.invokeMethod('AMapPOIConfig::set_rightBottomCoordinate', <String, dynamic>{'__this__': this, "rightBottomCoordinate": rightBottomCoordinate});
-  
-  
   }
   
   //endregion
@@ -117,10 +107,10 @@ class AMapPOIConfig extends NSObject  {
   }
 }
 
-extension AMapPOIConfig_Batch on List<AMapPOIConfig> {
+extension AMapPOIConfig_Batch on List<AMapPOIConfig?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters
