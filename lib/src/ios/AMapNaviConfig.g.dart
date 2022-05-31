@@ -72,26 +72,18 @@ class AMapNaviConfig extends NSObject  {
   //region setters
   Future<void> set_appScheme(String appScheme) async {
     await kAmapCoreFluttifyChannel.invokeMethod('AMapNaviConfig::set_appScheme', <String, dynamic>{'__this__': this, "appScheme": appScheme});
-  
-  
   }
   
   Future<void> set_appName(String appName) async {
     await kAmapCoreFluttifyChannel.invokeMethod('AMapNaviConfig::set_appName', <String, dynamic>{'__this__': this, "appName": appName});
-  
-  
   }
   
   Future<void> set_destination(CLLocationCoordinate2D destination) async {
     await kAmapCoreFluttifyChannel.invokeMethod('AMapNaviConfig::set_destination', <String, dynamic>{'__this__': this, "destination": destination});
-  
-  
   }
   
   Future<void> set_strategy(AMapDrivingStrategy strategy) async {
     await kAmapCoreFluttifyChannel.invokeMethod('AMapNaviConfig::set_strategy', <String, dynamic>{'__this__': this, "strategy": strategy.toValue()});
-  
-  
   }
   
   //endregion
@@ -106,10 +98,10 @@ class AMapNaviConfig extends NSObject  {
   }
 }
 
-extension AMapNaviConfig_Batch on List<AMapNaviConfig> {
+extension AMapNaviConfig_Batch on List<AMapNaviConfig?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

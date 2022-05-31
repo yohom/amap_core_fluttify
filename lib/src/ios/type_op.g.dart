@@ -63,6 +63,15 @@ Future<bool> AmapCoreFluttifyIOSIs<T>(dynamic __this__) async {
   } else if (T == NSError) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfNSError', {'__this__': __this__});
     return result;
+  } else if (T == NSCoding) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfNSCoding', {'__this__': __this__});
+    return result;
+  } else if (T == NSCopying) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfNSCopying', {'__this__': __this__});
+    return result;
+  } else if (T == NSMutableCopying) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfNSMutableCopying', {'__this__': __this__});
+    return result;
   } else if (T == UIView) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfUIView', {'__this__': __this__});
     return result;
@@ -135,6 +144,12 @@ T? AmapCoreFluttifyIOSAs<T>(dynamic __this__) {
     return (CLLocationManager()..refId = (__this__ as Ref).refId) as T;
   } else if (T == NSError) {
     return (NSError()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == NSCoding) {
+    return (NSCoding.subInstance()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == NSCopying) {
+    return (NSCopying.subInstance()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == NSMutableCopying) {
+    return (NSMutableCopying.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == UIView) {
     return (UIView()..refId = (__this__ as Ref).refId) as T;
   } else if (T == UIViewController) {

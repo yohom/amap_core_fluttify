@@ -16,8 +16,6 @@ extern NSMutableDictionary<NSString*, NSObject*>* HEAP;
 // 日志打印开关
 extern BOOL enableLog;
 
-@interface AmapCoreFluttifyPlugin (_Delegate)  @end
-
 @implementation AmapCoreFluttifyPlugin {
   NSMutableDictionary<NSString*, Handler>* _handlerMap;
 }
@@ -57,8 +55,5 @@ extern BOOL enableLog;
     methodResult(FlutterMethodNotImplemented);
   }
 }
-
-// 委托方法们
-
 
 @end

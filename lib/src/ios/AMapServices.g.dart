@@ -72,20 +72,14 @@ class AMapServices extends NSObject  {
   //region setters
   Future<void> set_apiKey(String apiKey) async {
     await kAmapCoreFluttifyChannel.invokeMethod('AMapServices::set_apiKey', <String, dynamic>{'__this__': this, "apiKey": apiKey});
-  
-  
   }
   
   Future<void> set_enableHTTPS(bool enableHTTPS) async {
     await kAmapCoreFluttifyChannel.invokeMethod('AMapServices::set_enableHTTPS', <String, dynamic>{'__this__': this, "enableHTTPS": enableHTTPS});
-  
-  
   }
   
   Future<void> set_crashReportEnabled(bool crashReportEnabled) async {
     await kAmapCoreFluttifyChannel.invokeMethod('AMapServices::set_crashReportEnabled', <String, dynamic>{'__this__': this, "crashReportEnabled": crashReportEnabled});
-  
-  
   }
   
   //endregion
@@ -116,10 +110,10 @@ class AMapServices extends NSObject  {
   }
 }
 
-extension AMapServices_Batch on List<AMapServices> {
+extension AMapServices_Batch on List<AMapServices?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters
