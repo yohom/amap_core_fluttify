@@ -1,6 +1,6 @@
 name: amap_core_fluttify
 description: An `Amap Core` Map Component, Powered By `Fluttify`, A Compiler Generating Dart Bindings For Native SDK.
-version: 0.17.0-rc.0
+version: 0.17.0
 homepage: https://github.com/fluttify-project
 
 environment:
